@@ -1,0 +1,10 @@
+:root {
+	--base-color: #d5d52b;
+	--dark-gray: #313e3b;
+	--medium-gray: #828c8a;
+	--yellow: #d5d52c;
+	--extra-medium-gray: #e4e4e4;
+
+	--font-alt: 'Space Grotesk', sans-serif;
+	--font-base: 'Inter', sans-serif;
+}
