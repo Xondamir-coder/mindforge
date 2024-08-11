@@ -8,6 +8,8 @@
 		<Services />
 		<Product />
 		<Skills />
+		<Words />
+		<Offer />
 		<section class="fake-section"></section>
 	</main>
 </template>
@@ -22,6 +24,8 @@ import ScrollThingy from '@/components/ScrollThingy.vue';
 import Services from '@/components/Services.vue';
 import Product from '@/components/Product.vue';
 import Skills from './components/Skills.vue';
+import Words from './components/Words.vue';
+import Offer from './components/Offer.vue';
 
 const containerRef = ref();
 
