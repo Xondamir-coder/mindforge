@@ -1,5 +1,5 @@
 <template>
-	<section class="hero">
+	<section class="hero section-padding">
 		<img ref="objRef" class="hero__obj" src="@/assets/images/green-object.png" alt="green" />
 		<div class="hero__lines"></div>
 		<div class="hero__content">
@@ -114,9 +114,9 @@ const handleMouseLeave = () => {
 	background-size: cover;
 	background-position: center;
 	position: relative;
-	padding: 0 10vw;
-	padding-top: 5rem;
+
 	padding-right: 0;
+	padding-bottom: 2rem;
 	display: grid;
 	grid-template-columns: 1fr 2fr;
 	overflow: hidden;
@@ -124,8 +124,10 @@ const handleMouseLeave = () => {
 
 	@media only screen and (max-width: 900px) {
 		grid-template-columns: none;
-		grid-template-rows: 1fr 1fr;
-		padding: 0 5vw;
+		grid-auto-rows: 1fr;
+		padding-bottom: 5rem;
+		padding-right: 5vw;
+		min-height: 887px;
 	}
 	&__obj {
 		position: absolute;
@@ -250,7 +252,7 @@ const handleMouseLeave = () => {
 	}
 
 	&__text {
-		font-size: 1.8rem;
+		font-size: 18px;
 		font-weight: 300;
 		font-family: var(--font-base);
 		opacity: 0;
@@ -261,6 +263,9 @@ const handleMouseLeave = () => {
 		font-weight: 500;
 		line-height: 0.89;
 		animation: fade-rotate 800ms forwards;
+		@media only screen and (max-width: 767px) {
+			font-size: min(45px, 6rem);
+		}
 	}
 	&__content {
 		z-index: 1;
@@ -305,16 +310,6 @@ const handleMouseLeave = () => {
 	}
 	to {
 		transform: translateY(30px);
-	}
-}
-@keyframes fade-rotate {
-	from {
-		opacity: 0;
-		transform: rotateY(-100deg) translate(9rem, 9rem);
-	}
-	to {
-		opacity: 1;
-		transform: rotateY(0) translate(0, 0);
 	}
 }
 @keyframes fade-rotate-2 {

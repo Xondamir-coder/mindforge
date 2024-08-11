@@ -1,39 +1,45 @@
 <template>
-	<main class="container">
+	<main class="container" ref="containerRef">
 		<Header />
 		<Hero />
-		<section></section>
-		<section></section>
+		<About />
+		<History />
+		<section class="fake-section"></section>
 	</main>
 </template>
 
 <script setup>
 import Header from '@/components/Header.vue';
-import Hero from './components/Hero.vue';
-import Lenis from 'lenis';
-const lenis = new Lenis();
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import About from '@/components/About.vue';
+import Hero from '@/components/Hero.vue';
+import { onMounted, ref } from 'vue';
+import History from '@/components/History.vue';
 
-function raf(time) {
-	lenis.raf(time);
-	requestAnimationFrame(raf);
-}
+const containerRef = ref();
 
-requestAnimationFrame(raf);
+onMounted(() => {
+	const observer = new IntersectionObserver(
+		entries => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add('active');
+				} else {
+					entry.target.classList.remove('active');
+				}
+			});
+		},
+		{
+			threshold: 0.3
+		}
+	);
 
-lenis.on('scroll', ScrollTrigger.update);
-
-gsap.ticker.add(time => {
-	lenis.raf(time * 1000);
+	containerRef.value.querySelectorAll('section').forEach(section => observer.observe(section));
 });
-
-gsap.ticker.lagSmoothing(0);
 </script>
 
 <style lang="scss" scoped>
-section {
+.fake-section {
 	height: 100vh;
-	background-color: yellow;
+	background-color: purple;
 }
 </style>
