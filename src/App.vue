@@ -1,19 +1,27 @@
 <template>
 	<main class="container" ref="containerRef">
+		<ScrollThingy />
 		<Header />
 		<Hero />
 		<About />
 		<History />
+		<Services />
+		<Product />
+		<Skills />
 		<section class="fake-section"></section>
 	</main>
 </template>
 
 <script setup>
+import { onMounted, ref } from 'vue';
 import Header from '@/components/Header.vue';
 import About from '@/components/About.vue';
 import Hero from '@/components/Hero.vue';
-import { onMounted, ref } from 'vue';
 import History from '@/components/History.vue';
+import ScrollThingy from '@/components/ScrollThingy.vue';
+import Services from '@/components/Services.vue';
+import Product from '@/components/Product.vue';
+import Skills from './components/Skills.vue';
 
 const containerRef = ref();
 
@@ -29,7 +37,7 @@ onMounted(() => {
 			});
 		},
 		{
-			threshold: 0.3
+			threshold: 0.2
 		}
 	);
 

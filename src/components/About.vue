@@ -1,42 +1,44 @@
 <template>
-	<section ref="aboutRef" class="about section-padding">
+	<div class="container">
 		<button class="scroll" @click="scrollToAbout">
 			<IconMouse />
 		</button>
-		<img
-			ref="imgRef"
-			class="about__ellipse"
-			src="@/assets/images/about-ellipse.webp"
-			alt="ellipse" />
-		<div class="about__left">
-			<div class="about__head">
-				<div class="about__top">
-					<div class="about__icon-container">
-						<IconAward class="about__icon" />
+		<section ref="aboutRef" class="about section-padding">
+			<img
+				ref="imgRef"
+				class="about__ellipse"
+				src="@/assets/images/about-ellipse.webp"
+				alt="ellipse" />
+			<div class="about__left">
+				<div class="about__head">
+					<div class="about__top">
+						<div class="about__icon-container">
+							<IconAward class="about__icon" />
+						</div>
+						<span>Guaranteed and certified</span>
 					</div>
-					<span>Guaranteed and certified</span>
+					<h1 class="about__title">Online learning wherever and whenever.</h1>
+					<button class="about__button">Learn more <span>&rightarrow;</span></button>
 				</div>
-				<h1 class="about__title">Online learning wherever and whenever.</h1>
-				<button class="about__button">Learn more <span>&rightarrow;</span></button>
+				<div class="about__experts">
+					<img src="@/assets/images/random-ppl.webp" alt="randos" />
+					<p>Online courses from <a class="about__link" href="#">experts.</a></p>
+				</div>
 			</div>
-			<div class="about__experts">
-				<img src="@/assets/images/random-ppl.webp" alt="randos" />
-				<p>Online courses from <a class="about__link" href="#">experts.</a></p>
+			<div class="about__right">
+				<div class="about__box" v-for="(content, index) in contents" :key="index">
+					<div class="about__box-num">0{{ index + 1 }}</div>
+					<h2 class="about__box-title">
+						{{ content.title }}
+					</h2>
+					<p class="about__box-text">
+						{{ content.text }}
+					</p>
+					<div class="about__box-divider"></div>
+				</div>
 			</div>
-		</div>
-		<div class="about__right">
-			<div class="about__box" v-for="(content, index) in contents" :key="index">
-				<div class="about__box-num">0{{ index + 1 }}</div>
-				<h2 class="about__box-title">
-					{{ content.title }}
-				</h2>
-				<p class="about__box-text">
-					{{ content.text }}
-				</p>
-				<div class="about__box-divider"></div>
-			</div>
-		</div>
-	</section>
+		</section>
+	</div>
 </template>
 
 <script setup>
@@ -101,12 +103,12 @@ onMounted(() => {
 .about {
 	background-image: url('@/assets/images/about-bg.png');
 	background-repeat: no-repeat;
-	position: relative;
 	display: grid;
 	grid-template-areas: 'left right';
 	grid-auto-columns: 1fr;
 	gap: 15vw;
 	color: var(--dark-gray);
+	overflow: hidden;
 
 	@media only screen and (max-width: 768px) {
 		grid-template-areas:
@@ -199,12 +201,16 @@ onMounted(() => {
 		}
 	}
 	&__right {
-		overflow: hidden;
 		grid-area: right;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		gap: 5rem;
+
+		@media only screen and (max-width: 768px) {
+			padding: 0 2rem;
+			gap: 10rem;
+		}
 	}
 	&__box {
 		position: relative;
@@ -221,11 +227,14 @@ onMounted(() => {
 			align-items: flex-end;
 			text-align: right;
 			transition-delay: 150ms;
+			@media only screen and (max-width: 768px) {
+				align-items: flex-start;
+			}
 			.about__box-num {
 				top: -7rem;
 				right: -4rem;
 				@media only screen and (max-width: 768px) {
-					right: -2rem;
+					right: initial;
 				}
 			}
 		}
@@ -242,9 +251,6 @@ onMounted(() => {
 			position: absolute;
 			top: -7rem;
 			left: -4rem;
-			@media only screen and (max-width: 768px) {
-				left: -2rem;
-			}
 		}
 		&-title {
 			font-size: 20px;
@@ -255,6 +261,11 @@ onMounted(() => {
 			font-size: 17px;
 			color: var(--medium-gray);
 			max-width: 220px;
+
+			@media only screen and (max-width: 768px) {
+				max-width: initial;
+				text-align: left;
+			}
 		}
 	}
 	&__icon {
@@ -302,5 +313,8 @@ onMounted(() => {
 			top: 50%;
 		}
 	}
+}
+.container {
+	position: relative;
 }
 </style>

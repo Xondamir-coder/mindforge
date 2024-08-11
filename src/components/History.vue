@@ -63,7 +63,6 @@ const historyRef = ref();
 onMounted(() => {
 	const handler = entries => {
 		entries.forEach(entry => {
-			console.log(entry.isIntersecting);
 			if (entry.isIntersecting) {
 				entry.target.classList.add('active');
 			} else {
@@ -99,6 +98,7 @@ onMounted(() => {
 			grid-template-areas:
 				'middle left'
 				'middle right';
+			row-gap: 2rem;
 		}
 		& > *:not(.history__box-middle) {
 			transition: opacity 600ms;
