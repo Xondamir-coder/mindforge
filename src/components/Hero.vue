@@ -8,10 +8,7 @@
 				Online courses from the world's leading experts. Join 17 million learners today.
 			</p>
 			<div class="hero__cta">
-				<button class="hero__button">
-					<IconLike />
-					<span class="hero__button-span">Get started</span>
-				</button>
+				<Button label="Get started" />
 				<button class="hero__youtube">
 					<IconYoutube class="hero__youtube-icon--1" />
 					<span class="hero__youtube-span">How it works</span>
@@ -46,6 +43,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { onMounted, ref } from 'vue';
 import IconLike from './icons/IconLike.vue';
 import IconYoutube from './icons/IconYoutube.vue';
+import Button from './Button.vue';
 gsap.registerPlugin(ScrollTrigger);
 
 const stats = [
@@ -182,45 +180,6 @@ const handleMouseLeave = () => {
 			opacity: 0;
 			transform: translateX(10px);
 			&--1 {
-				transition: transform 300ms, opacity 300ms;
-			}
-		}
-	}
-	&__button {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: 1rem;
-		background-color: var(--base-color);
-		color: var(--dark-gray);
-		font-size: 1.7rem;
-		font-weight: 500;
-		padding: 2rem 3rem;
-		border-radius: 100px;
-		font-weight: 600;
-		cursor: pointer;
-		overflow: hidden;
-
-		&:hover {
-			& .hero__button-span {
-				transform: translateY(-200%);
-				&::after {
-					opacity: 1;
-				}
-			}
-		}
-		&-span {
-			transition: transform 300ms, opacity 300ms;
-			position: relative;
-
-			&::after {
-				content: 'Get started';
-				font: inherit;
-				position: absolute;
-				top: 0;
-				left: 0;
-				transform: translateY(200%);
-				opacity: 0;
 				transition: transform 300ms, opacity 300ms;
 			}
 		}

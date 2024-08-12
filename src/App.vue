@@ -10,7 +10,8 @@
 		<Skills />
 		<Words />
 		<Offer />
-		<section class="fake-section"></section>
+		<Cta />
+		<Contacts />
 	</main>
 </template>
 
@@ -26,6 +27,8 @@ import Product from '@/components/Product.vue';
 import Skills from './components/Skills.vue';
 import Words from './components/Words.vue';
 import Offer from './components/Offer.vue';
+import Cta from './components/Cta.vue';
+import Contacts from './components/Contacts.vue';
 
 const containerRef = ref();
 
