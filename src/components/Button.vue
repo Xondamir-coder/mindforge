@@ -1,7 +1,10 @@
 <template>
 	<button class="button">
 		<icon />
-		<span class="button-span">{{ label }}</span>
+		<div class="button__container">
+			<span class="button-span button-span--first">{{ label }}</span>
+			<span class="button-span button-span--last">{{ label }}</span>
+		</div>
 	</button>
 </template>
 
@@ -36,26 +39,27 @@ const props = defineProps({
 	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 
 	&:hover {
-		& .button-span {
+		.button-span--first {
 			transform: translateY(-200%);
-			&::after {
-				opacity: 1;
-			}
+			opacity: 0;
 		}
+		.button-span--last {
+			transform: translateY(0);
+			opacity: 1;
+		}
+	}
+	&__container {
+		position: relative;
 	}
 	&-span {
 		transition: transform 300ms, opacity 300ms;
-		position: relative;
-
-		&::after {
-			content: 'Get started';
-			font: inherit;
+		display: block;
+		&--last {
 			position: absolute;
-			top: 0;
 			left: 0;
+			top: 0;
 			transform: translateY(200%);
 			opacity: 0;
-			transition: transform 300ms, opacity 300ms;
 		}
 	}
 }
