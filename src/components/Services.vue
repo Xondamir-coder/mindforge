@@ -2,8 +2,10 @@
 	<section class="services section-padding">
 		<div class="services__bg"></div>
 		<div class="services__head">
-			<span class="services__label">Services</span>
-			<h1 class="services__title">We offer a variety of services</h1>
+			<span class="services__label">Сервисы</span>
+			<h1 class="services__title">
+				Решения для эффективного онлайн-обучения и автоматизации
+			</h1>
 		</div>
 		<ul class="services__list">
 			<li class="services__item" v-for="service in services" :key="service.text">
@@ -23,37 +25,37 @@ import IconStudy from './icons/IconStudy.vue';
 const services = [
 	{
 		icon: IconStudy,
-		title: 'Service Name',
+		title: 'Интерактивные учебные материалы',
 		text: 'Мы преобразуем учебные материалы в интерактивный онлайн формат, делая обучение более увлекательным и понятным.'
 	},
 	{
 		icon: IconStudy,
-		title: 'Service Name',
+		title: 'Адаптация учебных пособий',
 		text: 'Мы разрабатываем учебные пособия, специально адаптированные для онлайн и гибридных форм обучения, чтобы обеспечить эффективное обучение в любой среде.'
 	},
 	{
 		icon: IconStudy,
-		title: 'Service Name',
+		title: 'Интерактивные лекции',
 		text: 'Мы создаем интерактивные лекции, которые вдохновляют и учат, делая процесс обучения более интересным и запоминающимся.'
 	},
 	{
 		icon: IconStudy,
-		title: 'Service Name',
+		title: 'Авторские онлайн-курсы',
 		text: 'Мы разрабатываем авторские курсы, которые можно легко использовать на сайтах или образовательных платформах, чтобы делиться знаниями с аудиторией.'
 	},
 	{
 		icon: IconStudy,
-		title: 'Service Name',
+		title: 'Автоматизация процессов обучения',
 		text: 'Мы автоматизируем процессы обучения и повышения квалификации, облегчая доступ к непрерывному обучению.'
 	},
 	{
 		icon: IconStudy,
-		title: 'Service Name',
+		title: 'Системы управления обучением (LMS)',
 		text: 'Мы внедряем системы управления обучением (LMS), которые автоматизируют рутинные процессы мониторинга и управления обучением.'
 	},
 	{
 		icon: IconStudy,
-		title: 'Service Name',
+		title: 'Видео-контент для обучения',
 		text: 'Мы снимаем видеоматериалы для уроков, лекций, семинаров и тренингов, чтобы создать качественный и доступный контент для обучения.'
 	}
 ];
@@ -108,6 +110,7 @@ const services = [
 		font-size: 3.9rem;
 		font-weight: 600;
 		line-height: 1.2;
+		max-width: 30ch;
 	}
 	&__list {
 		list-style: none;

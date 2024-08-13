@@ -15,7 +15,7 @@
 				</div>
 				<p>Премиальное обучение</p>
 			</div>
-			<h1 class="skills__title">Предоставляем выдающиеся онлайн-курсы.</h1>
+			<h1 class="skills__title">Что мы предлагаем</h1>
 			<div class="skills__content">
 				<div
 					class="skills__box"
@@ -45,18 +45,28 @@ const imgContainerRef = ref();
 
 const skills = [
 	{
-		title: 'Expert Teachers',
-		desc: 'We employ experienced and knowledgeable teachers who are passionate about teaching.',
+		title: 'Для школ',
+		desc: 'Онлайн-уроки по школьной программе и авторским курсам, курсы по профессиональным навыкам и подготовке к экзаменам, а также система управления обучением (LMS) для эффективного ведения учебного процесса',
 		icon: IconBook
 	},
 	{
-		title: 'Interactive Lessons',
-		desc: 'Our lessons are interactive and engaging. You will participate in activities that will enhance your learning experience.',
+		title: 'Для университетов',
+		desc: 'Онлайн-уроки для дистанционного и гибридного обучения по авторским программам, тесты и экзамены для оценки знаний, дополнительные курсы по профессиональным навыкам, а также LMS для управления образовательным процессом',
 		icon: IconBook
 	},
 	{
-		title: 'Personalized Support',
-		desc: 'Each student receives personalized attention from our dedicated support staff. They will ensure that you get the most out of your learning experience.',
+		title: 'Для учебных центров',
+		desc: 'Онлайн-уроки по авторским программам для дистанционного и гибридного обучения, задания для самостоятельной работы и проверки знаний, а также LMS для эффективного управления процессом обучения',
+		icon: IconBook
+	},
+	{
+		title: 'Для корпоративных клиентов',
+		desc: 'Онлайн-тренинги для подготовки и повышения квалификации персонала, а также LMS для мониторинга и контроля обучения сотрудников',
+		icon: IconBook
+	},
+	{
+		title: 'Для независимых авторов курсов:',
+		desc: 'Разработка онлайн-курсов по авторским программам с возможностью размещения и монетизации собственных курсов на платформе для широкой аудитории',
 		icon: IconBook
 	}
 ];
@@ -135,7 +145,7 @@ const handleMouseLeave = () => {
 	}
 	&__main {
 		padding: 0 4vw;
-		padding-right: 10vw;
+		padding-right: 7vw;
 		max-width: 700px;
 		grid-area: content;
 		display: flex;

@@ -15,14 +15,14 @@
 						<div class="about__icon-container">
 							<IconAward class="about__icon" />
 						</div>
-						<span>Guaranteed and certified</span>
+						<span>Гарантируем и сертифицируем</span>
 					</div>
-					<h1 class="about__title">Online learning wherever and whenever.</h1>
-					<button class="about__button">Learn more <span>&rightarrow;</span></button>
+					<h1 class="about__title">Учитесь онлайн в удобное время</h1>
+					<button class="about__button">Узнать больше <span>&rightarrow;</span></button>
 				</div>
 				<div class="about__experts">
 					<img src="@/assets/images/random-ppl.webp" alt="randos" />
-					<p>Online courses from <a class="about__link" href="#">experts.</a></p>
+					<p>Онлайн-курсы от <a class="about__link" href="#">экспертов.</a></p>
 				</div>
 			</div>
 			<div class="about__right">
@@ -52,16 +52,16 @@ gsap.registerPlugin(ScrollTrigger);
 
 const contents = [
 	{
-		title: 'Flexible schedule',
-		text: 'eLearning allows learners to quickly and more easily complete their training.'
+		title: 'Гибкий график',
+		text: 'Онлайн-обучение позволяет учащимся проходить курсы в удобное время, ускоряя процесс усвоения материала.'
 	},
 	{
-		title: 'Pocket friendly',
-		text: 'eLearning allows learners to quickly and more easily complete their training.'
+		title: 'Доступная стоимость',
+		text: 'Онлайн-обучение позволяет значительно сократить затраты на обучение без потери качества контента.'
 	},
 	{
-		title: 'Expert instructor',
-		text: 'eLearning allows learners to quickly and more easily complete their training.'
+		title: 'Экспертные преподаватели',
+		text: 'Наши курсы разрабатываются профессионалами, чтобы обеспечить высокое качество и актуальность материалов.'
 	}
 ];
 
@@ -260,7 +260,8 @@ onMounted(() => {
 		&-text {
 			font-size: 17px;
 			color: var(--medium-gray);
-			max-width: 220px;
+			max-width: 300px;
+			line-height: 1.5;
 
 			@media only screen and (max-width: 768px) {
 				max-width: initial;

@@ -1,8 +1,8 @@
 <template>
 	<section class="product section-padding">
 		<div class="product__head">
-			<span class="product__label">Products</span>
-			<h1 class="product__title">We offer a variety of products</h1>
+			<span class="product__label">Продукт</span>
+			<h1 class="product__title">Мы предлагаем продукт</h1>
 		</div>
 		<div class="product__images">
 			<img
@@ -12,14 +12,14 @@
 				class="product__image"
 				:src="image"
 				alt="product img" />
-			<button class="product__button" @click="changeSlide('prev')">
+			<button v-if="images.length > 1" class="product__button" @click="changeSlide('prev')">
 				<IconLess class="product__button-icon" />
 			</button>
-			<button class="product__button" @click="changeSlide('next')">
+			<button v-if="images.length > 1" class="product__button" @click="changeSlide('next')">
 				<IconGreater class="product__button-icon" />
 			</button>
 			<ul class="product__nav">
-				<li class="product__nav-item" v-for="i in [0, 1, 2]" :key="i">
+				<li class="product__nav-item" v-for="i in [0]" :key="i">
 					<button
 						class="product__nav-button"
 						:class="{ active: curSlide === i }"
@@ -29,7 +29,7 @@
 		</div>
 		<div class="product__content">
 			<div class="product__box" v-for="(content, i) in contents" :key="content.title">
-				<p class="product__box-desc">{{ i + 1 }}. {{ content.title }}:</p>
+				<p class="product__box-desc">{{ content.title }}:</p>
 				<p class="product__box-desc">{{ content.desc }}</p>
 			</div>
 		</div>
@@ -40,24 +40,17 @@
 import { onMounted, onUnmounted, ref } from 'vue';
 import IconGreater from './icons/IconGreater.vue';
 import IconLess from './icons/IconLess.vue';
-import imgUrl1 from '@/assets/images/product-1.webp';
-import imgUrl2 from '@/assets/images/product-2.webp';
-import imgUrl3 from '@/assets/images/product-3.webp';
+import imgUrl1 from '@/assets/images/product-1.avif';
+// import imgUrl2 from '@/assets/images/product-2.webp';
+// import imgUrl3 from '@/assets/images/product-3.webp';
 
 const curSlide = ref(0);
-const images = [imgUrl1, imgUrl2, imgUrl3];
+// const images = [imgUrl1, imgUrl2, imgUrl3];
+const images = [imgUrl1];
 const contents = [
 	{
-		title: 'Product #1',
-		desc: 'Product #1 description'
-	},
-	{
-		title: 'Product #2',
-		desc: 'Product #2 description'
-	},
-	{
-		title: 'Product #3',
-		desc: 'Product #3 description'
+		title: 'Edulab',
+		desc: 'Система управления обучением для различных организаций в Узбекистане, автоматизирующая процесс обучения и повышающая административную эффективность на единой централизованной платформе.'
 	}
 ];
 
@@ -87,8 +80,13 @@ onUnmounted(() => {
 .product {
 	display: flex;
 	flex-direction: column;
-	gap: 7rem;
+	gap: 3rem;
 	color: var(--dark-gray);
+	&__box {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
 	&.active &__box {
 		opacity: 1;
 		transform: rotateY(0) translate(0, 0);

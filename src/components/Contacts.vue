@@ -77,7 +77,7 @@ const contents = [
 		name: 'subject',
 		desc: 'Как мы можем вам помочь?',
 		icon: IconCopy,
-		title: 'Ваш тема',
+		title: 'Ваша тема',
 		isRequired: false
 	},
 	{

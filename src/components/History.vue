@@ -1,13 +1,12 @@
 <template>
 	<section class="history section-padding" ref="historyRef">
 		<div class="history__head">
-			<p class="history__label">Our story</p>
-			<h1 class="history__title">Delivering 6 years of excellence</h1>
+			<p class="history__label">Наша история</p>
+			<h1 class="history__title">Предоставляем 6 лет верной услуги</h1>
 			<p class="history__text">
-				Mindforge is a young and dynamic owner driven Destination Management Company that
-				opened its doors to the world of tourism in 2010. Along with passion, commitment and
-				discipline, our well-knit team converts its profound knowledge into memorable
-				experiences for every guest.
+				Mindforge — молодая и динамичная компания, создающая обучающий контент с 2018 года.
+				Наша команда превращает свои знания в качественные и запоминающиеся материалы для
+				ваших нужд.
 			</p>
 		</div>
 		<div class="history__content">
@@ -33,31 +32,42 @@ import { onMounted, ref } from 'vue';
 
 const history = [
 	{
-		date: 'Jan 2010',
-		title: 'Opened its doors to the world of tourism',
-		desc: 'Mindforge opened its doors to the world of tourism in 2010. Its passion, dedication, and discipline have allowed it to grow into a dynamic and successful Destination Management Company.'
+		date: '2018',
+		title: 'Основание компании',
+		desc: 'Mindforge начала свою деятельность в 2018 году, сосредоточив усилия на создании качественного обучающего контента. Наша команда с первых дней была полна энтузиазма и приверженности делу.'
 	},
 	{
-		date: 'Jan 2011',
-		title: 'Stabilized the business and gained confidence',
-		desc: 'With a solid foundation, Mindforge gained confidence and stability in its business operations. It continued to refine its services and expand its reach.'
+		date: '2019',
+		title: 'Укрепление бизнеса и уверенность',
+		desc: 'Mindforge стабилизировала свои процессы и обрела уверенность в создании эффективного и востребованного образовательного контента. Мы продолжали развивать наши навыки и расширять спектр услуг.'
 	},
 	{
-		date: 'Jan 2012',
-		title: 'Increased the number of tours and tourists',
-		desc: 'Mindforge successfully increased the number of tours and tourists, cementing its position as a reliable and trustworthy partner in the tourism industry.'
+		date: '2020',
+		title: 'Расширение портфолио проектов',
+		desc: 'Mindforge успешно увеличила количество проектов и заказчиков, закрепив свою репутацию надежного партнера в сфере разработки онлайн-контента.'
 	},
 	{
-		date: 'Jan 2013',
-		title: 'Strengthened the brand and attracted customers',
-		desc: 'The brand was further strengthened, making Mindforge a name synonymous with quality and excellence in the tourism industry. It attracted more customers and built a loyal customer base.'
+		date: '2021',
+		title: 'Укрепление бренда и привлечение клиентов',
+		desc: 'Mindforge укрепила свой бренд, став синонимом качества и инноваций в создании образовательного контента. Мы привлекли новых клиентов и создали лояльную базу пользователей.'
 	},
 	{
-		date: 'Jan 2014',
-		title: 'Introduced new services and products',
-		desc: 'Mindforge continued to innovate and introduce new services and products. It expanded its offerings and provided a wider range of experiences for its customers.'
+		date: '2022',
+		title: 'Внедрение новых услуг и продуктов',
+		desc: 'Mindforge продолжила внедрять новые услуги и продукты, расширяя возможности для создания уникального контента и предоставления разнообразных обучающих решений для клиентов.'
+	},
+	{
+		date: '2023',
+		title: 'Расширение на международные рынки',
+		desc: 'Mindforge вышла на международные рынки, предоставляя свои услуги по созданию онлайн-контента клиентам по всему миру. Наша экспертиза и качество привлекли новых партнеров и проекты.'
+	},
+	{
+		date: '2024',
+		title: 'Инновации и дальнейший рост',
+		desc: 'В 2024 году Mindforge продолжает внедрять инновации в сфере онлайн-образования, расширяя свой портфель и предлагая новые решения для еще большего охвата аудитории.'
 	}
 ];
+
 const historyRef = ref();
 
 onMounted(() => {

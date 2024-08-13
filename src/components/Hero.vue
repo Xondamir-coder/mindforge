@@ -3,9 +3,10 @@
 		<img ref="objRef" class="hero__obj" src="@/assets/images/blue-object.png" alt="blue" />
 		<div class="hero__lines"></div>
 		<div class="hero__content">
-			<h1 class="hero__title">Best online platform for education.</h1>
+			<h1 class="hero__title">Контент для обучения и бизнеса</h1>
 			<p class="hero__text">
-				Online courses from the world's leading experts. Join 17 million learners today.
+				Мы занимаемся разработкой обучающего контента для ВУЗов, школ, учебных центров,
+				корпоративных клиентов и тд.
 			</p>
 			<div class="hero__stats">
 				<div class="hero__stat" v-for="stat in stats" :key="stat.amount">
@@ -37,16 +38,16 @@ gsap.registerPlugin(ScrollTrigger);
 
 const stats = [
 	{
-		amount: 260,
-		name: 'Tutors'
+		amount: 1300,
+		name: 'Интерактивные уроки'
 	},
 	{
-		amount: 5340,
-		name: 'Students'
+		amount: 2000,
+		name: 'Обучающие видео'
 	},
 	{
-		amount: 280,
-		name: 'Courses'
+		amount: 24000,
+		name: 'Потребители'
 	}
 ];
 
@@ -148,6 +149,7 @@ const handleMouseLeave = () => {
 		align-items: center;
 		flex-direction: column;
 		gap: 1rem;
+		text-align: center;
 		&-name {
 			font-size: 3.2rem;
 		}
