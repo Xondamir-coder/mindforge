@@ -1,6 +1,6 @@
 <template>
 	<section class="contacts section-padding">
-		<h1 class="contacts__title">How we can help you?</h1>
+		<h1 class="contacts__title">Как мы можем помочь?</h1>
 		<form class="form" @submit.prevent="submitForm">
 			<div class="form__container" v-for="content in contents" :key="content.name">
 				<h2 class="form__label">{{ content.title }}</h2>
@@ -27,12 +27,12 @@
 		</form>
 		<div class="contacts__footer">
 			<p>
-				We are committed to protecting your privacy. We will never collect information about
-				you without your explicit consent.
+				Мы принципиально привязываемся к защите Вашей конфиденциальности. Мы никогда не
+				собираем информацию о вас без вашего явного согласия.
 			</p>
 			<Button
 				@click="submitForm"
-				label="Send message"
+				label="Отправить"
 				:icon="IconSend"
 				class="contacts__button" />
 		</div>
@@ -54,37 +54,37 @@ import Button from './Button.vue';
 const contents = [
 	{
 		name: 'name',
-		desc: "What's your good name?",
+		desc: 'Какое ваше хорошее имя?',
 		icon: IconSmile,
-		title: 'Your good name*',
+		title: 'Ваше хорошее имя*',
 		isRequired: true
 	},
 	{
 		name: 'email',
-		desc: 'Enter your email address',
+		desc: 'Введите ваш адрес электронной почты',
 		icon: IconMail,
-		title: 'Your email address*',
+		title: 'Ваш адрес электронной почты*',
 		isRequired: true
 	},
 	{
 		name: 'tel',
-		desc: 'Enter your phone number',
+		desc: 'Введите ваш номер телефона',
 		icon: IconCall,
-		title: 'Your phone number*',
+		title: 'Ваш номер телефона*',
 		isRequired: true
 	},
 	{
 		name: 'subject',
-		desc: 'How can we help you?',
+		desc: 'Как мы можем вам помочь?',
 		icon: IconCopy,
-		title: 'Your subject',
+		title: 'Ваш тема',
 		isRequired: false
 	},
 	{
 		name: 'message',
-		desc: 'Describe your message',
+		desc: 'Опишите ваше сообщение',
 		icon: IconMessage,
-		title: 'Your message',
+		title: 'Ваше сообщение',
 		isRequired: false
 	}
 ];

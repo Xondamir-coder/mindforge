@@ -4,8 +4,8 @@
 			<div class="footer__lines"></div>
 			<img class="footer__obj" src="@/assets/images/offer-obj.png" />
 			<div class="footer__banner">
-				<h1 class="footer__banner-title">Admission is open for the next year batch</h1>
-				<Button label="Get started now" class="footer__banner-button" />
+				<h1 class="footer__banner-title">Актуально открыт набор на следующий курс</h1>
+				<Button label="Начать обучение" class="footer__banner-button" />
 				<a href="tel:+1 800 222 000" class="footer__banner-call">
 					<IconCall class="footer__banner-icon" />
 					<span>+1 800 222 000</span>
@@ -14,9 +14,7 @@
 			<div class="footer__content">
 				<div class="footer__box">
 					<Logo class="footer__logo" />
-					<p class="footer__text">
-						We are providing high-quality courses for about ten years.
-					</p>
+					<p class="footer__text">Предоставляем качественные курсы с 10 лет назад.</p>
 					<ul class="footer__links">
 						<li class="footer__links-item">
 							<a href="#">Fb.</a>
@@ -33,46 +31,23 @@
 					</ul>
 				</div>
 				<div class="footer__box">
-					<h2 class="footer__title">Need help?</h2>
+					<h2 class="footer__title">Нужна помощь?</h2>
 					<div>
-						<p class="footer__text">Call us directly?</p>
+						<p class="footer__text">Позвонить нам?</p>
 						<a href="tel:+1 800 222 000" class="footer__a footer__a--tel"
 							>+1 800 222 000</a
 						>
 					</div>
 					<div>
-						<p class="footer__text">Need support?</p>
+						<p class="footer__text">Нужна поддержка?</p>
 						<a class="footer__a" href="mailto:help@domain.com">help@domain.com</a>
-					</div>
-				</div>
-				<div class="footer__box">
-					<h2 class="footer__title">Subscribe to our newsletter</h2>
-					<form class="footer__form" @submit.prevent="submitMail">
-						<input
-							required
-							v-model="mail"
-							type="email"
-							name="mail"
-							class="footer__input"
-							placeholder="Enter your email ..." />
-						<button class="footer__button">
-							<span>Submit</span>
-							<span>&rightarrow;</span>
-						</button>
-						<p :class="{ sent: isMailSent }" class="footer__sent">
-							Thank you for subscribing!
-						</p>
-					</form>
-					<div>
-						<IconHandshake class="footer__handshake" />
-						<p>Protecting your privacy</p>
 					</div>
 				</div>
 			</div>
 			<div class="footer__divider"></div>
 			<div class="footer__copyright">
 				<p>
-					&copy; {{ new Date().getFullYear() }} Mindforge is Proudly Developed by
+					&copy; {{ new Date().getFullYear() }} Mindforge разработано с удовольствием
 					<a href="http://spacelabs.uz" target="_blank" rel="noopener noreferrer"
 						>SpaceLabs</a
 					>
@@ -83,27 +58,14 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
 import Button from './Button.vue';
 import IconCall from './icons/IconCall.vue';
 import Logo from './icons/Logo.vue';
-import IconHandshake from './icons/IconHandshake.vue';
-
-const mail = ref();
-const isMailSent = ref(false);
-const submitMail = () => {
-	console.log(mail.value);
-	mail.value = '';
-	isMailSent.value = true;
-	setTimeout(() => {
-		isMailSent.value = false;
-	}, 2000);
-};
 </script>
 
 <style lang="scss" scoped>
 .footer {
-	background-image: linear-gradient(to right bottom, #313e3b, #2e3b38, #2c3835, #293532, #27322f);
+	background-image: linear-gradient(to right bottom, #246294, #184e77, #123d5c, #0f2d44, #0b1f30);
 	position: relative;
 	display: flex;
 	flex-direction: column;
@@ -115,73 +77,7 @@ const submitMail = () => {
 	@media screen and (max-width: 550px) {
 		padding-top: 5rem;
 	}
-	&__form + div {
-		display: flex;
-		align-items: center;
-		gap: 1rem;
-	}
-	&__sent {
-		position: absolute;
-		bottom: -6rem;
-		left: 0;
-		background: #fff;
-		padding: 1.5rem 2rem;
-		width: 100%;
-		border-radius: 4px;
-		color: #5cb85c;
-		transform: translateY(-15px);
-		opacity: 0;
-		transition: transform 0.5s, opacity 0.5s;
-		&.sent {
-			transform: translateY(0);
-			opacity: 1;
-		}
-	}
-	&__form {
-		background-color: var(--dark-gray);
-		padding: 1.5rem 2rem;
-		display: flex;
-		gap: 3rem;
-		position: relative;
-		border: 1px solid var(--medium-gray);
-		border-radius: 4px;
-		transition: border-color 300ms;
-		margin: 1rem 0;
-		max-width: 80%;
-		&:has(input:user-invalid) {
-			border-color: #dc3545;
-		}
-	}
-	&__input {
-		background-color: transparent;
-		border: none;
-		color: #fff;
-		font: inherit;
-		font-size: 15px;
-		outline: none;
-		width: 100%;
-	}
-	&__button {
-		background-color: transparent;
-		border: none;
-		color: #fff;
-		font-size: 15px;
-		cursor: pointer;
-		transition: color 300ms;
-		display: flex;
-		gap: 10px;
 
-		& > span:last-of-type {
-			transition: transform 300ms;
-		}
-
-		&:hover {
-			color: var(--base-color);
-			& > span:last-of-type {
-				transform: translateX(5px);
-			}
-		}
-	}
 	&__copyright {
 		display: flex;
 		justify-content: center;
@@ -190,7 +86,7 @@ const submitMail = () => {
 		transform: translateY(2rem);
 		opacity: 0;
 		transition: transform 300ms, opacity 300ms;
-		transition-delay: 1.5s;
+		transition-delay: 800ms;
 		a {
 			color: #fff;
 			font-weight: 500;

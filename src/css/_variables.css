@@ -1,8 +1,12 @@
 :root {
-	--base-color: #d5d52b;
+	--base-color: #f8e16c;
+	--blue-light: #73b3e7;
+	--blue-very-light: #b9d9f3;
+	--blue: #154c79;
+	--blue-dark: #0f3757;
 	--dark-gray: #313e3b;
 	--medium-gray: #828c8a;
-	--yellow: #d5d52c;
+	--yellow: #f8e16c;
 	--extra-medium-gray: #e4e4e4;
 
 	--font-alt: 'Space Grotesk', sans-serif;

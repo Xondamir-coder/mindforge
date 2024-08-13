@@ -124,7 +124,7 @@ onMounted(() => {
 <style lang="scss" scoped>
 .offer {
 	color: #fff;
-	background-image: linear-gradient(to right bottom, #313e3b, #2e3b38, #2c3835, #293532, #27322f);
+	background-image: linear-gradient(to right bottom, #154c79, #0f3757, #0d2c43, #0b1e31, #091227);
 	position: relative;
 	display: grid;
 	grid-auto-columns: 1fr 1.5fr;

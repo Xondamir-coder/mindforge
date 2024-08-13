@@ -147,7 +147,7 @@ onUnmounted(() => {
 		position: absolute;
 		background-color: transparent;
 		border: none;
-		background-color: #e1f6ef;
+		background-color: var(--blue-very-light);
 		width: 6.5rem;
 		height: 6.5rem;
 		border-radius: 13px;
@@ -172,7 +172,7 @@ onUnmounted(() => {
 			}
 		}
 		&-icon {
-			fill: #559974;
+			fill: var(--blue);
 			width: 40%;
 			height: 40%;
 			transition: transform 300ms;
@@ -211,8 +211,8 @@ onUnmounted(() => {
 	&__label {
 		font-size: 14px;
 		font-weight: 600;
-		background-color: #e1f6ef;
-		color: #529774;
+		background-color: var(--blue-light);
+		color: var(--blue-dark);
 		padding: 0.7rem 2rem;
 		border-radius: 200px;
 	}

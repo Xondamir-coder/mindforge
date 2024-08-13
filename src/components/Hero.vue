@@ -1,20 +1,12 @@
 <template>
 	<section class="hero section-padding">
-		<img ref="objRef" class="hero__obj" src="@/assets/images/green-object.png" alt="green" />
+		<img ref="objRef" class="hero__obj" src="@/assets/images/blue-object.png" alt="blue" />
 		<div class="hero__lines"></div>
 		<div class="hero__content">
 			<h1 class="hero__title">Best online platform for education.</h1>
 			<p class="hero__text">
 				Online courses from the world's leading experts. Join 17 million learners today.
 			</p>
-			<div class="hero__cta">
-				<Button label="Get started" />
-				<button class="hero__youtube">
-					<IconYoutube class="hero__youtube-icon--1" />
-					<span class="hero__youtube-span">How it works</span>
-					<IconYoutube class="hero__youtube-icon" />
-				</button>
-			</div>
 			<div class="hero__stats">
 				<div class="hero__stat" v-for="stat in stats" :key="stat.amount">
 					<h2 class="hero__stat-name">{{ stat.amount }}+</h2>
@@ -41,9 +33,6 @@
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { onMounted, ref } from 'vue';
-import IconLike from './icons/IconLike.vue';
-import IconYoutube from './icons/IconYoutube.vue';
-import Button from './Button.vue';
 gsap.registerPlugin(ScrollTrigger);
 
 const stats = [
@@ -107,7 +96,7 @@ const handleMouseLeave = () => {
 <style lang="scss" scoped>
 .hero {
 	min-height: 100vh;
-	background-image: url('@/assets/images/hero-bg.jpg');
+	background-image: linear-gradient(to right bottom, var(--blue), #061f35);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -146,44 +135,6 @@ const handleMouseLeave = () => {
 		cursor: pointer;
 		font-family: var(--font-base);
 	}
-	&__cta {
-		display: flex;
-		justify-content: center;
-		gap: 2rem;
-		opacity: 0;
-		animation: fade-rotate 800ms forwards 400ms;
-	}
-	&__youtube {
-		background-color: transparent;
-		color: #fff;
-		display: flex;
-		align-items: center;
-		gap: 5px;
-		&:hover {
-			& .hero__youtube-span {
-				transform: translateX(-10px);
-			}
-			& .hero__youtube-icon {
-				opacity: 1;
-				transform: translateX(-10px);
-			}
-			& .hero__youtube-icon--1 {
-				opacity: 0;
-				transform: translateX(-10px);
-			}
-		}
-		&-span {
-			transition: transform 300ms;
-		}
-		&-icon {
-			transition: transform 300ms, opacity 300ms;
-			opacity: 0;
-			transform: translateX(10px);
-			&--1 {
-				transition: transform 300ms, opacity 300ms;
-			}
-		}
-	}
 	&__stats {
 		display: flex;
 		justify-content: space-between;
@@ -206,7 +157,7 @@ const handleMouseLeave = () => {
 		}
 		&-divider {
 			align-self: stretch;
-			border-top: 1px solid var(--base-color);
+			border-top: 1px solid var(--yellow);
 		}
 	}
 

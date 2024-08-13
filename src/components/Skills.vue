@@ -5,17 +5,17 @@
 			class="skills__images"
 			@mousemove="handleMouseMove"
 			@mouseleave="handleMouseLeave">
-			<img class="skills__image" src="@/assets/images/girl.webp" alt="chick" />
-			<img class="skills__image" src="@/assets/images/green-object.webp" alt="green object" />
+			<img class="skills__image" src="@/assets/images/girl.webp" alt="девочка" />
+			<img class="skills__image" src="@/assets/images/blue-object.webp" alt="синяя вещь" />
 		</div>
 		<div class="skills__main">
 			<div class="skills__head">
 				<div class="skills__icon-container">
 					<IconBriefcase class="skills__icon" />
 				</div>
-				<p>Premium learning experience</p>
+				<p>Премиальное обучение</p>
 			</div>
-			<h1 class="skills__title">Providing amazing online courses.</h1>
+			<h1 class="skills__title">Предоставляем выдающиеся онлайн-курсы.</h1>
 			<div class="skills__content">
 				<div
 					class="skills__box"

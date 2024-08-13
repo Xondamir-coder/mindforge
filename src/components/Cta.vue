@@ -3,11 +3,11 @@
 		<div class="cta__links">
 			<div class="cta__link">
 				<IconMail />
-				<p>Looking for help? <a href="#">Contact us today</a></p>
+				<p>Ищете помощь? <a href="#">Напишите нам сегодня</a></p>
 			</div>
 			<div class="cta__link">
 				<IconLike class="cta__icon" />
-				<p>Keep in touch. <a href="#">Like us on Facebook</a></p>
+				<p>Оставайтесь на связи. <a href="#">Подпишитесь на нас в Facebook</a></p>
 			</div>
 		</div>
 	</section>

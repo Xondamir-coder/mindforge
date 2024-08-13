@@ -99,8 +99,8 @@ const services = [
 	&__label {
 		font-size: 14px;
 		font-weight: 600;
-		background-color: #e1f6ef;
-		color: #529774;
+		background-color: var(--blue-light);
+		color: var(--blue-dark);
 		padding: 0.7rem 2rem;
 		border-radius: 200px;
 	}
@@ -159,11 +159,11 @@ const services = [
 	&__icon {
 		width: 50%;
 		height: 50%;
-		color: #77b399;
+		color: var(--blue-dark);
 		&-container {
 			width: 8.6rem;
 			height: 8.6rem;
-			background-color: #f0fbf7;
+			background-color: var(--blue-light);
 			border-radius: 50%;
 			display: grid;
 			place-items: center;

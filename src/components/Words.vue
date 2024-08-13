@@ -1,7 +1,7 @@
 <template>
 	<section class="words">
-		<h1 class="words__words">Remember I am the strongest frontend developer</h1>
-		<h1 class="words__title">Online learning wherever and whenever.</h1>
+		<h1 class="words__words">Вспоминая, что я сильнейший фронтенд-разработчик</h1>
+		<h1 class="words__title">Онлайн-обучение везде и в любое время.</h1>
 	</section>
 </template>
 
