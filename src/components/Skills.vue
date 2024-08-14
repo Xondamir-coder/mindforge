@@ -6,6 +6,7 @@
 			@mousemove="handleMouseMove"
 			@mouseleave="handleMouseLeave">
 			<img class="skills__image" src="@/assets/images/girl.webp" alt="девочка" />
+			<Circle class="skills__circle yellow" />
 		</div>
 		<div class="skills__main">
 			<div class="skills__head">
@@ -38,6 +39,7 @@ import { ref } from 'vue';
 import IconBook from './icons/IconBook.vue';
 import IconBriefcase from './icons/IconBriefcase.vue';
 import gsap from 'gsap';
+import Circle from './Circle.vue';
 
 const activeItem = ref(0);
 const imgContainerRef = ref();
@@ -157,6 +159,15 @@ const handleMouseLeave = () => {
 		letter-spacing: -3px;
 		font-weight: 600;
 		transition-delay: 200ms;
+	}
+	&__circle {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		inset: 0;
+		top: -10%;
+		z-index: -1;
+		animation: pulsate 3s ease-in-out infinite alternate;
 	}
 	&__box {
 		cursor: pointer;

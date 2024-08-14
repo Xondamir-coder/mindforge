@@ -9,7 +9,7 @@
 				</div>
 				<span>Мы делаем для всех</span>
 			</div>
-			<h1 class="offer__title">Наши предложения для-</h1>
+			<h1 class="offer__title">Наши предложения для_</h1>
 			<p class="offer__text">
 				Создавайте и монетизируйте онлайн-курсы с возможностью контроля обучения и повышения
 				квалификации
@@ -39,7 +39,7 @@
 					}">
 					<img class="offer__box-img" :src="content.img" alt="img" />
 					<div class="offer__box-content">
-						<h3 class="offer__box-name">-{{ content.for }}</h3>
+						<h3 class="offer__box-name">_{{ content.for }}</h3>
 						<p class="offer__box-text">{{ content.text }}</p>
 					</div>
 				</div>

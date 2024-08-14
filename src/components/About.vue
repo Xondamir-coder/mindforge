@@ -2,11 +2,8 @@
 	<div class="container">
 		<ScrollHere @click="scrollToAbout" />
 		<section ref="aboutRef" class="about section-padding">
-			<img
-				ref="imgRef"
-				class="about__ellipse"
-				src="@/assets/images/about-ellipse.webp"
-				alt="ellipse" />
+			<Rectangle class="about__rectangle" />
+			<Circle class="about__circle" />
 			<div class="about__left">
 				<div class="about__head">
 					<div class="about__top">
@@ -17,6 +14,7 @@
 					</div>
 					<h1 class="about__title">Учитесь онлайн в удобное время</h1>
 				</div>
+				<Iron class="about__iron" />
 			</div>
 			<div class="about__right">
 				<div class="about__box" v-for="(content, index) in contents" :key="index">
@@ -41,6 +39,9 @@ import IconAward from './icons/IconAward.vue';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import ScrollHere from './ScrollHere.vue';
+import Rectangle from './Rectangle.vue';
+import Circle from './Circle.vue';
+import Iron from './Iron.vue';
 gsap.registerPlugin(ScrollTrigger);
 
 const contents = [
@@ -58,7 +59,6 @@ const contents = [
 	}
 ];
 
-const imgRef = ref();
 const aboutRef = ref();
 
 const scrollToAbout = () => {
@@ -68,11 +68,41 @@ const scrollToAbout = () => {
 };
 
 onMounted(() => {
-	gsap.to(imgRef.value, {
-		y: -200,
+	gsap.to('.about__rectangle', {
+		y: '100%',
+		rotate: 360,
 		scrollTrigger: {
 			trigger: '.about',
 			start: 'top top',
+			scrub: 1
+		}
+	});
+	gsap.from('.about__circle', {
+		y: '-100%',
+		rotateX: 360,
+		opacity: 0,
+		scrollTrigger: {
+			trigger: '.about',
+			start: 'top top',
+			scrub: 1
+		}
+	});
+	gsap.from(document.getElementById('hammer'), {
+		opacity: 0,
+		rotate: -60,
+		scrollTrigger: {
+			trigger: '.about',
+			start: 'top top',
+			end: 'center+=100 center',
+			scrub: 1
+		}
+	});
+	gsap.from('.about__iron', {
+		opacity: 0,
+		scrollTrigger: {
+			trigger: '.about',
+			start: 'top top',
+			end: 'center+=100 center',
 			scrub: 1
 		}
 	});
@@ -81,8 +111,6 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 .about {
-	background-image: url('@/assets/images/about-bg.png');
-	background-repeat: no-repeat;
 	display: grid;
 	grid-template-areas: 'left right';
 	grid-auto-columns: 1fr;
@@ -94,6 +122,18 @@ onMounted(() => {
 		grid-template-areas:
 			'left'
 			'right';
+	}
+
+	&__iron {
+		width: 100%;
+		height: 100%;
+	}
+	&__circle {
+		position: absolute;
+		top: 60%;
+		right: 0;
+		width: 30rem;
+		height: 30rem;
 	}
 	&.active {
 		.about__box {
@@ -108,6 +148,13 @@ onMounted(() => {
 			opacity: 1;
 			transform: rotateY(0) translate(0, 0);
 		}
+	}
+	&__rectangle {
+		position: absolute;
+		inset: 0;
+		width: 20rem;
+		left: -10rem;
+		opacity: 1;
 	}
 	&__top {
 		display: flex;

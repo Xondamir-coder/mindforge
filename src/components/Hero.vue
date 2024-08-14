@@ -1,7 +1,17 @@
 <template>
 	<section class="hero section-padding">
-		<img ref="objRef" class="hero__obj" src="@/assets/images/pattern.webp" alt="blue" />
-		<!-- <div class="hero__lines"></div> -->
+		<div class="hero__svg-container">
+			<Circle class="hero__svg hero__svg-1" />
+			<Circle class="hero__svg hero__svg-2" />
+			<Rectangle class="hero__svg hero__svg-3" />
+			<Rectangle class="hero__svg hero__svg-4" />
+			<Triangle class="hero__svg hero__svg-5" />
+			<Triangle class="hero__svg hero__svg-6" />
+			<Circle class="hero__svg hero__svg-7" />
+			<Rectangle class="hero__svg hero__svg-8" />
+			<Triangle class="hero__svg hero__svg-9" />
+		</div>
+		<div class="hero__lines"></div>
 		<div class="hero__content">
 			<h1 class="hero__title">Создаем контент для обучения</h1>
 			<p class="hero__text">
@@ -22,6 +32,7 @@
 			@mousemove="handleMouseMove"
 			@mouseleave="handleMouseLeave">
 			<div class="hero__images" ref="imgContainerRef">
+				<Circle class="hero__circle" />
 				<img src="@/assets/images/guy.webp" alt="hero guy" />
 			</div>
 		</div>
@@ -31,8 +42,11 @@
 <script setup>
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { onMounted, ref } from 'vue';
+import { ref } from 'vue';
 gsap.registerPlugin(ScrollTrigger);
+import Circle from '@/components/Circle.vue';
+import Rectangle from './Rectangle.vue';
+import Triangle from './Triangle.vue';
 
 const stats = [
 	{
@@ -50,22 +64,6 @@ const stats = [
 ];
 
 const imgContainerRef = ref();
-const objRef = ref();
-
-onMounted(() => {
-	gsap.to(objRef.value, {
-		rotate: 45,
-		scale: 0.4
-	});
-	gsap.to(objRef.value, {
-		y: 200,
-		scrollTrigger: {
-			trigger: '.hero',
-			scrub: 1,
-			start: 'top top'
-		}
-	});
-});
 
 const handleMouseMove = e => {
 	const rect = imgContainerRef.value.getBoundingClientRect();
@@ -110,9 +108,31 @@ const handleMouseLeave = () => {
 	grid-template-columns: repeat(2, 1fr);
 	gap: max(15vw, 5rem);
 
+	&__svg {
+		position: absolute;
+		width: 3rem;
+		height: 3rem;
+		animation: travel 10s infinite linear;
+		&-container {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			display: grid;
+			place-items: center;
+		}
+	}
+
 	@media only screen and (max-width: 900px) {
 		grid-template-columns: none;
 		grid-auto-rows: 1fr;
+	}
+	&__circle {
+		position: absolute;
+		inset: 0;
+		z-index: 1;
+		animation: pulsate 1.5s infinite linear alternate;
+		width: 100%;
+		height: 100%;
 	}
 	&__obj {
 		position: absolute;
@@ -209,7 +229,9 @@ const handleMouseLeave = () => {
 		img {
 			width: 100%;
 			height: 100%;
-			object-fit: cover;
+			object-fit: contain;
+			position: relative;
+			z-index: 2;
 		}
 	}
 }
@@ -230,6 +252,37 @@ const handleMouseLeave = () => {
 	to {
 		opacity: 0.5;
 		transform: rotateY(0) translate(0, 0);
+	}
+}
+
+@function generate-translate($index) {
+	$x: random(160) - 80; // Generates a random number between -80 and 80 for vw
+	$y: random(120) - 60; // Generates a random number between -60 and 60 for vh
+	@return translate(#{$x}vw, #{$y}vh);
+}
+
+@for $i from 1 through 9 {
+	@keyframes wander#{$i} {
+		0% {
+			transform: translate(0, 0);
+		}
+		25% {
+			transform: generate-translate($i);
+		}
+		50% {
+			transform: generate-translate($i);
+		}
+		75% {
+			transform: generate-translate($i);
+		}
+		100% {
+			transform: translate(0, 0);
+		}
+	}
+
+	.hero__svg-#{$i} {
+		position: absolute;
+		animation: wander#{$i} #{20 + ($i * 2)}s ease-in-out infinite;
 	}
 }
 </style>

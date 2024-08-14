@@ -4,6 +4,11 @@
 			<div class="footer__lines"></div>
 			<img class="footer__obj" src="@/assets/images/offer-obj.png" />
 			<div class="footer__banner">
+				<div class="footer__banner-svgs">
+					<Circle class="footer__circle" />
+					<Rectangle class="footer__rectangle" />
+					<Triangle class="footer__triangle" />
+				</div>
 				<IconLike />
 				<h1 class="footer__banner-title">
 					Оставайтесь на связи. Подпишитесь на нас в <a href="#">Facebook</a>
@@ -47,7 +52,7 @@
 				<p>
 					&copy; {{ new Date().getFullYear() }} Mindforge. Разработано
 					<a href="http://spacelabs.uz" target="_blank" rel="noopener noreferrer"
-						>SpaceLabs</a
+						>Space Labs</a
 					>
 				</p>
 			</div>
@@ -56,8 +61,11 @@
 </template>
 
 <script setup>
+import Circle from './Circle.vue';
 import IconLike from './icons/IconLike.vue';
 import Logo from './icons/Logo.vue';
+import Rectangle from './Rectangle.vue';
+import Triangle from './Triangle.vue';
 </script>
 
 <style lang="scss" scoped>
@@ -89,6 +97,7 @@ import Logo from './icons/Logo.vue';
 			color: #fff;
 			font-weight: 500;
 			transition: color 300ms;
+			text-decoration: none;
 			&:hover {
 				color: var(--base-color);
 			}
@@ -126,6 +135,7 @@ import Logo from './icons/Logo.vue';
 	& > * {
 		z-index: 1;
 	}
+
 	&__banner {
 		position: absolute;
 		left: 50%;
@@ -133,21 +143,37 @@ import Logo from './icons/Logo.vue';
 		transform: translate(-50%, -50%);
 		z-index: 10;
 		width: 80%;
-		background-color: var(--base-color);
+		background-color: #000;
 		display: flex;
 		align-items: center;
 		gap: 1.5rem;
 		padding: 3.6rem min(6vw, 6rem);
 		border-radius: 8px;
-		background-image: url('@/assets/images/cta-bg.webp');
-		background-repeat: no-repeat;
 		flex-wrap: wrap;
 		text-align: center;
 		justify-content: center;
-		color: var(--dark-gray);
+		color: #fff;
+		position: relative;
+		overflow: hidden;
 
+		&-svgs {
+			position: absolute;
+			inset: 0;
+			display: flex;
+			align-items: center;
+			height: 100%;
+			width: 100%;
+			z-index: -1;
+			opacity: 0.3;
+
+			& > * {
+				width: 100%;
+			}
+		}
 		@media screen and (max-width: 550px) {
-			position: static;
+			position: relative;
+			left: 0;
+			top: 0;
 			transform: none;
 			width: 100%;
 			text-align: center;
@@ -162,7 +188,7 @@ import Logo from './icons/Logo.vue';
 			font-weight: 800;
 			transition: color 300ms;
 			&:hover {
-				color: #fff;
+				color: var(--base-color);
 			}
 		}
 		&-button {
@@ -181,6 +207,18 @@ import Logo from './icons/Logo.vue';
 			width: 1.7rem;
 			height: 1.7rem;
 		}
+	}
+	&__circle {
+		transform: translateX(-25%);
+		animation: rotateY 10s infinite alternate;
+	}
+	&__rectangle {
+		transform: rotate(44deg);
+		animation: rotate 15s infinite alternate;
+	}
+	&__triangle {
+		transform: rotate(-45deg);
+		animation: rotate-reverse 20s infinite alternate;
 	}
 	&__box {
 		display: flex;
@@ -255,5 +293,29 @@ import Logo from './icons/Logo.vue';
 .section.active .footer__copyright {
 	opacity: 1;
 	transform: translateY(0);
+}
+@keyframes rotate {
+	0% {
+		transform: rotate(0);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+@keyframes rotate-reverse {
+	0% {
+		transform: rotate(0);
+	}
+	100% {
+		transform: rotate(-360deg);
+	}
+}
+@keyframes rotateY {
+	0% {
+		transform: rotateY(0);
+	}
+	100% {
+		transform: rotateY(360deg);
+	}
 }
 </style>
