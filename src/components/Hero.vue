@@ -1,12 +1,11 @@
 <template>
 	<section class="hero section-padding">
-		<img ref="objRef" class="hero__obj" src="@/assets/images/blue-object.png" alt="blue" />
+		<img ref="objRef" class="hero__obj" src="@/assets/images/pattern.webp" alt="blue" />
 		<div class="hero__lines"></div>
 		<div class="hero__content">
-			<h1 class="hero__title">Контент для обучения и бизнеса</h1>
+			<h1 class="hero__title">Создаем контент для обучения</h1>
 			<p class="hero__text">
-				Мы занимаемся разработкой обучающего контента для ВУЗов, школ, учебных центров,
-				корпоративных клиентов и тд.
+				Разработка обучающего контента для ВУЗов, школ, учебных центров, и для бизнесов
 			</p>
 			<div class="hero__stats">
 				<div class="hero__stat" v-for="stat in stats" :key="stat.amount">
@@ -23,7 +22,7 @@
 			@mousemove="handleMouseMove"
 			@mouseleave="handleMouseLeave">
 			<div class="hero__images" ref="imgContainerRef">
-				<img src="@/assets/images/hero-guy.webp" alt="hero guy" />
+				<img src="@/assets/images/guy.webp" alt="hero guy" />
 				<img src="@/assets/images/yellow-object.webp" alt="yeellow thingy" />
 			</div>
 		</div>
@@ -55,6 +54,10 @@ const imgContainerRef = ref();
 const objRef = ref();
 
 onMounted(() => {
+	gsap.to(objRef.value, {
+		rotate: 45,
+		scale: 0.6
+	});
 	gsap.to(objRef.value, {
 		y: 200,
 		scrollTrigger: {
@@ -119,8 +122,8 @@ const handleMouseLeave = () => {
 	}
 	&__obj {
 		position: absolute;
-		top: 15rem;
-		left: -10rem;
+		top: -50%;
+		left: -20rem;
 	}
 	&__lines {
 		position: absolute;
@@ -198,6 +201,7 @@ const handleMouseLeave = () => {
 		width: 100%;
 		height: 100%;
 		max-width: 700px;
+
 		&-container {
 			display: flex;
 			justify-content: center;
@@ -208,7 +212,7 @@ const handleMouseLeave = () => {
 			inset: 0;
 			width: 100%;
 			height: 100%;
-			object-fit: cover;
+			object-fit: contain;
 			&:last-child {
 				animation: up-down 4s linear infinite alternate;
 			}

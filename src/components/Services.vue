@@ -20,7 +20,13 @@
 </template>
 
 <script setup>
+import IconAdaptation from './icons/IconAdaptation.vue';
 import IconStudy from './icons/IconStudy.vue';
+import IconInteractive from './icons/IconInteractive.vue';
+import IconAuthor from './icons/IconAuthor.vue';
+import IconAutomation from './icons/IconAutomation.vue';
+import IconSystem from './icons/IconSystem.vue';
+import IconVideo from './icons/IconVideo.vue';
 
 const services = [
 	{
@@ -29,32 +35,32 @@ const services = [
 		text: 'Мы преобразуем учебные материалы в интерактивный онлайн формат, делая обучение более увлекательным и понятным.'
 	},
 	{
-		icon: IconStudy,
+		icon: IconAdaptation,
 		title: 'Адаптация учебных пособий',
 		text: 'Мы разрабатываем учебные пособия, специально адаптированные для онлайн и гибридных форм обучения, чтобы обеспечить эффективное обучение в любой среде.'
 	},
 	{
-		icon: IconStudy,
+		icon: IconInteractive,
 		title: 'Интерактивные лекции',
 		text: 'Мы создаем интерактивные лекции, которые вдохновляют и учат, делая процесс обучения более интересным и запоминающимся.'
 	},
 	{
-		icon: IconStudy,
+		icon: IconAuthor,
 		title: 'Авторские онлайн-курсы',
 		text: 'Мы разрабатываем авторские курсы, которые можно легко использовать на сайтах или образовательных платформах, чтобы делиться знаниями с аудиторией.'
 	},
 	{
-		icon: IconStudy,
+		icon: IconAutomation,
 		title: 'Автоматизация процессов обучения',
 		text: 'Мы автоматизируем процессы обучения и повышения квалификации, облегчая доступ к непрерывному обучению.'
 	},
 	{
-		icon: IconStudy,
+		icon: IconSystem,
 		title: 'Системы управления обучением (LMS)',
 		text: 'Мы внедряем системы управления обучением (LMS), которые автоматизируют рутинные процессы мониторинга и управления обучением.'
 	},
 	{
-		icon: IconStudy,
+		icon: IconVideo,
 		title: 'Видео-контент для обучения',
 		text: 'Мы снимаем видеоматериалы для уроков, лекций, семинаров и тренингов, чтобы создать качественный и доступный контент для обучения.'
 	}

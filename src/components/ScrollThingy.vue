@@ -17,9 +17,7 @@ gsap.registerPlugin(ScrollTrigger);
 const scrollRef = ref();
 
 const scrollToTop = () => {
-	lenis.scrollTo(0, {
-		duration: 2
-	});
+	lenis.scrollTo(0);
 };
 
 onMounted(() => {

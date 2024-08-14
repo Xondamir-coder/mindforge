@@ -1,8 +1,6 @@
 <template>
 	<div class="container">
-		<button class="scroll" @click="scrollToAbout">
-			<IconMouse />
-		</button>
+		<ScrollHere @click="scrollToAbout" />
 		<section ref="aboutRef" class="about section-padding">
 			<img
 				ref="imgRef"
@@ -18,11 +16,6 @@
 						<span>Гарантируем и сертифицируем</span>
 					</div>
 					<h1 class="about__title">Учитесь онлайн в удобное время</h1>
-					<button class="about__button">Узнать больше <span>&rightarrow;</span></button>
-				</div>
-				<div class="about__experts">
-					<img src="@/assets/images/random-ppl.webp" alt="randos" />
-					<p>Онлайн-курсы от <a class="about__link" href="#">экспертов.</a></p>
 				</div>
 			</div>
 			<div class="about__right">
@@ -47,7 +40,7 @@ import { onMounted, ref } from 'vue';
 import IconAward from './icons/IconAward.vue';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import IconMouse from './icons/IconMouse.vue';
+import ScrollHere from './ScrollHere.vue';
 gsap.registerPlugin(ScrollTrigger);
 
 const contents = [
@@ -87,19 +80,6 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
-.scroll {
-	cursor: pointer;
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
-	top: -3.5rem;
-	width: 7rem;
-	height: 7rem;
-	background-color: #fff;
-	border-radius: 50%;
-	border: none;
-	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-}
 .about {
 	background-image: url('@/assets/images/about-bg.png');
 	background-repeat: no-repeat;
@@ -145,7 +125,6 @@ onMounted(() => {
 		flex-direction: column;
 		gap: 3rem;
 		align-items: flex-start;
-		overflow: hidden;
 
 		& > * {
 			opacity: 0;

@@ -1,6 +1,6 @@
 <template>
 	<section class="words">
-		<h1 class="words__words">Вспоминая, что я сильнейший фронтенд-разработчик</h1>
+		<h1 class="words__words">Мастерство в онлайн-обучении и разработке курсов</h1>
 		<h1 class="words__title">Онлайн-обучение везде и в любое время.</h1>
 	</section>
 </template>

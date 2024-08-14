@@ -11,7 +11,6 @@
 		<Words />
 		<Offer />
 		<Contacts />
-		<Cta />
 		<Footer />
 	</main>
 </template>
@@ -28,7 +27,6 @@ import Product from '@/components/Product.vue';
 import Skills from './components/Skills.vue';
 import Words from './components/Words.vue';
 import Offer from './components/Offer.vue';
-import Cta from './components/Cta.vue';
 import Contacts from './components/Contacts.vue';
 import Footer from './components/Footer.vue';
 

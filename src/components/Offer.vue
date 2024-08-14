@@ -7,16 +7,17 @@
 				<div class="offer__icon-container">
 					<IconChat class="offer__icon" />
 				</div>
-				<span>Students feedback</span>
+				<span>Мы делаем для всех</span>
 			</div>
-			<h1 class="offer__title">Trusted by genius people.</h1>
+			<h1 class="offer__title">Наши предложения для -</h1>
 			<p class="offer__text">
-				Lorem ipsum dolor sit amet consectetur adipiscing elit venenatis dictum nec.
+				Создавайте и монетизируйте онлайн-курсы с возможностью контроля обучения и повышения
+				квалификации
 			</p>
 			<div class="offer__content">
 				<h2 class="offer__content-data">99%</h2>
 				<div class="offer__content-divider"></div>
-				<div class="offer__content-text">Student's complete course successfully.</div>
+				<div class="offer__content-text">Клиенты успешно завершают курсы</div>
 			</div>
 		</div>
 		<div class="offer__right">
@@ -38,23 +39,8 @@
 					}">
 					<img class="offer__box-img" :src="content.img" alt="img" />
 					<div class="offer__box-content">
-						<div class="offer__stars">
-							<svg
-								v-for="i in [1, 2, 3, 4, 5]"
-								:key="i"
-								xmlns="http://www.w3.org/2000/svg"
-								width="16"
-								height="16"
-								fill="#fff"
-								class="bi bi-star-fill"
-								viewBox="0 0 16 16">
-								<path
-									d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-							</svg>
-						</div>
+						<h3 class="offer__box-name">- {{ content.for }}</h3>
 						<p class="offer__box-text">{{ content.text }}</p>
-						<h2 class="offer__box-name">{{ content.name }}</h2>
-						<h3 class="offer__box-job">{{ content.job }}</h3>
 					</div>
 				</div>
 			</div>
@@ -68,9 +54,8 @@ import IconChat from './icons/IconChat.vue';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
-import offerImg1 from '@/assets/images/offer-1.jpg';
-import offerImg2 from '@/assets/images/offer-2.jpg';
-import offerImg3 from '@/assets/images/offer-3.jpg';
+import offerImg1 from '@/assets/images/offer-1.webp';
+import offerImg2 from '@/assets/images/offer-2.webp';
 import IconLess from './icons/IconLess.vue';
 import IconGreater from './icons/IconGreater.vue';
 
@@ -79,21 +64,13 @@ const curSlide = ref(0);
 const contents = [
 	{
 		img: offerImg1,
-		text: 'Course materials were good, the mentoring approach was good and working with other people via the internet was good.',
-		name: 'Aizen Sosuke',
-		job: 'Traitor'
+		text: 'Онлайн-тренинги для подготовки и повышения квалификации персонала, а также LMS для мониторинга и контроля обучения сотрудников',
+		for: 'корпоративных клиентов'
 	},
 	{
 		img: offerImg2,
-		text: 'Course materials were good, the mentoring approach was good and working with other people via the internet was good.',
-		name: 'Shunsui Kyoraku',
-		job: 'Head Commander'
-	},
-	{
-		img: offerImg3,
-		text: 'Course materials were good, the mentoring approach was good and working with other people via the internet was good.',
-		name: 'Yhwach',
-		job: 'King of Wandenreich'
+		text: 'Разработка онлайн-курсов по авторским программам с возможностью размещения и монетизации собственных курсов на платформе для широкой аудитории',
+		for: 'независимых авторов курсов:'
 	}
 ];
 
@@ -238,11 +215,6 @@ onMounted(() => {
 			font-size: 18px;
 			font-weight: 600;
 			color: var(--dark-gray);
-		}
-		&-job {
-			font-size: 16px;
-			font-weight: 400;
-			margin-top: -1rem;
 		}
 		&-content {
 			display: flex;

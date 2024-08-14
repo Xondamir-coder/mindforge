@@ -4,17 +4,15 @@
 			<div class="footer__lines"></div>
 			<img class="footer__obj" src="@/assets/images/offer-obj.png" />
 			<div class="footer__banner">
-				<h1 class="footer__banner-title">Актуально открыт набор на следующий курс</h1>
-				<Button label="Начать обучение" class="footer__banner-button" />
-				<a href="tel:+1 800 222 000" class="footer__banner-call">
-					<IconCall class="footer__banner-icon" />
-					<span>+1 800 222 000</span>
-				</a>
+				<IconLike />
+				<h1 class="footer__banner-title">
+					Оставайтесь на связи. Подпишитесь на нас в <a href="#">Facebook</a>
+				</h1>
 			</div>
 			<div class="footer__content">
 				<div class="footer__box">
 					<Logo class="footer__logo" />
-					<p class="footer__text">Предоставляем качественные курсы с 10 лет назад.</p>
+					<p class="footer__text">Предоставляем качественный контент уже 6 лет</p>
 					<ul class="footer__links">
 						<li class="footer__links-item">
 							<a href="#">Fb.</a>
@@ -47,7 +45,7 @@
 			<div class="footer__divider"></div>
 			<div class="footer__copyright">
 				<p>
-					&copy; {{ new Date().getFullYear() }} Mindforge разработано с удовольствием
+					&copy; {{ new Date().getFullYear() }} Mindforge. Разработано
 					<a href="http://spacelabs.uz" target="_blank" rel="noopener noreferrer"
 						>SpaceLabs</a
 					>
@@ -58,8 +56,7 @@
 </template>
 
 <script setup>
-import Button from './Button.vue';
-import IconCall from './icons/IconCall.vue';
+import IconLike from './icons/IconLike.vue';
 import Logo from './icons/Logo.vue';
 </script>
 
@@ -90,6 +87,10 @@ import Logo from './icons/Logo.vue';
 		a {
 			color: #fff;
 			font-weight: 500;
+			transition: color 300ms;
+			&:hover {
+				color: var(--base-color);
+			}
 		}
 	}
 	&__a {
@@ -134,12 +135,16 @@ import Logo from './icons/Logo.vue';
 		background-color: var(--base-color);
 		display: flex;
 		align-items: center;
-		gap: 3rem;
+		gap: 1.5rem;
 		padding: 3.6rem min(6vw, 6rem);
 		border-radius: 8px;
 		background-image: url('@/assets/images/cta-bg.webp');
 		background-repeat: no-repeat;
 		flex-wrap: wrap;
+		text-align: center;
+		justify-content: center;
+		color: var(--dark-gray);
+
 		@media screen and (max-width: 550px) {
 			position: static;
 			transform: none;
@@ -150,10 +155,14 @@ import Logo from './icons/Logo.vue';
 			font-size: 28px;
 			font-weight: 600;
 			font-family: var(--font-alt);
-			color: var(--dark-gray);
 		}
 		a {
-			text-decoration: none;
+			color: inherit;
+			font-weight: 800;
+			transition: color 300ms;
+			&:hover {
+				color: #fff;
+			}
 		}
 		&-button {
 			background-color: var(--dark-gray);
@@ -183,7 +192,7 @@ import Logo from './icons/Logo.vue';
 			transition-delay: 300ms;
 		}
 		&:nth-of-type(3) {
-			transition-delay: 600ms;
+			transition-delay: f;
 		}
 		@media only screen and (max-width: 550px) {
 			align-items: center;
@@ -219,6 +228,7 @@ import Logo from './icons/Logo.vue';
 	&__logo {
 		width: 15.7rem;
 		height: 4rem;
+		color: #fff;
 	}
 	&__obj {
 		position: absolute;
