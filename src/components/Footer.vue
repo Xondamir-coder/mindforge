@@ -70,6 +70,7 @@ import Logo from './icons/Logo.vue';
 	color: var(--medium-gray);
 	padding-bottom: 3rem;
 	padding-top: 15rem;
+	margin-top: 6rem;
 
 	@media screen and (max-width: 550px) {
 		padding-top: 5rem;

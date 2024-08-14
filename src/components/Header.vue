@@ -3,16 +3,18 @@
 		<a href="#"><Logo class="header__logo" /></a>
 		<div class="header__right">
 			<ul class="header__languages">
-				<li class="header__language" v-for="lang in ['uz', 'ru', 'en']">
-					<button @click="changeLang(lang)">
-						{{ lang.toUpperCase() }}
+				<li
+					class="header__language"
+					v-for="item in [
+						{ label: 'O\'ZB', lang: 'uz' },
+						{ label: 'РУС', lang: 'ru' },
+						{ label: 'ENG', lang: 'en' }
+					]">
+					<button @click="changeLang(item.lang)">
+						{{ item.label }}
 					</button>
 				</li>
 			</ul>
-			<a class="header__call" href="tel:+1 800 222 000">
-				<IconCall class="header__call-icon" />
-				<a>1 800 222 000</a>
-			</a>
 		</div>
 	</header>
 </template>
@@ -56,10 +58,11 @@ onMounted(() => {
 	position: fixed;
 	z-index: 100;
 	top: 0;
-	padding: 2rem 4.5rem;
+	padding: 2rem max(2rem, 5vw);
 	font-family: var(--font-alt);
 	// background-color: #fff;
 	color: #fff;
+	align-items: center;
 	&__languages {
 		list-style-type: none;
 		display: flex;
@@ -91,23 +94,9 @@ onMounted(() => {
 	&__logo {
 		width: 15.7rem;
 		height: 3.9rem;
-	}
-	&__call {
-		display: flex;
-		align-items: center;
-		gap: 1rem;
-		font-size: 1.7rem;
-		color: inherit;
-		font-weight: bold;
-		text-decoration: none;
 		transition: color 300ms;
 		&:hover {
 			color: var(--base-color);
-		}
-		&-icon {
-			width: 1.7rem;
-			height: 1.7rem;
-			fill: currentColor;
 		}
 	}
 }

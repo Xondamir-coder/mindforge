@@ -1,12 +1,11 @@
 <template>
-	<section class="skills">
+	<section class="skills section-padding">
 		<div
 			ref="imgContainerRef"
 			class="skills__images"
 			@mousemove="handleMouseMove"
 			@mouseleave="handleMouseLeave">
 			<img class="skills__image" src="@/assets/images/girl.webp" alt="девочка" />
-			<img class="skills__image" src="@/assets/images/blue-object.webp" alt="синяя вещь" />
 		</div>
 		<div class="skills__main">
 			<div class="skills__head">
@@ -45,18 +44,13 @@ const imgContainerRef = ref();
 
 const skills = [
 	{
-		title: 'Для школ',
-		desc: 'Онлайн-уроки по школьной программе и авторским курсам, курсы по профессиональным навыкам и подготовке к экзаменам, а также система управления обучением (LMS) для эффективного ведения учебного процесса',
+		title: 'Lorem',
+		desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, quibusdam?',
 		icon: IconBook
 	},
 	{
-		title: 'Для университетов',
-		desc: 'Онлайн-уроки для дистанционного и гибридного обучения по авторским программам, тесты и экзамены для оценки знаний, дополнительные курсы по профессиональным навыкам, а также LMS для управления образовательным процессом',
-		icon: IconBook
-	},
-	{
-		title: 'Для учебных центров',
-		desc: 'Онлайн-уроки по авторским программам для дистанционного и гибридного обучения, задания для самостоятельной работы и проверки знаний, а также LMS для эффективного управления процессом обучения',
+		title: 'Forem',
+		desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, quibusdam',
 		icon: IconBook
 	}
 ];
@@ -92,32 +86,24 @@ const handleMouseLeave = () => {
 
 <style lang="scss" scoped>
 .skills {
-	display: grid;
-	grid-template-areas: 'images content';
-	grid-auto-columns: 1fr;
+	display: flex;
+	flex-wrap: wrap;
 	gap: 2rem;
-	padding: 10rem 0;
+	justify-content: center;
 	@media only screen and (max-width: 900px) {
-		grid-template-areas:
-			'content'
-			'images';
+		gap: 5rem;
 	}
 	&.active &__main > * {
 		opacity: 1;
 		transform: rotateY(0) translate(0, 0);
 	}
 	&__images {
-		grid-area: images;
 		position: relative;
 	}
 	&__image {
 		width: 100%;
 		height: 100%;
-		object-fit: contain;
-		&:last-of-type {
-			position: absolute;
-			left: 0;
-		}
+		object-fit: cover;
 	}
 	&__icon {
 		width: 40%;
@@ -137,7 +123,6 @@ const handleMouseLeave = () => {
 		padding: 0 4vw;
 		padding-right: 7vw;
 		max-width: 700px;
-		grid-area: content;
 		display: flex;
 		flex-direction: column;
 		gap: 20px;

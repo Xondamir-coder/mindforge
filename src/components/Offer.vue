@@ -9,7 +9,7 @@
 				</div>
 				<span>Мы делаем для всех</span>
 			</div>
-			<h1 class="offer__title">Наши предложения для -</h1>
+			<h1 class="offer__title">Наши предложения для-</h1>
 			<p class="offer__text">
 				Создавайте и монетизируйте онлайн-курсы с возможностью контроля обучения и повышения
 				квалификации
@@ -39,7 +39,7 @@
 					}">
 					<img class="offer__box-img" :src="content.img" alt="img" />
 					<div class="offer__box-content">
-						<h3 class="offer__box-name">- {{ content.for }}</h3>
+						<h3 class="offer__box-name">-{{ content.for }}</h3>
 						<p class="offer__box-text">{{ content.text }}</p>
 					</div>
 				</div>
@@ -56,6 +56,9 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 import offerImg1 from '@/assets/images/offer-1.webp';
 import offerImg2 from '@/assets/images/offer-2.webp';
+import offerImg3 from '@/assets/images/offer-3.webp';
+import offerImg4 from '@/assets/images/offer-4.webp';
+import offerImg5 from '@/assets/images/offer-5.webp';
 import IconLess from './icons/IconLess.vue';
 import IconGreater from './icons/IconGreater.vue';
 
@@ -65,12 +68,27 @@ const contents = [
 	{
 		img: offerImg1,
 		text: 'Онлайн-тренинги для подготовки и повышения квалификации персонала, а также LMS для мониторинга и контроля обучения сотрудников',
-		for: 'корпоративных клиентов'
+		for: 'Корпоративных клиентов'
 	},
 	{
 		img: offerImg2,
 		text: 'Разработка онлайн-курсов по авторским программам с возможностью размещения и монетизации собственных курсов на платформе для широкой аудитории',
-		for: 'независимых авторов курсов:'
+		for: 'Независимых авторов курсов:'
+	},
+	{
+		img: offerImg3,
+		for: 'Школ',
+		text: 'Онлайн-уроки по школьной программе и авторским курсам, курсы по профессиональным навыкам и подготовке к экзаменам, а также система управления обучением (LMS) для эффективного ведения учебного процесса'
+	},
+	{
+		img: offerImg4,
+		for: 'Университетов',
+		text: 'Онлайн-уроки для дистанционного и гибридного обучения по авторским программам, тесты и экзамены для оценки знаний, дополнительные курсы по профессиональным навыкам, а также LMS для управления образовательным процессом'
+	},
+	{
+		img: offerImg5,
+		for: 'Учебных центров',
+		text: 'Онлайн-уроки по авторским программам для дистанционного и гибридного обучения, задания для самостоятельной работы и проверки знаний, а также LMS для эффективного управления процессом обучения'
 	}
 ];
 
@@ -127,15 +145,20 @@ onMounted(() => {
 		grid-template-areas:
 			'left'
 			'right';
-		grid-auto-rows: 1fr 1.5fr;
-	}
-	@media only screen and (max-width: 600px) {
-		grid-auto-rows: 1fr 2fr;
 	}
 	&__container {
 		overflow: hidden;
 		width: 100%;
 		position: relative;
+		@media only screen and (max-width: 1300px) {
+			min-height: 50vh;
+		}
+		@media only screen and (max-width: 900px) {
+			min-height: 100vh;
+		}
+		@media only screen and (max-width: 600px) {
+			min-height: 110vh;
+		}
 	}
 	&__left {
 		grid-area: left;
@@ -176,15 +199,23 @@ onMounted(() => {
 		transition-delay: 0.5s;
 		&:first-of-type {
 			left: 0;
+			&:hover .offer__button-icon {
+				transform: translateX(-5px);
+			}
 		}
 		&:last-of-type {
 			left: 100%;
 			transition-delay: 0.8s;
+			&:hover .offer__button-icon {
+				transform: translateX(5px);
+			}
 		}
+
 		&-icon {
 			fill: var(--dark-gray);
 			width: 50%;
 			height: 50%;
+			transition: transform 300ms;
 		}
 	}
 	&__box {
@@ -196,7 +227,7 @@ onMounted(() => {
 		transition: transform 1s;
 		display: grid;
 		grid-template-columns: 1fr 1.5fr;
-		@media only screen and (max-width: 600px) {
+		@media only screen and (max-width: 900px) {
 			grid-template-columns: initial;
 			grid-template-rows: 40rem 1fr;
 		}
@@ -223,6 +254,9 @@ onMounted(() => {
 			align-items: start;
 			gap: 2rem;
 			padding: 6rem;
+			@media only screen and (max-width: 900px) {
+				padding: 3rem;
+			}
 		}
 	}
 	&__stars {

@@ -1,7 +1,7 @@
 <template>
 	<section class="hero section-padding">
 		<img ref="objRef" class="hero__obj" src="@/assets/images/pattern.webp" alt="blue" />
-		<div class="hero__lines"></div>
+		<!-- <div class="hero__lines"></div> -->
 		<div class="hero__content">
 			<h1 class="hero__title">Создаем контент для обучения</h1>
 			<p class="hero__text">
@@ -23,7 +23,6 @@
 			@mouseleave="handleMouseLeave">
 			<div class="hero__images" ref="imgContainerRef">
 				<img src="@/assets/images/guy.webp" alt="hero guy" />
-				<img src="@/assets/images/yellow-object.webp" alt="yeellow thingy" />
 			</div>
 		</div>
 	</section>
@@ -56,7 +55,7 @@ const objRef = ref();
 onMounted(() => {
 	gsap.to(objRef.value, {
 		rotate: 45,
-		scale: 0.6
+		scale: 0.4
 	});
 	gsap.to(objRef.value, {
 		y: 200,
@@ -105,25 +104,25 @@ const handleMouseLeave = () => {
 	background-size: cover;
 	background-position: center;
 	position: relative;
-
-	padding-right: 0;
-	padding-bottom: 2rem;
-	display: grid;
-	grid-template-columns: 1fr 2fr;
 	overflow: hidden;
-	gap: 2rem;
+
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: max(15vw, 5rem);
 
 	@media only screen and (max-width: 900px) {
 		grid-template-columns: none;
 		grid-auto-rows: 1fr;
-		padding-bottom: 5rem;
-		padding-right: 5vw;
-		min-height: 887px;
 	}
 	&__obj {
 		position: absolute;
 		top: -50%;
 		left: -20rem;
+
+		@media only screen and (max-width: 900px) {
+			top: -40%;
+			left: -30rem;
+		}
 	}
 	&__lines {
 		position: absolute;
@@ -171,6 +170,7 @@ const handleMouseLeave = () => {
 		font-weight: 300;
 		font-family: var(--font-base);
 		opacity: 0;
+		line-height: 1.5;
 		animation: fade-rotate-2 800ms forwards 200ms;
 	}
 	&__title {
@@ -200,7 +200,6 @@ const handleMouseLeave = () => {
 		position: relative;
 		width: 100%;
 		height: 100%;
-		max-width: 700px;
 
 		&-container {
 			display: flex;
@@ -208,14 +207,9 @@ const handleMouseLeave = () => {
 		}
 
 		img {
-			position: absolute;
-			inset: 0;
 			width: 100%;
 			height: 100%;
-			object-fit: contain;
-			&:last-child {
-				animation: up-down 4s linear infinite alternate;
-			}
+			object-fit: cover;
 		}
 	}
 }
