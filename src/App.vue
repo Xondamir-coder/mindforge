@@ -53,8 +53,7 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
-.fake-section {
-	height: 100vh;
-	background-color: purple;
+.container {
+	overflow: hidden;
 }
 </style>

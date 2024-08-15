@@ -90,7 +90,7 @@ const handleMouseLeave = () => {
 .skills {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 2rem;
+	gap: 5rem;
 	justify-content: center;
 	@media only screen and (max-width: 900px) {
 		gap: 5rem;

@@ -260,6 +260,9 @@ const handleMouseLeave = () => {
 	$y: random(120) - 60; // Generates a random number between -60 and 60 for vh
 	@return translate(#{$x}vw, #{$y}vh);
 }
+@function generate-rotation($index) {
+	@return rotate(#{random(160) * 10}deg);
+}
 
 @for $i from 1 through 9 {
 	@keyframes wander#{$i} {
@@ -267,13 +270,13 @@ const handleMouseLeave = () => {
 			transform: translate(0, 0);
 		}
 		25% {
-			transform: generate-translate($i);
+			transform: generate-translate($i) generate-rotation($i);
 		}
 		50% {
-			transform: generate-translate($i);
+			transform: generate-translate($i) generate-rotation($i);
 		}
 		75% {
-			transform: generate-translate($i);
+			transform: generate-translate($i) generate-rotation($i);
 		}
 		100% {
 			transform: translate(0, 0);
