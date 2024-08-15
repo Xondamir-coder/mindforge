@@ -97,7 +97,7 @@ onMounted(() => {
 	gap: 7rem;
 	@media only screen and (max-width: 900px) {
 		grid-template-columns: 100%;
-		grid-auto-rows: 1fr;
+		grid-auto-rows: max-content 1fr;
 	}
 
 	&.active &__left > *:not(.offer__text) {
