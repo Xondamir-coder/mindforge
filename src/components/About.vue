@@ -3,31 +3,37 @@
 		<ScrollHere @click="scrollToAbout" />
 		<section ref="aboutRef" class="about section-padding">
 			<Rectangle class="about__rectangle" />
-			<Circle class="about__circle" />
-			<div class="about__left">
-				<div class="about__head">
-					<div class="about__top">
-						<div class="about__icon-container">
-							<IconAward class="about__icon" />
+			<div class="about__top">
+				<div class="about__left">
+					<div class="about__head">
+						<div class="about__top">
+							<div class="about__icon-container">
+								<IconAward class="about__icon" />
+							</div>
+							<span>Гарантируем и сертифицируем</span>
 						</div>
-						<span>Гарантируем и сертифицируем</span>
+						<h1 class="about__title">Учитесь онлайн в удобное время</h1>
 					</div>
-					<h1 class="about__title">Учитесь онлайн в удобное время</h1>
 				</div>
-				<Iron class="about__iron" />
-			</div>
-			<div class="about__right">
-				<div class="about__box" v-for="(content, index) in contents" :key="index">
-					<div class="about__box-num">0{{ index + 1 }}</div>
-					<h2 class="about__box-title">
-						{{ content.title }}
+				<div class="about__right">
+					<h2 class="about__subtitle">
+						Online courses from the world's leading experts.
 					</h2>
-					<p class="about__box-text">
-						{{ content.text }}
+					<p class="about__text">
+						Lorem ipsum is simply dummy of the printing and typesetting industry lorem
+						ipsum has the industry standard dummy.
 					</p>
-					<div class="about__box-divider"></div>
 				</div>
 			</div>
+			<ul class="about__list">
+				<li class="about__item" v-for="content in contents" :key="content">
+					<div class="about__item-img">
+						<img :src="content.img" alt="img" />
+					</div>
+					<h3 class="about__item-title">{{ content.title }}</h3>
+					<p class="about__item-text">{{ content.text }}</p>
+				</li>
+			</ul>
 		</section>
 	</div>
 </template>
@@ -40,22 +46,26 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import ScrollHere from './ScrollHere.vue';
 import Rectangle from './Rectangle.vue';
-import Circle from './Circle.vue';
-import Iron from './Iron.vue';
 gsap.registerPlugin(ScrollTrigger);
+import aboutImg1 from '@/assets/images/about-1.webp';
+import aboutImg2 from '@/assets/images/about-2.webp';
+import aboutImg3 from '@/assets/images/about-3.webp';
 
 const contents = [
 	{
 		title: 'Гибкий график',
-		text: 'Онлайн-обучение позволяет учащимся проходить курсы в удобное время, ускоряя процесс усвоения материала.'
+		text: 'Best online platform for professional courses.',
+		img: aboutImg1
 	},
 	{
 		title: 'Доступная стоимость',
-		text: 'Онлайн-обучение позволяет значительно сократить затраты на обучение без потери качества контента.'
+		text: 'Best online platform for professional courses.',
+		img: aboutImg2
 	},
 	{
 		title: 'Экспертные преподаватели',
-		text: 'Наши курсы разрабатываются профессионалами, чтобы обеспечить высокое качество и актуальность материалов.'
+		text: 'Best online platform for professional courses.',
+		img: aboutImg3
 	}
 ];
 
@@ -77,68 +87,25 @@ onMounted(() => {
 			scrub: 1
 		}
 	});
-	gsap.from('.about__circle', {
-		y: '-100%',
-		rotateX: 360,
-		opacity: 0,
-		scrollTrigger: {
-			trigger: '.about',
-			start: 'top top',
-			scrub: 1
-		}
-	});
-	gsap.from(document.getElementById('hammer'), {
-		opacity: 0,
-		rotate: -60,
-		scrollTrigger: {
-			trigger: '.about',
-			start: 'top top',
-			end: 'center+=100 center',
-			scrub: 1
-		}
-	});
-	gsap.from('.about__iron', {
-		opacity: 0,
-		scrollTrigger: {
-			trigger: '.about',
-			start: 'top top',
-			end: 'center+=100 center',
-			scrub: 1
-		}
-	});
 });
 </script>
 
 <style lang="scss" scoped>
 .about {
-	display: grid;
-	grid-template-areas: 'left right';
-	grid-auto-columns: 1fr;
-	gap: 15vw;
 	color: var(--dark-gray);
 	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	gap: 10rem;
 
-	@media only screen and (max-width: 768px) {
-		grid-template-areas:
-			'left'
-			'right';
-	}
-
-	&__iron {
-		width: 100%;
-		height: 100%;
-	}
-	&__circle {
-		position: absolute;
-		top: 60%;
-		right: 0;
-		width: 30rem;
-		height: 30rem;
-	}
 	&.active {
 		.about__box {
 			opacity: 1;
 			transform: translate(0, 0);
+		}
+		.about__item {
+			opacity: 1;
+			transform: translateX(0);
 		}
 		.about__head > * {
 			opacity: 1;
@@ -148,6 +115,67 @@ onMounted(() => {
 			opacity: 1;
 			transform: rotateY(0) translate(0, 0);
 		}
+		.about__subtitle,
+		.about__text {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+	&__list {
+		list-style-type: none;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(150px, 300px));
+		justify-content: center;
+		row-gap: 4rem;
+	}
+	&__item {
+		display: flex;
+		align-items: center;
+		text-align: center;
+		flex-direction: column;
+		gap: 1rem;
+		padding: 0 5rem;
+		opacity: 0;
+		transform: translateX(-12rem);
+		transition: transform 1s, opacity 1s;
+		&:not(:last-child) {
+			border-right: 1px solid var(--extra-medium-gray);
+			@media only screen and (max-width: 660px) {
+				border-right: none;
+				border-bottom: 1px solid var(--extra-medium-gray);
+				padding: 4rem 1rem;
+			}
+		}
+		&:nth-child(2) {
+			transition-delay: 500ms;
+		}
+		&:nth-child(3) {
+			transition-delay: 1s;
+		}
+		&-title {
+			font-weight: 600;
+			font-size: 18px;
+		}
+		&-text {
+			color: var(--medium-gray);
+			line-height: 30px;
+			font-size: 17px;
+		}
+		&-img {
+			margin-bottom: 30px;
+			height: 10rem;
+			width: 10rem;
+			background-color: rgb(247, 247, 247);
+			border-radius: 50%;
+			display: grid;
+			place-items: center;
+			img {
+				width: 7.5rem;
+				height: 7.5rem;
+				object-fit: cover;
+				transform: translateY(2.5rem);
+			}
+		}
 	}
 	&__rectangle {
 		position: absolute;
@@ -156,12 +184,45 @@ onMounted(() => {
 		left: -10rem;
 		opacity: 1;
 	}
+	&__subtitle {
+		font-size: 18px;
+		font-weight: 600;
+		opacity: 0;
+		transform: translateY(-20px);
+		transition: transform 600ms, opacity 600ms;
+	}
+	&__text {
+		opacity: 0;
+		transform: translateY(20px);
+		transition: transform 600ms, opacity 600ms;
+		transition-delay: 300ms;
+	}
+
+	&__right {
+		align-self: end;
+		display: flex;
+		flex-direction: column;
+		gap: 7px;
+		@media only screen and (max-width: 900px) {
+			align-items: center;
+			text-align: center;
+		}
+		p {
+			font-size: 17px;
+			color: #828c8a;
+			font-weight: 400;
+			line-height: 1.6;
+		}
+	}
 	&__top {
 		display: flex;
 		align-items: center;
-		gap: 10px;
+		gap: 30px;
 		font-size: 1.9rem;
 		font-weight: 500;
+		@media only screen and (max-width: 900px) {
+			flex-direction: column;
+		}
 	}
 	&__title {
 		font-size: 5.5rem;
@@ -173,6 +234,10 @@ onMounted(() => {
 		gap: 3rem;
 		align-items: flex-start;
 
+		@media only screen and (max-width: 900px) {
+			align-items: center;
+			text-align: center;
+		}
 		& > * {
 			opacity: 0;
 			transform: rotateY(-90deg) translate(9rem, 9rem);
@@ -226,75 +291,7 @@ onMounted(() => {
 			gap: 3rem;
 		}
 	}
-	&__right {
-		grid-area: right;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		gap: 5rem;
 
-		@media only screen and (max-width: 768px) {
-			padding: 0 2rem;
-			gap: 10rem;
-		}
-	}
-	&__box {
-		position: relative;
-		display: flex;
-		flex-direction: column;
-		gap: 17px;
-		opacity: 0;
-		transform: translate(50px, 50px);
-		transition: transform 600ms, opacity 600ms;
-		&:nth-child(3) {
-			transition-delay: 300ms;
-		}
-		&:nth-child(2) {
-			align-items: flex-end;
-			text-align: right;
-			transition-delay: 150ms;
-			@media only screen and (max-width: 768px) {
-				align-items: flex-start;
-			}
-			.about__box-num {
-				top: -7rem;
-				right: -4rem;
-				@media only screen and (max-width: 768px) {
-					right: initial;
-				}
-			}
-		}
-		&-divider {
-			height: 1px;
-			border-top: 3px solid var(--base-color);
-			width: 20%;
-		}
-		&-num {
-			font-family: var(--font-alt);
-			opacity: 0.1;
-			font-size: 10rem;
-			font-weight: 700;
-			position: absolute;
-			top: -7rem;
-			left: -4rem;
-		}
-		&-title {
-			font-size: 20px;
-			font-weight: 600;
-			max-width: 220px;
-		}
-		&-text {
-			font-size: 17px;
-			color: var(--medium-gray);
-			max-width: 300px;
-			line-height: 1.5;
-
-			@media only screen and (max-width: 768px) {
-				max-width: initial;
-				text-align: left;
-			}
-		}
-	}
 	&__icon {
 		width: 2.2rem;
 		height: 2.2rem;

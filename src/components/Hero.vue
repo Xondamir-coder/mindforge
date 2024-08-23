@@ -2,14 +2,11 @@
 	<section class="hero section-padding">
 		<div class="hero__svg-container">
 			<Circle class="hero__svg hero__svg-1" />
-			<Circle class="hero__svg hero__svg-2" />
-			<Rectangle class="hero__svg hero__svg-3" />
-			<Rectangle class="hero__svg hero__svg-4" />
-			<Triangle class="hero__svg hero__svg-5" />
+			<Rectangle class="hero__svg hero__svg-2" />
+			<Triangle class="hero__svg hero__svg-3" />
+			<Circle class="hero__svg hero__svg-4" />
+			<Rectangle class="hero__svg hero__svg-5" />
 			<Triangle class="hero__svg hero__svg-6" />
-			<Circle class="hero__svg hero__svg-7" />
-			<Rectangle class="hero__svg hero__svg-8" />
-			<Triangle class="hero__svg hero__svg-9" />
 		</div>
 		<div class="hero__lines"></div>
 		<div class="hero__content">
@@ -32,7 +29,6 @@
 			@mousemove="handleMouseMove"
 			@mouseleave="handleMouseLeave">
 			<div class="hero__images" ref="imgContainerRef">
-				<Circle class="hero__circle" />
 				<img src="@/assets/images/guy.webp" alt="hero guy" />
 			</div>
 		</div>
@@ -109,10 +105,10 @@ const handleMouseLeave = () => {
 	gap: max(15vw, 5rem);
 
 	&__svg {
-		position: absolute;
 		width: 3rem;
 		height: 3rem;
-		animation: travel 10s infinite linear;
+		bottom: 0;
+		left: 0;
 		&-container {
 			width: 100%;
 			height: 100%;
@@ -126,13 +122,13 @@ const handleMouseLeave = () => {
 		grid-template-columns: none;
 		grid-auto-rows: 1fr;
 	}
-	&__circle {
+	&__rectangle {
 		position: absolute;
-		inset: 0;
 		z-index: 1;
-		animation: pulsate 1.5s infinite linear alternate;
-		width: 100%;
-		height: 100%;
+		width: 107%;
+		height: 107%;
+		top: -1rem;
+		left: -6px;
 	}
 	&__obj {
 		position: absolute;
@@ -224,6 +220,7 @@ const handleMouseLeave = () => {
 		&-container {
 			display: flex;
 			justify-content: center;
+			transform-style: preserve-3d;
 		}
 
 		img {
@@ -256,15 +253,15 @@ const handleMouseLeave = () => {
 }
 
 @function generate-translate($index) {
-	$x: random(160) - 80; // Generates a random number between -80 and 80 for vw
-	$y: random(120) - 60; // Generates a random number between -60 and 60 for vh
+	$x: random(100); // Generates a random number between 0 and 100 for vw
+	$y: random(100) * -1; // Generates a random number between 0 and 100 for vh
 	@return translate(#{$x}vw, #{$y}vh);
 }
 @function generate-rotation($index) {
 	@return rotate(#{random(160) * 10}deg);
 }
 
-@for $i from 1 through 9 {
+@for $i from 1 through 6 {
 	@keyframes wander#{$i} {
 		0% {
 			transform: translate(0, 0);

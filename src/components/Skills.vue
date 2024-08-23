@@ -6,7 +6,6 @@
 			@mousemove="handleMouseMove"
 			@mouseleave="handleMouseLeave">
 			<img class="skills__image" src="@/assets/images/girl.webp" alt="девочка" />
-			<Circle class="skills__circle yellow" />
 		</div>
 		<div class="skills__main">
 			<div class="skills__head">
@@ -88,24 +87,25 @@ const handleMouseLeave = () => {
 
 <style lang="scss" scoped>
 .skills {
-	display: flex;
-	flex-wrap: wrap;
+	display: grid;
+	grid-auto-flow: column;
+	grid-template-columns: minmax(250px, 1fr) 1fr;
 	gap: 5rem;
 	justify-content: center;
 	@media only screen and (max-width: 900px) {
 		gap: 5rem;
+		grid-auto-flow: row;
+		grid-auto-rows: 400px 1fr;
+		grid-template-columns: initial;
 	}
 	&.active &__main > * {
 		opacity: 1;
 		transform: rotateY(0) translate(0, 0);
 	}
-	&__images {
-		position: relative;
-	}
 	&__image {
 		width: 100%;
 		height: 100%;
-		object-fit: cover;
+		object-fit: contain;
 	}
 	&__icon {
 		width: 40%;

@@ -5,6 +5,7 @@
 		<Hero />
 		<About />
 		<History />
+		<Directions />
 		<Services />
 		<Product />
 		<Skills />
@@ -29,8 +30,9 @@ import Words from './components/Words.vue';
 import Offer from './components/Offer.vue';
 import Contacts from './components/Contacts.vue';
 import Footer from './components/Footer.vue';
+import Directions from './components/Directions.vue';
 
-const containerRef = ref();
+const containerRef = ref(null);
 
 onMounted(() => {
 	const observer = new IntersectionObserver(
@@ -38,13 +40,11 @@ onMounted(() => {
 			entries.forEach(entry => {
 				if (entry.isIntersecting) {
 					entry.target.classList.add('active');
-				} else {
-					entry.target.classList.remove('active');
 				}
 			});
 		},
 		{
-			threshold: 0.2
+			threshold: window.innerWidth < 768 ? 0.1 : 0.3
 		}
 	);
 
