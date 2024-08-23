@@ -6,6 +6,7 @@
 		<About />
 		<History />
 		<Directions />
+		<Courses />
 		<Services />
 		<Product />
 		<Skills />
@@ -31,6 +32,7 @@ import Offer from './components/Offer.vue';
 import Contacts from './components/Contacts.vue';
 import Footer from './components/Footer.vue';
 import Directions from './components/Directions.vue';
+import Courses from './components/Courses.vue';
 
 const containerRef = ref(null);
 
@@ -44,7 +46,7 @@ onMounted(() => {
 			});
 		},
 		{
-			threshold: window.innerWidth < 768 ? 0.1 : 0.3
+			threshold: window.innerWidth < 768 ? 0.1 : 0.2
 		}
 	);
 

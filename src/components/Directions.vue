@@ -204,7 +204,7 @@ const contents = [
 		opacity: 0;
 		@for $i from 1 through 10 {
 			&:nth-child(#{$i}) {
-				transition-delay: $i * 0.3s;
+				transition-delay: $i * 0.2s;
 			}
 		}
 		&:hover .directions__text {

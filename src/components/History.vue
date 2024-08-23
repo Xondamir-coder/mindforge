@@ -70,7 +70,6 @@ const contents = [
 		transform: rotateY(0) translate(0, 0);
 	}
 	&.active &__list {
-		opacity: 1;
 		transform: perspective(800px) rotateX(0) translateZ(0);
 	}
 	&__list {
@@ -80,8 +79,7 @@ const contents = [
 		row-gap: 4rem;
 		transform-style: preserve-3d;
 		transform: perspective(800px) rotateX(33deg) translateZ(75px);
-		transition: transform 1s, opacity 1s;
-		opacity: 0;
+		transition: transform 1.5s;
 	}
 	&__item {
 		display: flex;
