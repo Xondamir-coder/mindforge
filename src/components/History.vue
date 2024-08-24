@@ -1,8 +1,8 @@
 <template>
 	<section class="history section-padding" ref="historyRef">
 		<div class="history__head">
-			<p class="history__label">Наша история</p>
-			<h1 class="history__title">Предоставляем 6 лет верной услуги</h1>
+			<p class="history__label">{{ $t('history-label') }}</p>
+			<h1 class="history__title">{{ $t('history-title') }}</h1>
 		</div>
 		<ul class="history__list">
 			<li class="history__item" v-for="content in contents" :key="content.title">
@@ -15,48 +15,51 @@
 </template>
 
 <script setup>
-const contents = [
+import { i18n } from '@/locales';
+import { computed } from 'vue';
+
+const contents = computed(() => [
 	{
-		title: 'Уроков',
-		text: '1300+',
-		date: '2018'
+		title: i18n.global.t('history-title-1'),
+		text: i18n.global.t('history-text-1'),
+		date: i18n.global.t('history-date-1')
 	},
 	{
-		title: 'Предметов',
-		text: '65+',
-		date: '2019'
+		title: i18n.global.t('history-title-2'),
+		text: i18n.global.t('history-text-2'),
+		date: i18n.global.t('history-date-2')
 	},
 	{
-		title: 'Страниц',
-		text: '295,000+',
-		date: '2020'
+		title: i18n.global.t('history-title-3'),
+		text: i18n.global.t('history-text-3'),
+		date: i18n.global.t('history-date-3')
 	},
 	{
-		title: 'Чтения',
-		text: '10,400+ часов',
-		date: '2021'
+		title: i18n.global.t('history-title-4'),
+		text: i18n.global.t('history-text-4'),
+		date: i18n.global.t('history-date-4')
 	},
 	{
-		title: 'Направлений',
-		text: '14+',
-		date: '2022'
+		title: i18n.global.t('history-title-5'),
+		text: i18n.global.t('history-text-5'),
+		date: i18n.global.t('history-date-5')
 	},
 	{
-		title: 'Создание',
-		text: '5200+ часов',
-		date: '2023'
+		title: i18n.global.t('history-title-6'),
+		text: i18n.global.t('history-text-6'),
+		date: i18n.global.t('history-date-6')
 	},
 	{
-		title: 'Пользователей',
-		text: '24,000+',
-		date: '2024'
+		title: i18n.global.t('history-title-7'),
+		text: i18n.global.t('history-text-7'),
+		date: i18n.global.t('history-date-7')
 	},
 	{
-		title: 'Видеоуроков',
-		text: '700+ часов',
-		date: '2024'
+		title: i18n.global.t('history-title-8'),
+		text: i18n.global.t('history-text-8'),
+		date: i18n.global.t('history-date-8')
 	}
-];
+]);
 </script>
 
 <style lang="scss" scoped>

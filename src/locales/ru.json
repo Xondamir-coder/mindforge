@@ -1,0 +1,258 @@
+{
+	"send": "Отправить",
+	"dev": "Разработано",
+	"scroll": "скролл",
+	"go-to": "Перейти",
+
+	"hero-title": "Создаем образовательный контент любого формата",
+	"hero-text": "Разработка обучающего контента для ВУЗов, школ, учебных центров, и для бизнесов",
+	"hero-stat-amount-1": "1300",
+	"hero-stat-name-1": "Интерактивные уроки",
+	"hero-stat-amount-2": "1500",
+	"hero-stat-name-2": "Часов обучающего видео",
+	"hero-stat-amount-3": "24000",
+	"hero-stat-name-3": "Активные пользователи",
+	"hero-stat-amount-4": "65",
+	"hero-stat-name-4": "Количество дисциплин",
+	"hero-stat-amount-5": "295000",
+	"hero-stat-name-5": "Материал",
+
+	"about-label": "Гарантируем и сертифицируем",
+	"about-title": "Учитесь онлайн в удобное время",
+	"about-subtitle": "Online courses from the world's leading experts.",
+	"about-text": "Lorem ipsum is simply dummy of the printing and typesetting industry lorem ipsum has the industry standard dummy.",
+	"about-title-1": "Гибкий график",
+	"about-text-1": "Best online platform for professional courses.",
+	"about-title-2": "Доступная стоимость",
+	"about-text-2": "Best online platform for professional courses.",
+	"about-title-3": "Экспертные преподаватели",
+	"about-text-3": "Best online platform for professional courses.",
+
+	"history-label": "Наша история",
+	"history-title": "Предоставляем 6 лет верной услуги",
+	"history-title-1": "Уроков",
+	"history-text-1": "1300+",
+	"history-date-1": "2018",
+	"history-title-2": "Предметов",
+	"history-text-2": "65+",
+	"history-date-2": "2019",
+	"history-title-3": "Страниц",
+	"history-text-3": "295,000+",
+	"history-date-3": "2020",
+	"history-title-4": "Чтения",
+	"history-text-4": "10,400+ часов",
+	"history-date-4": "2021",
+	"history-title-5": "Направлений",
+	"history-text-5": "14+",
+	"history-date-5": "2022",
+	"history-title-6": "Создание",
+	"history-text-6": "5200+ часов",
+	"history-date-6": "2023",
+	"history-title-7": "Пользователей",
+	"history-text-7": "24,000+",
+	"history-date-7": "2024",
+	"history-title-8": "Видеоуроков",
+	"history-text-8": "700+ часов",
+	"history-date-8": "2024",
+
+	"directions-title": "Мы предлагаем готовые полноценные курсы на основе данных направлений:",
+
+	"directions-title-1": "ACCA",
+	"directions-data-1-text-1": "Корпоративное управление",
+	"directions-data-1-text-2": "Управление рисками",
+	"directions-data-1-text-3": "Этика и корпоративная культура",
+	"directions-data-1-text-4": "Управление эффективностью",
+	"directions-data-1-text-5": "Финансовый менеджмент",
+	"directions-data-1-text-6": "Финансовая отчетность",
+	"directions-data-1-text-7": "Управленческий учет",
+
+	"directions-title-2": "CIMA",
+	"directions-data-2-text-1": "E1 - Организационный менеджмент",
+	"directions-data-2-text-2": "E2 - Управление проектами и управляющие взаимоотношения",
+	"directions-data-2-text-3": "E3 - Стратегическое управление",
+	"directions-data-2-text-4": "F3 - Финансовая стратегия",
+	"directions-data-2-text-5": "P1 - Управление эффективностью операций",
+	"directions-data-2-text-6": "P2 - Управление эффективностью бизнеса",
+	"directions-data-2-text-7": "P3 - Управление рисками",
+
+	"directions-title-3": "Бизнес менеджмент",
+	"directions-data-3-text-1": "Бизнес менеджмент",
+	"directions-data-3-text-2": "Бизнес процессы",
+	"directions-data-3-text-3": "Бизнес этика",
+	"directions-data-3-text-4": "Бизнес коммуникации",
+	"directions-data-3-text-5": "Финансы",
+	"directions-data-3-text-6": "Аналитика",
+	"directions-data-3-text-7": "Управление персоналом",
+
+	"directions-title-4": "Инженерия",
+	"directions-data-4-text-1": "Гидромеханика",
+	"directions-data-4-text-2": "Пневматика",
+	"directions-data-4-text-3": "Электроника",
+	"directions-data-4-text-4": "Робототехника",
+	"directions-data-4-text-5": "Строительная инженерия",
+	"directions-data-4-text-6": "Сопромат",
+
+	"directions-title-5": "Технологии",
+	"directions-data-5-text-1": "Языки программирования",
+	"directions-data-5-text-2": "WEB разработка",
+	"directions-data-5-text-3": "Дизайн",
+	"directions-data-5-text-4": "Тестирования",
+	"directions-data-5-text-5": "Data Science",
+	"directions-data-5-text-6": "Машинное обучение",
+
+	"directions-title-6": "Наука",
+	"directions-data-6-text-1": "Высшая математика",
+	"directions-data-6-text-2": "Статистика",
+	"directions-data-6-text-3": "Эконометрика",
+	"directions-data-6-text-4": "Физика-2",
+	"directions-data-6-text-5": "Химия",
+
+	"directions-title-7": "Управление проектами",
+	"directions-data-7-text-1": "Проектное управление (PMBOK, PRINCE2, AGILE)",
+	"directions-data-7-text-2": "SCRUM",
+	"directions-data-7-text-3": "KANBAN",
+	"directions-data-7-text-4": "LEAN",
+	"directions-data-7-text-5": "Управление изменениями",
+
+	"directions-title-8": "Софт и инструменты",
+	"directions-data-8-text-1": "Пакет AutoDesk",
+	"directions-data-8-text-2": "Пакет Adobe",
+	"directions-data-8-text-3": "Пакет MS OFFICE",
+	"directions-data-8-text-4": "DINAMO BIM",
+	"directions-data-8-text-5": "SolidWorks",
+	"directions-data-8-text-6": "MatLab",
+
+	"directions-title-9": "Психология",
+	"directions-data-9-text-1": "Социальная психология",
+	"directions-data-9-text-2": "Бизнес психология",
+	"directions-data-9-text-3": "Теория игр",
+	"directions-data-9-text-4": "Когнитивная психология",
+
+	"directions-title-10": "Языки",
+	"directions-data-10-text-1": "Английский",
+	"directions-data-10-text-2": "Китайский",
+	"directions-data-10-text-3": "Русский",
+	"directions-data-10-text-4": "Немецкий",
+	"directions-data-10-text-5": "Французский",
+	"directions-data-10-text-6": "Итальянский",
+	"directions-data-10-text-7": "Испанский",
+	"directions-data-10-text-8": "Японский",
+	"directions-data-10-text-9": "Корейский",
+
+	"courses-label": "Гарантируем и сертифицируем",
+	"courses-title": "Учитесь онлайн в удобное время",
+	"courses-subtitle": "Online courses from the world's leading experts.",
+	"courses-text": "Lorem ipsum is simply dummy of the printing and typesetting industry lorem ipsum has the industry standard dummy.",
+
+	"courses-title-1": "Критическое мышление",
+	"courses-text-1": "Убеждение по принципу 'один на один'",
+
+	"courses-title-2": "ENGLISH",
+	"courses-text-2": "Environment. Essay: Rainforests of the sea",
+
+	"courses-title-3": "Falsafa",
+	"courses-text-3": "Falsafa va uning jamiyat hayotidagi roli.",
+
+	"courses-title-4": "IQTISODIYOT NAZARIYASI",
+	"courses-text-4": "Ish haqi va mehnat munosabatlari.",
+
+	"courses-title-5": "Psixofiziologia",
+	"courses-text-5": "Biologik qayta aloqa. Sensor jarayonlar psixofiziologiyasi.",
+
+	"courses-title-6": "HRM",
+	"courses-text-6": "Samaradorlikni boshqarish va ish faoliyatini baholash",
+
+	"courses-title-7": "Поведение потребителей",
+	"courses-text-7": "Убеждение: отношение и суждение",
+
+	"courses-title-8": "Статистика",
+	"courses-text-8": "Линейная регрессия",
+
+	"courses-title-9": "Managing Finance in Digital World",
+	"courses-text-9": "Internet of things. Mobile. 3D printing.",
+
+	"courses-title-10": "Performance Management",
+	"courses-text-10": "Cost volume profit analysis",
+
+	"services-title": "Решения для эффективного онлайн-обучения и автоматизации",
+	"services-label": "Сервисы",
+
+	"services-title-1": "Интерактивные учебные материалы",
+	"services-text-1": "Мы преобразуем учебные материалы в интерактивный онлайн формат, делая обучение более увлекательным и понятным.",
+
+	"services-title-2": "Адаптация учебных пособий",
+	"services-text-2": "Мы разрабатываем учебные пособия, специально адаптированные для онлайн и гибридных форм обучения, чтобы обеспечить эффективное обучение в любой среде.",
+
+	"services-title-3": "Интерактивные лекции",
+	"services-text-3": "Мы создаем интерактивные лекции, которые вдохновляют и учат, делая процесс обучения более интересным и запоминающимся.",
+
+	"services-title-4": "Авторские онлайн-курсы",
+	"services-text-4": "Мы разрабатываем авторские курсы, которые можно легко использовать на сайтах или образовательных платформах, чтобы делиться знаниями с аудиторией.",
+
+	"services-title-5": "Автоматизация процессов обучения",
+	"services-text-5": "Мы автоматизируем процессы обучения и повышения квалификации, облегчая доступ к непрерывному обучению.",
+
+	"services-title-6": "Системы управления обучением (LMS)",
+	"services-text-6": "Мы внедряем системы управления обучением (LMS), которые автоматизируют рутинные процессы мониторинга и управления обучением.",
+
+	"services-title-7": "Видео-контент для обучения",
+	"services-text-7": "Мы снимаем видеоматериалы для уроков, лекций, семинаров и тренингов, чтобы создать качественный и доступный контент для обучения.",
+
+	"product-label": "Продукт",
+	"product-title": "Наш продукт: EDULAB",
+	"product-name": "Edulab",
+	"product-desc": "Платформа EduLab, это маркет-плейс онлайн-курсов, где вы можете найти уроки, лекции и семинары на 3 языках: узбекском, английском и русском. Здесь любой может разместить свой авторский курс для любой аудитории с возможностью монетизации.",
+
+	"skills-label": "Премиальное обучение",
+	"skills-title": "Что мы предлагаем",
+	"skills-quote-text": "Образование воспринимается теперь не как подготовка ко взрослой жизни, а как непрерывный процесс роста и развития – от рождения до смерти. – Стивен Митчел",
+	"skills-quote-desc": "Мы предлагаем вам вступить в эпоху трансформации образования вместе с нами! Уникальное предложение для вашего бизнеса прокачать своих сотрудников и клиентов быстро и эффективно!",
+
+	"words-big": "Мастерство в онлайн-обучении и разработке курсов",
+	"words-small": "Онлайн-обучение везде и в любое время.",
+
+	"offer-label": "Мы делаем для всех",
+	"offer-title": "Наши предложения для_",
+	"offer-text": "Создавайте и монетизируйте онлайн-курсы с возможностью контроля обучения и повышения квалификации",
+	"offer-client": "Клиенты успешно завершают курсы",
+
+	"offer-text-1": "Онлайн-тренинги для подготовки и повышения квалификации персонала, а также LMS для мониторинга и контроля обучения сотрудников",
+	"offer-for-1": "Корпоративных клиентов",
+
+	"offer-text-2": "Разработка онлайн-курсов по авторским программам с возможностью размещения и монетизации собственных курсов на платформе для широкой аудитории",
+	"offer-for-2": "Независимых авторов курсов",
+
+	"offer-text-3": "Онлайн-уроки по школьной программе и авторским курсам, курсы по профессиональным навыкам и подготовке к экзаменам, а также система управления обучением (LMS) для эффективного ведения учебного процесса",
+	"offer-for-3": "Школ",
+
+	"offer-text-4": "Онлайн-уроки для дистанционного и гибридного обучения по авторским программам, тесты и экзамены для оценки знаний, дополнительные курсы по профессиональным навыкам, а также LMS для управления образовательным процессом",
+	"offer-for-4": "Университетов",
+
+	"offer-text-5": "Онлайн-уроки по авторским программам для дистанционного и гибридного обучения, задания для самостоятельной работы и проверки знаний, а также LMS для эффективного управления процессом обучения",
+	"offer-for-5": "Учебных центров",
+
+	"contacts-title": "Как мы можем помочь?",
+	"contacts-classified": "Мы принципиально привязываемся к защите конфиденциальности. Мы никогда не собираем информацию о вас без о явного согласия.",
+
+	"contacts-desc-1": "Введите имя",
+	"contacts-title-1": "Имя*",
+
+	"contacts-desc-2": "Введите ваш адрес электронной почты",
+	"contacts-title-2": "Почта*",
+
+	"contacts-desc-3": "Введите ваш номер телефона",
+	"contacts-title-3": "Номер*",
+
+	"contacts-desc-4": "Как мы можем вам помочь?",
+	"contacts-title-4": "Тема",
+
+	"contacts-desc-5": "Опишите сообщение",
+	"contacts-title-5": "Сообщение",
+
+	"footer-strong": "Сила",
+	"footer-power": "в знании",
+	"footer-subtitle": "Предоставляем качественный контент уже 6 лет",
+	"footer-help": "Нужна помощь?",
+	"footer-call": "Позвонить нам?",
+	"footer-support": "Нужна поддержка?"
+}

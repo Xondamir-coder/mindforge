@@ -1,7 +1,7 @@
 <template>
 	<section class="words">
-		<h1 class="words__words">Мастерство в онлайн-обучении и разработке курсов</h1>
-		<h1 class="words__title">Онлайн-обучение везде и в любое время.</h1>
+		<h1 class="words__words">{{ $t('words-big') }}</h1>
+		<h1 class="words__title">{{ $t('words-small') }}</h1>
 	</section>
 </template>
 

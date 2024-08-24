@@ -1,6 +1,6 @@
 <template>
 	<section class="contacts section-padding">
-		<h1 class="contacts__title">Как мы можем помочь?</h1>
+		<h1 class="contacts__title">{{ $t('contacts-title') }}</h1>
 		<form class="form" @submit.prevent="submitForm">
 			<div class="form__container" v-for="content in contents" :key="content.name">
 				<h2 class="form__label">{{ content.title }}</h2>
@@ -27,12 +27,11 @@
 		</form>
 		<div class="contacts__footer">
 			<p>
-				Мы принципиально привязываемся к защите конфиденциальности. Мы никогда не собираем
-				информацию о вас без о явного согласия.
+				{{ $t('contacts-classified') }}
 			</p>
 			<Button
 				@click="submitForm"
-				label="Отправить"
+				:label="$t('send')"
 				:icon="IconSend"
 				class="contacts__button" />
 		</div>
@@ -45,49 +44,50 @@ import IconMail from './icons/IconMail.vue';
 import IconSmile from './icons/IconSmile.vue';
 import IconTopic from './icons/IconTopic.vue';
 import IconMessage from './icons/IconMessage.vue';
-import { ref } from 'vue';
+import { computed, ref } from 'vue';
 import IconError from './icons/IconError.vue';
 import IconValid from './icons/IconValid.vue';
 import IconSend from './icons/IconSend.vue';
 import Button from './Button.vue';
+import { i18n } from '@/locales';
 
-const contents = [
+const contents = computed(() => [
 	{
 		name: 'name',
-		desc: 'Введите имя',
 		icon: IconSmile,
-		title: 'Имя*',
-		isRequired: true
+		isRequired: true,
+		desc: i18n.global.t('contacts-desc-1'),
+		title: i18n.global.t('contacts-title-1')
 	},
 	{
 		name: 'email',
-		desc: 'Введите ваш адрес электронной почты',
 		icon: IconMail,
-		title: 'Почта*',
-		isRequired: true
+		isRequired: true,
+		desc: i18n.global.t('contacts-desc-2'),
+		title: i18n.global.t('contacts-title-2')
 	},
 	{
 		name: 'tel',
-		desc: 'Введите ваш номер телефона',
 		icon: IconCall,
-		title: 'Номер*',
-		isRequired: true
+		isRequired: true,
+		desc: i18n.global.t('contacts-desc-3'),
+		title: i18n.global.t('contacts-title-3')
 	},
 	{
 		name: 'subject',
-		desc: 'Как мы можем вам помочь?',
 		icon: IconTopic,
-		title: 'Тема',
-		isRequired: false
+		isRequired: false,
+		desc: i18n.global.t('contacts-desc-4'),
+		title: i18n.global.t('contacts-title-4')
 	},
 	{
 		name: 'message',
-		desc: 'Опишите сообщение',
 		icon: IconMessage,
-		title: 'Сообщение',
-		isRequired: false
+		isRequired: false,
+		desc: i18n.global.t('contacts-desc-5'),
+		title: i18n.global.t('contacts-title-5')
 	}
-];
+]);
 
 const data = ref({
 	name: '',

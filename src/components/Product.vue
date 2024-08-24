@@ -1,8 +1,8 @@
 <template>
 	<section class="product section-padding">
 		<div class="product__head">
-			<span class="product__label">Продукт</span>
-			<h1 class="product__title">Наш продукт: EDULAB</h1>
+			<span class="product__label">{{ $t('product-label') }}</span>
+			<h1 class="product__title">{{ $t('product-title') }}</h1>
 		</div>
 		<div class="product__images">
 			<img
@@ -37,22 +37,23 @@
 </template>
 
 <script setup>
-import { onMounted, onUnmounted, ref } from 'vue';
+import { computed, onMounted, onUnmounted, ref } from 'vue';
 import IconGreater from './icons/IconGreater.vue';
 import IconLess from './icons/IconLess.vue';
 import imgUrl1 from '@/assets/images/product-1.avif';
+import { i18n } from '@/locales';
 // import imgUrl2 from '@/assets/images/product-2.webp';
 // import imgUrl3 from '@/assets/images/product-3.webp';
 
 const curSlide = ref(0);
 // const images = [imgUrl1, imgUrl2, imgUrl3];
 const images = [imgUrl1];
-const contents = [
+const contents = computed(() => [
 	{
-		title: 'Edulab',
-		desc: 'Платформа EduLab, это маркет-плейс онлайн-курсов, где вы можете найти уроки, лекции и семинары на 3 языках: узбекском, английском и русском. Здесь любой может разместить свой авторский курс для любой аудитории с возможностью монетизации.'
+		title: i18n.global.t('product-name'),
+		desc: i18n.global.t('product-desc')
 	}
-];
+]);
 
 const changeSlide = direction => {
 	if (direction === 'next') {

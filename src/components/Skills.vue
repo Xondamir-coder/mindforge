@@ -12,9 +12,9 @@
 				<div class="skills__icon-container">
 					<IconBriefcase class="skills__icon" />
 				</div>
-				<p>Премиальное обучение</p>
+				<p>{{ $t('skills-label') }}</p>
 			</div>
-			<h1 class="skills__title">Что мы предлагаем</h1>
+			<h1 class="skills__title">{{ $t('skills-title') }}</h1>
 			<div class="skills__content">
 				<div
 					class="skills__box"
@@ -38,15 +38,15 @@ import { ref } from 'vue';
 import IconBook from './icons/IconBook.vue';
 import IconBriefcase from './icons/IconBriefcase.vue';
 import gsap from 'gsap';
-import Circle from './Circle.vue';
+import { i18n } from '@/locales';
 
 const activeItem = ref(-1);
 const imgContainerRef = ref();
 
 const skills = [
 	{
-		title: 'Образование воспринимается теперь не как подготовка ко взрослой жизни, а как непрерывный процесс роста и развития – от рождения до смерти. – Стивен Митчел',
-		desc: 'Мы предлагаем вам вступить в эпоху трансформации образования вместе с нами! Уникальное предложение для вашего бизнеса прокачать своих сотрудников и клиентов быстро и эффективно!',
+		title: i18n.global.t('skills-quote-text'),
+		desc: i18n.global.t('skills-quote-desc'),
 		icon: IconBook
 	}
 	// {

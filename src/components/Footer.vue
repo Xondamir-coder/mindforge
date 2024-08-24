@@ -9,12 +9,14 @@
 					<Rectangle class="footer__rectangle" />
 					<Triangle class="footer__triangle" />
 				</div>
-				<h1 class="footer__banner-title"><strong>Сила</strong> в знании</h1>
+				<h1 class="footer__banner-title">
+					<strong>{{ $t('footer-strong') }}</strong> {{ $t('footer-power') }}
+				</h1>
 			</div>
 			<div class="footer__content">
 				<div class="footer__box">
 					<Logo class="footer__logo" />
-					<p class="footer__text">Предоставляем качественный контент уже 6 лет</p>
+					<p class="footer__text">{{ $t('footer-subtitle') }}</p>
 					<ul class="footer__links">
 						<li class="footer__links-item">
 							<a href="#">Fb.</a>
@@ -31,15 +33,15 @@
 					</ul>
 				</div>
 				<div class="footer__box">
-					<h2 class="footer__title">Нужна помощь?</h2>
+					<h2 class="footer__title">{{ $t('footer-help') }}</h2>
 					<div>
-						<p class="footer__text">Позвонить нам?</p>
+						<p class="footer__text">{{ $t('footer-call') }}</p>
 						<a href="tel:+1 800 222 000" class="footer__a footer__a--tel"
 							>+1 800 222 000</a
 						>
 					</div>
 					<div>
-						<p class="footer__text">Нужна поддержка?</p>
+						<p class="footer__text">{{ $t('footer-support') }}</p>
 						<a class="footer__a" href="mailto:help@domain.com">help@domain.com</a>
 					</div>
 				</div>
@@ -47,7 +49,7 @@
 			<div class="footer__divider"></div>
 			<div class="footer__copyright">
 				<p>
-					&copy; {{ new Date().getFullYear() }} Mindforge. Разработано
+					&copy; {{ new Date().getFullYear() }} Mindforge. {{ $t('dev') }}
 					<a href="http://spacelabs.uz" target="_blank" rel="noopener noreferrer"
 						>Space Labs</a
 					>
@@ -59,7 +61,6 @@
 
 <script setup>
 import Circle from './Circle.vue';
-import IconLike from './icons/IconLike.vue';
 import Logo from './icons/Logo.vue';
 import Rectangle from './Rectangle.vue';
 import Triangle from './Triangle.vue';

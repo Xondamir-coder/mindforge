@@ -1,6 +1,6 @@
 <template>
 	<div class="scroll" ref="scrollRef" @click="scrollToTop">
-		<p class="scroll__text">scroll</p>
+		<p class="scroll__text">{{ $t('scroll') }}</p>
 		<div class="scroll__outer">
 			<div class="scroll__inner"></div>
 		</div>

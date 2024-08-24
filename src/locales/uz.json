@@ -1,0 +1,258 @@
+{
+	"send": "Yuborish",
+	"dev": "Ishlab chiqilgan",
+	"scroll": "scroll",
+	"go-to": "O'tish",
+
+	"hero-title": "Har qanday formatdagi ta'lim kontentini yaratamiz",
+	"hero-text": "Universitetlar, maktablar, o'quv markazlari va bizneslar uchun o'quv kontentini ishlab chiqish",
+	"hero-stat-amount-1": "1300",
+	"hero-stat-name-1": "Interaktiv darslar",
+	"hero-stat-amount-2": "1500",
+	"hero-stat-name-2": "O'quv videolarining soatlari",
+	"hero-stat-amount-3": "24000",
+	"hero-stat-name-3": "Faol foydalanuvchilar",
+	"hero-stat-amount-4": "65",
+	"hero-stat-name-4": "Fanlar soni",
+	"hero-stat-amount-5": "295000",
+	"hero-stat-name-5": "Materiallar",
+
+	"about-label": "Kafolatlangan va sertifikatlangan",
+	"about-title": "Qulay vaqtda onlayn o'rganing",
+	"about-subtitle": "Dunyoning yetakchi ekspertlaridan onlayn kurslar.",
+	"about-text": "Lorem ipsum – bu chop etish va matn terish sanoatining oddiy soxta matni. Lorem ipsum sanoat standartiga aylangan.",
+	"about-title-1": "Moslashuvchan jadval",
+	"about-text-1": "Professional kurslar uchun eng yaxshi onlayn platforma.",
+	"about-title-2": "Arzon narx",
+	"about-text-2": "Professional kurslar uchun eng yaxshi onlayn platforma.",
+	"about-title-3": "Ekspert o'qituvchilar",
+	"about-text-3": "Professional kurslar uchun eng yaxshi onlayn platforma.",
+
+	"history-label": "Bizning tariximiz",
+	"history-title": "6 yillik ishonchli xizmat ko'rsatamiz",
+	"history-title-1": "Darslar",
+	"history-text-1": "1300+",
+	"history-date-1": "2018",
+	"history-title-2": "Fanlar",
+	"history-text-2": "65+",
+	"history-date-2": "2019",
+	"history-title-3": "Sahifalar",
+	"history-text-3": "295,000+",
+	"history-date-3": "2020",
+	"history-title-4": "O'qish",
+	"history-text-4": "10,400+ soat",
+	"history-date-4": "2021",
+	"history-title-5": "Yo'nalishlar",
+	"history-text-5": "14+",
+	"history-date-5": "2022",
+	"history-title-6": "Yaratish",
+	"history-text-6": "5200+ soat",
+	"history-date-6": "2023",
+	"history-title-7": "Foydalanuvchilar",
+	"history-text-7": "24,000+",
+	"history-date-7": "2024",
+	"history-title-8": "Video darslar",
+	"history-text-8": "700+ soat",
+	"history-date-8": "2024",
+
+	"directions-title": "Biz quyidagi yo'nalishlar bo'yicha tayyor to'liq kurslarni taklif etamiz:",
+
+	"directions-title-1": "ACCA",
+	"directions-data-1-text-1": "Korporativ boshqaruv",
+	"directions-data-1-text-2": "Xavflarni boshqarish",
+	"directions-data-1-text-3": "Etika va korporativ madaniyat",
+	"directions-data-1-text-4": "Natijadorlikni boshqarish",
+	"directions-data-1-text-5": "Moliyaviy boshqaruv",
+	"directions-data-1-text-6": "Moliyaviy hisobot",
+	"directions-data-1-text-7": "Boshqaruv hisobi",
+
+	"directions-title-2": "CIMA",
+	"directions-data-2-text-1": "E1 - Tashkilot boshqaruvi",
+	"directions-data-2-text-2": "E2 - Loyihalarni boshqarish va munosabatlarni boshqarish",
+	"directions-data-2-text-3": "E3 - Strategik boshqaruv",
+	"directions-data-2-text-4": "F3 - Moliyaviy strategiya",
+	"directions-data-2-text-5": "P1 - Operatsion natijadorlikni boshqarish",
+	"directions-data-2-text-6": "P2 - Biznes natijadorligini boshqarish",
+	"directions-data-2-text-7": "P3 - Xavflarni boshqarish",
+
+	"directions-title-3": "Biznes boshqaruv",
+	"directions-data-3-text-1": "Biznes boshqaruv",
+	"directions-data-3-text-2": "Biznes jarayonlari",
+	"directions-data-3-text-3": "Biznes etika",
+	"directions-data-3-text-4": "Biznes kommunikatsiya",
+	"directions-data-3-text-5": "Moliyaviy",
+	"directions-data-3-text-6": "Analitika",
+	"directions-data-3-text-7": "Kadrlar boshqaruvi",
+
+	"directions-title-4": "Muhandislik",
+	"directions-data-4-text-1": "Gidromexanika",
+	"directions-data-4-text-2": "Pnevmatika",
+	"directions-data-4-text-3": "Elektronika",
+	"directions-data-4-text-4": "Robototexnika",
+	"directions-data-4-text-5": "Fuqarolik muhandisligi",
+	"directions-data-4-text-6": "Materiallarning mustahkamligi",
+
+	"directions-title-5": "Texnologiya",
+	"directions-data-5-text-1": "Dasturlash tillari",
+	"directions-data-5-text-2": "WEB rivojlanish",
+	"directions-data-5-text-3": "Dizayn",
+	"directions-data-5-text-4": "Sinov",
+	"directions-data-5-text-5": "Data Science",
+	"directions-data-5-text-6": "Mashina o'rganish",
+
+	"directions-title-6": "Fan",
+	"directions-data-6-text-1": "Oliy matematika",
+	"directions-data-6-text-2": "Statistika",
+	"directions-data-6-text-3": "Ekonometrika",
+	"directions-data-6-text-4": "Fizika-2",
+	"directions-data-6-text-5": "Kimyo",
+
+	"directions-title-7": "Loyihalarni boshqarish",
+	"directions-data-7-text-1": "Loyihalarni boshqarish (PMBOK, PRINCE2, AGILE)",
+	"directions-data-7-text-2": "SCRUM",
+	"directions-data-7-text-3": "KANBAN",
+	"directions-data-7-text-4": "LEAN",
+	"directions-data-7-text-5": "O'zgarishlarni boshqarish",
+
+	"directions-title-8": "Dasturiy ta'minot va vositalar",
+	"directions-data-8-text-1": "AutoDesk paketi",
+	"directions-data-8-text-2": "Adobe paketi",
+	"directions-data-8-text-3": "MS OFFICE paketi",
+	"directions-data-8-text-4": "DINAMO BIM",
+	"directions-data-8-text-5": "SolidWorks",
+	"directions-data-8-text-6": "MatLab",
+
+	"directions-title-9": "Psixologiya",
+	"directions-data-9-text-1": "Ijtimoiy psixologiya",
+	"directions-data-9-text-2": "Biznes psixologiyasi",
+	"directions-data-9-text-3": "O'yin nazariyasi",
+	"directions-data-9-text-4": "Kognitiv psixologiya",
+
+	"directions-title-10": "Tillar",
+	"directions-data-10-text-1": "Ingliz tili",
+	"directions-data-10-text-2": "Xitoy tili",
+	"directions-data-10-text-3": "Rus tili",
+	"directions-data-10-text-4": "Nemis tili",
+	"directions-data-10-text-5": "Fransuz tili",
+	"directions-data-10-text-6": "Italiya tili",
+	"directions-data-10-text-7": "Ispan tili",
+	"directions-data-10-text-8": "Yapon tili",
+	"directions-data-10-text-9": "Koreys tili",
+
+	"courses-label": "Kafolatlangan va sertifikatlangan",
+	"courses-title": "Qulay vaqtda onlayn o'rganing",
+	"courses-subtitle": "Dunyoning yetakchi ekspertlaridan onlayn kurslar.",
+	"courses-text": "Lorem ipsum – bu chop etish va matn terish sanoatining oddiy soxta matni. Lorem ipsum sanoat standartiga aylangan.",
+
+	"courses-title-1": "Tanqidiy fikrlash",
+	"courses-text-1": "Bir-biriga qarshi dalillar bilan ishontirish",
+
+	"courses-title-2": "ENGLISH",
+	"courses-text-2": "Atrof-muhit. Insho: Dengizlarning yomg'ir o'rmonlari",
+
+	"courses-title-3": "Falsafa",
+	"courses-text-3": "Falsafa va uning jamiyat hayotidagi roli.",
+
+	"courses-title-4": "IQTISODIYOT NAZARIYASI",
+	"courses-text-4": "Ish haqi va mehnat munosabatlari.",
+
+	"courses-title-5": "Psixofiziologiya",
+	"courses-text-5": "Biologik qayta aloqa. Sensor jarayonlar psixofiziologiyasi.",
+
+	"courses-title-6": "HRM",
+	"courses-text-6": "Ish natijadorligini boshqarish va ish faoliyatini baholash",
+
+	"courses-title-7": "Iste'molchilarning xatti-harakatlari",
+	"courses-text-7": "Ishontirish: munosabat va hukm",
+
+	"courses-title-8": "Statistika",
+	"courses-text-8": "Chiziqli regressiya",
+
+	"courses-title-9": "Raqamli dunyoda moliyani boshqarish",
+	"courses-text-9": "Narsalar interneti. Mobil. 3D chop etish.",
+
+	"courses-title-10": "Natijadorlikni boshqarish",
+	"courses-text-10": "Narx hajmi foyda tahlili",
+
+	"services-title": "Samarali onlayn ta'lim va avtomatlashtirish uchun echimlar",
+	"services-label": "Xizmatlar",
+
+	"services-title-1": "Interaktiv o'quv materiallari",
+	"services-text-1": "Biz o'quv materiallarini interaktiv onlayn formatga aylantiramiz, bu esa ta'limni yanada qiziqarli va tushunarli qiladi.",
+
+	"services-title-2": "O'quv materiallarini moslashtirish",
+	"services-text-2": "Biz o'quv materiallarini onlayn va gibrid ta'lim shakllari uchun maxsus moslashtirilgan holda ishlab chiqamiz, bu esa har qanday muhitda samarali ta'lim olishni ta'minlaydi.",
+
+	"services-title-3": "Interaktiv ma'ruzalar",
+	"services-text-3": "Biz ilhomlantiruvchi va o'rgatuvchi interaktiv ma'ruzalarni yaratamiz, bu esa ta'lim jarayonini yanada qiziqarli va esda qolarli qiladi.",
+
+	"services-title-4": "Mualliflik onlayn kurslari",
+	"services-text-4": "Biz o'z bilimlaringizni auditoriyaga ulashish uchun osongina veb-saytlarda yoki ta'lim platformalarida foydalanish mumkin bo'lgan mualliflik kurslarini ishlab chiqamiz.",
+
+	"services-title-5": "Ta'lim jarayonlarini avtomatlashtirish",
+	"services-text-5": "Biz ta'lim va malaka oshirish jarayonlarini avtomatlashtiramiz, bu esa uzluksiz ta'limga kirishni osonlashtiradi.",
+
+	"services-title-6": "Ta'limni boshqarish tizimlari (LMS)",
+	"services-text-6": "Biz ta'limni boshqarish tizimlarini (LMS) joriy qilamiz, ular monitoring va boshqaruv jarayonlarining muntazam bajarilishini avtomatlashtiradi.",
+
+	"services-title-7": "Ta'lim uchun video kontent",
+	"services-text-7": "Biz darslar, ma'ruzalar, seminarlar va treninglar uchun video materiallarni suratga olamiz, yuqori sifatli va ta'lim uchun ochiq kontent yaratamiz.",
+
+	"product-label": "Mahsulot",
+	"product-title": "Bizning mahsulotimiz: EDULAB",
+	"product-name": "Edulab",
+	"product-desc": "EduLab platformasi bu onlayn kurslar bozori bo'lib, u yerda siz darslar, ma'ruzalar va seminarlarni 3 tilda topishingiz mumkin: o'zbek, ingliz va rus. Bu yerda har qanday kishi o'z mualliflik kursini keng auditoriyaga joylashtirish va monetizatsiya qilish imkoniyatiga ega.",
+
+	"skills-label": "Premium ta'lim",
+	"skills-title": "Biz nima taklif qilamiz",
+	"skills-quote-text": "Ta'lim endi kattalar hayotiga tayyorgarlik emas, balki tug'ilishdan to o'limga qadar uzluksiz o'sish va rivojlanish jarayoni sifatida qabul qilinadi. – Stiven Mitchell",
+	"skills-quote-desc": "Biz sizni biz bilan birgalikda ta'lim transformatsiyasi davriga kirishga taklif etamiz! Bizning taklifimiz – biznesingiz uchun xodimlaringizni va mijozlaringizni tez va samarali rivojlantirish.",
+
+	"words-big": "Onlayn ta'lim va kurslarni ishlab chiqishda mahorat",
+	"words-small": "Onlayn ta'lim istalgan joyda va istalgan vaqtda.",
+
+	"offer-label": "Biz hammaga yordam beramiz",
+	"offer-title": "Bizning takliflarimiz_",
+	"offer-text": "Onlayn kurslar yaratish va monetizatsiya qilish imkoniyati bilan o'quv jarayonini nazorat qilish va malaka oshirish",
+	"offer-client": "Mijozlar muvaffaqiyatli kurslarni tugatadilar",
+
+	"offer-text-1": "Xodimlarni tayyorlash va malaka oshirish uchun onlayn treninglar, shuningdek, xodimlarning ta'limini monitoring qilish va nazorat qilish uchun LMS",
+	"offer-for-1": "Korporativ mijozlar",
+
+	"offer-text-2": "Mualliflik dasturlariga asoslangan onlayn kurslarni ishlab chiqish, o'z kurslaringizni platformada keng auditoriyaga joylashtirish va monetizatsiya qilish imkoniyati bilan",
+	"offer-for-2": "Mustaqil kurs mualliflari",
+
+	"offer-text-3": "Maktab dasturi va mualliflik kurslari bo'yicha onlayn darslar, professional ko'nikmalar va imtihonlarga tayyorgarlik kurslari, shuningdek, o'quv jarayonini samarali boshqarish uchun ta'limni boshqarish tizimi (LMS)",
+	"offer-for-3": "Maktablar",
+
+	"offer-text-4": "Mualliflik dasturlariga asoslangan masofaviy va gibrid o'qitish uchun onlayn darslar, bilimlarni baholash uchun testlar va imtihonlar, professional ko'nikmalar bo'yicha qo'shimcha kurslar, shuningdek, ta'lim jarayonini boshqarish uchun LMS",
+	"offer-for-4": "Universitetlar",
+
+	"offer-text-5": "Masofaviy va gibrid o'qitish uchun mualliflik dasturlariga asoslangan onlayn darslar, mustaqil ish va bilimlarni baholash uchun topshiriqlar, shuningdek, o'quv jarayonini samarali boshqarish uchun LMS",
+	"offer-for-5": "O'quv markazlari",
+
+	"contacts-title": "Biz qanday yordam bera olamiz?",
+	"contacts-classified": "Biz maxfiylikni himoya qilishga sodiqmiz. Biz siz haqingizda sizning aniq roziligingizsiz hech qanday ma'lumot to'plamaymiz.",
+
+	"contacts-desc-1": "Ismingizni kiriting",
+	"contacts-title-1": "Ism*",
+
+	"contacts-desc-2": "Elektron pochtangizni kiriting",
+	"contacts-title-2": "Pochta*",
+
+	"contacts-desc-3": "Telefon raqamingizni kiriting",
+	"contacts-title-3": "Telefon*",
+
+	"contacts-desc-4": "Biz qanday yordam bera olamiz?",
+	"contacts-title-4": "Mavzu",
+
+	"contacts-desc-5": "Xabaringizni tasvirlab bering",
+	"contacts-title-5": "Xabar",
+
+	"footer-strong": "Kuch",
+	"footer-power": "- bilimda",
+	"footer-subtitle": "6 yildan beri sifatli kontentni taqdim etamiz",
+	"footer-help": "Yordam kerakmi?",
+	"footer-call": "Bizga qo'ng'iroq qilishni xohlaysizmi?",
+	"footer-support": "Qo'llab-quvvatlash kerakmi?"
+}

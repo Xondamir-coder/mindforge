@@ -10,9 +10,9 @@
 		</div>
 		<div class="hero__lines"></div>
 		<div class="hero__content">
-			<h1 class="hero__title">Создаем образовательный контент любого формата</h1>
+			<h1 class="hero__title">{{ $t('hero-title') }}</h1>
 			<p class="hero__text">
-				Разработка обучающего контента для ВУЗов, школ, учебных центров, и для бизнесов
+				{{ $t('hero-text') }}
 			</p>
 			<div class="hero__stats">
 				<div class="hero__stat" v-for="stat in stats" :key="stat.amount">
@@ -38,34 +38,35 @@
 <script setup>
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ref } from 'vue';
+import { computed, ref } from 'vue';
 gsap.registerPlugin(ScrollTrigger);
 import Circle from '@/components/Circle.vue';
 import Rectangle from './Rectangle.vue';
 import Triangle from './Triangle.vue';
+import { i18n } from '@/locales';
 
-const stats = [
+const stats = computed(() => [
 	{
-		amount: 1300,
-		name: 'Интерактивные уроки'
+		amount: i18n.global.t('hero-stat-amount-1'),
+		name: i18n.global.t('hero-stat-name-1')
 	},
 	{
-		amount: 1500,
-		name: 'Часов обучающего видео'
+		amount: i18n.global.t('hero-stat-amount-2'),
+		name: i18n.global.t('hero-stat-name-2')
 	},
 	{
-		amount: 24000,
-		name: 'Активные пользователи'
+		amount: i18n.global.t('hero-stat-amount-3'),
+		name: i18n.global.t('hero-stat-name-3')
 	},
 	{
-		amount: 65,
-		name: 'Количество дисциплин'
+		amount: i18n.global.t('hero-stat-amount-4'),
+		name: i18n.global.t('hero-stat-name-4')
 	},
 	{
-		amount: 295000,
-		name: 'Материал'
+		amount: i18n.global.t('hero-stat-amount-5'),
+		name: i18n.global.t('hero-stat-name-5')
 	}
-];
+]);
 
 const imgContainerRef = ref();
 

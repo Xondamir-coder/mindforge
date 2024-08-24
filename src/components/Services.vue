@@ -2,9 +2,9 @@
 	<section class="services section-padding">
 		<div class="services__bg"></div>
 		<div class="services__head">
-			<span class="services__label">Сервисы</span>
+			<span class="services__label">{{ $t('services-label') }}</span>
 			<h1 class="services__title">
-				Решения для эффективного онлайн-обучения и автоматизации
+				{{ $t('services-title') }}
 			</h1>
 		</div>
 		<ul class="services__list">
@@ -27,44 +27,46 @@ import IconAuthor from './icons/IconAuthor.vue';
 import IconAutomation from './icons/IconAutomation.vue';
 import IconSystem from './icons/IconSystem.vue';
 import IconVideo from './icons/IconVideo.vue';
+import { computed } from 'vue';
+import { i18n } from '@/locales';
 
-const services = [
+const services = computed(() => [
 	{
 		icon: IconStudy,
-		title: 'Интерактивные учебные материалы',
-		text: 'Мы преобразуем учебные материалы в интерактивный онлайн формат, делая обучение более увлекательным и понятным.'
+		title: i18n.global.t('services-title-1'),
+		text: i18n.global.t('services-text-1')
 	},
 	{
 		icon: IconAdaptation,
-		title: 'Адаптация учебных пособий',
-		text: 'Мы разрабатываем учебные пособия, специально адаптированные для онлайн и гибридных форм обучения, чтобы обеспечить эффективное обучение в любой среде.'
+		title: i18n.global.t('services-title-2'),
+		text: i18n.global.t('services-text-2')
 	},
 	{
 		icon: IconInteractive,
-		title: 'Интерактивные лекции',
-		text: 'Мы создаем интерактивные лекции, которые вдохновляют и учат, делая процесс обучения более интересным и запоминающимся.'
+		title: i18n.global.t('services-title-3'),
+		text: i18n.global.t('services-text-3')
 	},
 	{
 		icon: IconAuthor,
-		title: 'Авторские онлайн-курсы',
-		text: 'Мы разрабатываем авторские курсы, которые можно легко использовать на сайтах или образовательных платформах, чтобы делиться знаниями с аудиторией.'
+		title: i18n.global.t('services-title-4'),
+		text: i18n.global.t('services-text-4')
 	},
 	{
 		icon: IconAutomation,
-		title: 'Автоматизация процессов обучения',
-		text: 'Мы автоматизируем процессы обучения и повышения квалификации, облегчая доступ к непрерывному обучению.'
+		title: i18n.global.t('services-title-5'),
+		text: i18n.global.t('services-text-5')
 	},
 	{
 		icon: IconSystem,
-		title: 'Системы управления обучением (LMS)',
-		text: 'Мы внедряем системы управления обучением (LMS), которые автоматизируют рутинные процессы мониторинга и управления обучением.'
+		title: i18n.global.t('services-title-6'),
+		text: i18n.global.t('services-text-6')
 	},
 	{
 		icon: IconVideo,
-		title: 'Видео-контент для обучения',
-		text: 'Мы снимаем видеоматериалы для уроков, лекций, семинаров и тренингов, чтобы создать качественный и доступный контент для обучения.'
+		title: i18n.global.t('services-title-7'),
+		text: i18n.global.t('services-text-7')
 	}
-];
+]);
 </script>
 
 <style lang="scss" scoped>

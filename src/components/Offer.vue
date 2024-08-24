@@ -7,17 +7,16 @@
 				<div class="offer__icon-container">
 					<IconChat class="offer__icon" />
 				</div>
-				<span>Мы делаем для всех</span>
+				<span>{{ $t('offer-label') }}</span>
 			</div>
-			<h1 class="offer__title">Наши предложения для_</h1>
+			<h1 class="offer__title">{{ $t('offer-title') }}</h1>
 			<p class="offer__text">
-				Создавайте и монетизируйте онлайн-курсы с возможностью контроля обучения и повышения
-				квалификации
+				{{ $t('offer-text') }}
 			</p>
 			<div class="offer__content">
 				<h2 class="offer__content-data">99%</h2>
 				<div class="offer__content-divider"></div>
-				<div class="offer__content-text">Клиенты успешно завершают курсы</div>
+				<div class="offer__content-text">{{ $t('offer-client') }}</div>
 			</div>
 		</div>
 		<div class="offer__right">
@@ -27,7 +26,7 @@
 </template>
 
 <script setup>
-import { onMounted, ref } from 'vue';
+import { computed, onMounted, ref } from 'vue';
 import IconChat from './icons/IconChat.vue';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -38,35 +37,36 @@ import offerImg3 from '@/assets/images/offer-3.webp';
 import offerImg4 from '@/assets/images/offer-4.webp';
 import offerImg5 from '@/assets/images/offer-5.webp';
 import Cards from '@/components/Cards.vue';
+import { i18n } from '@/locales';
 
 const objRef = ref();
-const contents = [
+const contents = computed(() => [
 	{
 		img: offerImg1,
-		text: 'Онлайн-тренинги для подготовки и повышения квалификации персонала, а также LMS для мониторинга и контроля обучения сотрудников',
-		for: 'Корпоративных клиентов'
+		text: i18n.global.t('offer-text-1'),
+		for: i18n.global.t('offer-for-1')
 	},
 	{
 		img: offerImg2,
-		text: 'Разработка онлайн-курсов по авторским программам с возможностью размещения и монетизации собственных курсов на платформе для широкой аудитории',
-		for: 'Независимых авторов курсов:'
+		text: i18n.global.t('offer-text-2'),
+		for: i18n.global.t('offer-for-2')
 	},
 	{
 		img: offerImg3,
-		for: 'Школ',
-		text: 'Онлайн-уроки по школьной программе и авторским курсам, курсы по профессиональным навыкам и подготовке к экзаменам, а также система управления обучением (LMS) для эффективного ведения учебного процесса'
+		text: i18n.global.t('offer-text-3'),
+		for: i18n.global.t('offer-for-3')
 	},
 	{
 		img: offerImg4,
-		for: 'Университетов',
-		text: 'Онлайн-уроки для дистанционного и гибридного обучения по авторским программам, тесты и экзамены для оценки знаний, дополнительные курсы по профессиональным навыкам, а также LMS для управления образовательным процессом'
+		text: i18n.global.t('offer-text-4'),
+		for: i18n.global.t('offer-for-4')
 	},
 	{
 		img: offerImg5,
-		for: 'Учебных центров',
-		text: 'Онлайн-уроки по авторским программам для дистанционного и гибридного обучения, задания для самостоятельной работы и проверки знаний, а также LMS для эффективного управления процессом обучения'
+		text: i18n.global.t('offer-text-5'),
+		for: i18n.global.t('offer-for-5')
 	}
-];
+]);
 
 onMounted(() => {
 	gsap.to(objRef.value, {

@@ -1,7 +1,7 @@
 <template>
 	<section class="directions section-padding">
 		<h1 class="directions__title">
-			Мы предлагаем готовые полноценные курсы на основе данных направлений:
+			{{ $t('directions-title') }}
 		</h1>
 		<ul class="directions__list">
 			<li class="directions__item" v-for="content in contents" :key="content">
@@ -31,120 +31,127 @@ import directionsImg7 from '@/assets/images/directions-7.jpg';
 import directionsImg8 from '@/assets/images/directions-8.jpg';
 import directionsImg10 from '@/assets/images/directions-10.jpg';
 import directionsImg11 from '@/assets/images/directions-11.jpg';
+import { computed } from 'vue';
+import { i18n } from '@/locales';
 
-const contents = [
+const contents = computed(() => [
 	{
-		title: 'ACCA',
+		title: i18n.global.t('directions-title-1'),
 		img: directionsImg1,
 		data: [
-			'Корпоративное управление',
-			'Управление рисками',
-			'Этика и корпоративная культура',
-			'Управление эффективностью',
-			'Финансовый менеджмент',
-			'Финансовая отчетность',
-			'Управленческий учет'
+			i18n.global.t('directions-data-1-text-1'),
+			i18n.global.t('directions-data-1-text-2'),
+			i18n.global.t('directions-data-1-text-3'),
+			i18n.global.t('directions-data-1-text-4'),
+			i18n.global.t('directions-data-1-text-5'),
+			i18n.global.t('directions-data-1-text-6')
 		]
 	},
 	{
-		title: 'CIMA',
+		title: i18n.global.t('directions-title-2'),
 		img: directionsImg2,
 		data: [
-			'E1 - Организационный менеджмент',
-			'E2 - Управление проектами и управляющие взаимоотношения',
-			'E3 - Стратегическое управление',
-			'F3 - Финансовая стратегия',
-			'P1 - Управление эффективностью операций',
-			'P2 - Управление эффективностью бизнеса',
-			'P3 - Управление рисками'
+			i18n.global.t('directions-data-2-text-1'),
+			i18n.global.t('directions-data-2-text-2'),
+			i18n.global.t('directions-data-2-text-3'),
+			i18n.global.t('directions-data-2-text-4'),
+			i18n.global.t('directions-data-2-text-5'),
+			i18n.global.t('directions-data-2-text-6')
 		]
 	},
 	{
-		title: 'Бизнес менеджмент',
+		title: i18n.global.t('directions-title-3'),
 		img: directionsImg3,
 		data: [
-			'Бизнес менеджмент',
-			'Бизнес процессы',
-			'Бизнес этика',
-			'Бизнес коммуникации',
-			'Финансы',
-			'Аналитика',
-			'Управление персоналом'
+			i18n.global.t('directions-data-3-text-1'),
+			i18n.global.t('directions-data-3-text-2'),
+			i18n.global.t('directions-data-3-text-3'),
+			i18n.global.t('directions-data-3-text-4'),
+			i18n.global.t('directions-data-3-text-5'),
+			i18n.global.t('directions-data-3-text-6')
 		]
 	},
 	{
-		title: 'Инженерия',
+		title: i18n.global.t('directions-title-4'),
 		img: directionsImg4,
 		data: [
-			'Гидромеханика',
-			'Пневматика',
-			'Электроника',
-			'Робототехника',
-			'Строительная инженерия',
-			'Сопромат'
+			i18n.global.t('directions-data-4-text-1'),
+			i18n.global.t('directions-data-4-text-2'),
+			i18n.global.t('directions-data-4-text-3'),
+			i18n.global.t('directions-data-4-text-4'),
+			i18n.global.t('directions-data-4-text-5'),
+			i18n.global.t('directions-data-4-text-6')
 		]
 	},
 	{
-		title: 'Технологии',
+		title: i18n.global.t('directions-title-5'),
 		img: directionsImg5,
 		data: [
-			'Языки программирования',
-			'WEB разработка',
-			'Дизайн',
-			'Тестирования',
-			'Data Science',
-			'Машинное обучение'
+			i18n.global.t('directions-data-5-text-1'),
+			i18n.global.t('directions-data-5-text-2'),
+			i18n.global.t('directions-data-5-text-3'),
+			i18n.global.t('directions-data-5-text-4'),
+			i18n.global.t('directions-data-5-text-5'),
+			i18n.global.t('directions-data-5-text-6')
 		]
 	},
 	{
-		title: 'Наука',
+		title: i18n.global.t('directions-title-6'),
 		img: directionsImg6,
-		data: ['Высшая математика', 'Статистика', 'Эконометрика', 'Физика-2', 'Химия']
+		data: [
+			i18n.global.t('directions-data-6-text-1'),
+			i18n.global.t('directions-data-6-text-2'),
+			i18n.global.t('directions-data-6-text-3'),
+			i18n.global.t('directions-data-6-text-4'),
+			i18n.global.t('directions-data-6-text-5')
+		]
 	},
 	{
-		title: 'Управление проектами',
+		title: i18n.global.t('directions-title-7'),
 		img: directionsImg7,
 		data: [
-			'Проектное управление (PMBOK, PRINCE2, AGILE)',
-			'SCRUM',
-			'KANBAN',
-			'LEAN',
-			'Управление изменениями'
+			i18n.global.t('directions-data-7-text-1'),
+			i18n.global.t('directions-data-7-text-2'),
+			i18n.global.t('directions-data-7-text-3'),
+			i18n.global.t('directions-data-7-text-4'),
+			i18n.global.t('directions-data-7-text-5')
 		]
 	},
 	{
-		title: 'Софт и инструменты',
+		title: i18n.global.t('directions-title-8'),
 		img: directionsImg8,
 		data: [
-			'Пакет AutoDesk',
-			'Пакет Adobe',
-			'Пакет MS OFFICE',
-			'DINAMO BIM',
-			'SolidWorks',
-			'MatLab'
+			i18n.global.t('directions-data-8-text-1'),
+			i18n.global.t('directions-data-8-text-2'),
+			i18n.global.t('directions-data-8-text-3'),
+			i18n.global.t('directions-data-8-text-4'),
+			i18n.global.t('directions-data-8-text-5'),
+			i18n.global.t('directions-data-8-text-6')
 		]
 	},
 	{
-		title: 'Психология',
+		title: i18n.global.t('directions-title-9'),
 		img: directionsImg10,
-		data: ['Социальная психология', 'Бизнес психология', 'Теория игр', 'Когнитивная психология']
+		data: [
+			i18n.global.t('directions-data-9-text-1'),
+			i18n.global.t('directions-data-9-text-2'),
+			i18n.global.t('directions-data-9-text-3'),
+			i18n.global.t('directions-data-9-text-4')
+		]
 	},
 	{
-		title: 'Языки',
+		title: i18n.global.t('directions-title-10'),
 		img: directionsImg11,
 		data: [
-			'Английский',
-			'Китайский',
-			'Русский',
-			'Немецкий',
-			'Французский',
-			'Итальянский',
-			'Испанский',
-			'Японский',
-			'Корейский'
+			i18n.global.t('directions-data-10-text-1'),
+			i18n.global.t('directions-data-10-text-2'),
+			i18n.global.t('directions-data-10-text-3'),
+			i18n.global.t('directions-data-10-text-4'),
+			i18n.global.t('directions-data-10-text-5'),
+			i18n.global.t('directions-data-10-text-6')
 		]
 	}
-];
+]);
 </script>
 
 <style lang="scss" scoped>

@@ -5,13 +5,13 @@
 			<ul class="header__languages">
 				<li
 					class="header__language"
-					v-for="item in [
+					v-for="{ label, lang } in [
 						{ label: 'O\'ZB', lang: 'uz' },
 						{ label: 'РУС', lang: 'ru' },
 						{ label: 'ENG', lang: 'en' }
 					]">
-					<button @click="changeLang(item.lang)">
-						{{ item.label }}
+					<button @click="selectLang(lang)">
+						{{ label }}
 					</button>
 				</li>
 			</ul>
@@ -20,13 +20,15 @@
 </template>
 
 <script setup>
+import { changeLang } from '@/locales';
 import Logo from './icons/Logo.vue';
-import IconCall from './icons/IconCall.vue';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { onMounted, ref } from 'vue';
 gsap.registerPlugin(ScrollTrigger);
 const headerRef = ref();
+
+const selectLang = lang => changeLang(lang);
 
 onMounted(() => {
 	gsap.timeline({

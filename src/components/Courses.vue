@@ -7,16 +7,15 @@
 						<div class="courses__icon-container">
 							<IconAward class="courses__icon" />
 						</div>
-						<span>Гарантируем и сертифицируем</span>
+						<span>{{ $t('courses-label') }}</span>
 					</div>
-					<h1 class="courses__title">Учитесь онлайн в удобное время</h1>
+					<h1 class="courses__title">{{ $t('courses-title') }}</h1>
 				</div>
 			</div>
 			<div class="courses__right">
-				<h2 class="courses__subtitle">Online courses from the world's leading experts.</h2>
+				<h2 class="courses__subtitle">{{ $t('courses-subtitle') }}</h2>
 				<p class="courses__text">
-					Lorem ipsum is simply dummy of the printing and typesetting industry lorem ipsum
-					has the industry standard dummy.
+					{{ $t('courses-text') }}
 				</p>
 			</div>
 		</div>
@@ -30,7 +29,7 @@
 				<div class="courses__container">
 					<p>Hover me</p>
 					<a :href="content.link" target="_blank" class="courses__button">
-						Перейти
+						{{ $t('go-to') }}
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							width="16"
@@ -53,60 +52,62 @@ import IconAward from './icons/IconAward.vue';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Rectangle from './Rectangle.vue';
+import { i18n } from '@/locales';
+import { computed } from 'vue';
 gsap.registerPlugin(ScrollTrigger);
 
-const contents = [
+const contents = computed(() => [
 	{
-		title: 'Критическое мышление',
-		text: 'Убеждение по принципу "один на один',
+		title: i18n.global.t('courses-title-1'),
+		text: i18n.global.t('courses-text-1'),
 		link: 'https://rise.articulate.com/share/fiI3-K6KlURvjgrj4nvDOXT9d82ttZPA#/'
 	},
 	{
-		title: 'ENGLISH',
-		text: 'Environment. Essay: Rainforests of the sea',
+		title: i18n.global.t('courses-title-2'),
+		text: i18n.global.t('courses-text-2'),
 		link: 'https://rise.articulate.com/share/agirrURI99r2s6DHEW9s1Pe5z7D8guen#/lessons/CivdVBNOdHXjD6ohQfqNv1K8j544zZ7_'
 	},
 	{
-		title: 'Falsafa',
-		text: 'Falsafa va uning jamiyat hayotidagi roli.',
+		title: i18n.global.t('courses-title-3'),
+		text: i18n.global.t('courses-text-3'),
 		link: 'https://rise.articulate.com/share/9ANAJwt4wi91eLHGWxxYRGaOhfQrVW--#/'
 	},
 	{
-		title: 'IQTISODIYOT NAZARIYASI',
-		text: 'Ish haqi va mehnat munosabatlari. ',
+		title: i18n.global.t('courses-title-4'),
+		text: i18n.global.t('courses-text-4'),
 		link: 'https://rise.articulate.com/share/N-uzWUbqJaxuCxiCcQGTpl5BiJP0XT-Z#/'
 	},
 	{
-		title: 'Psixofiziologia',
-		text: 'Biologik qayta aloqa. Sensor jarayonlar psixofiziologiyasi.',
+		title: i18n.global.t('courses-title-5'),
+		text: i18n.global.t('courses-text-5'),
 		link: 'https://rise.articulate.com/share/5kzW5bf4HlSaf_BVeFOlJavKzIv8GDt-#/'
 	},
 	{
-		title: 'HRM ',
-		text: 'Samaradorlikni boshqarish va ish faoliyatini baholash ',
+		title: i18n.global.t('courses-title-6'),
+		text: i18n.global.t('courses-text-6'),
 		link: 'https://rise.articulate.com/share/eKfxoqO7H4T4BIgRf7vsUmJrkRPgMeyc#/'
 	},
 	{
-		title: 'Поведение потребителей',
-		text: 'Убеждение: отношение и суждение',
+		title: i18n.global.t('courses-title-7'),
+		text: i18n.global.t('courses-text-7'),
 		link: 'https://rise.articulate.com/share/3gOFJXXa-zUK41HWCaju8KKphQnLDsdl#/'
 	},
 	{
-		title: 'Статистика',
-		text: 'Линейная регрессия ',
+		title: i18n.global.t('courses-title-8'),
+		text: i18n.global.t('courses-text-8'),
 		link: 'https://rise.articulate.com/share/XaSYw9fJX8GQCFmhzzst7LyJ-UgNgIKf#/'
 	},
 	{
-		title: 'Managing Finance in Digital World',
-		text: 'Internet of things. Mobile. 3D printing. ',
+		title: i18n.global.t('courses-title-9'),
+		text: i18n.global.t('courses-text-9'),
 		link: 'https://rise.articulate.com/share/cbm6ZAzQhuz9OmvdrtG4zePycEs-mEiv#/'
 	},
 	{
-		title: 'Performance Management',
-		text: 'Cost volume profit analysis ',
+		title: i18n.global.t('courses-title-10'),
+		text: i18n.global.t('courses-text-10'),
 		link: 'https://rise.articulate.com/share/2Ey08C-iD6zoqiJzlbDW-GYzzGgc5OcE#/'
 	}
-];
+]);
 </script>
 
 <style lang="scss" scoped>

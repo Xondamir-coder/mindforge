@@ -10,18 +10,17 @@
 							<div class="about__icon-container">
 								<IconAward class="about__icon" />
 							</div>
-							<span>Гарантируем и сертифицируем</span>
+							<span>{{ $t('about-label') }}</span>
 						</div>
-						<h1 class="about__title">Учитесь онлайн в удобное время</h1>
+						<h1 class="about__title">{{ $t('about-title') }}</h1>
 					</div>
 				</div>
 				<div class="about__right">
 					<h2 class="about__subtitle">
-						Online courses from the world's leading experts.
+						{{ $t('about-subtitle') }}
 					</h2>
 					<p class="about__text">
-						Lorem ipsum is simply dummy of the printing and typesetting industry lorem
-						ipsum has the industry standard dummy.
+						{{ $t('about-text') }}
 					</p>
 				</div>
 			</div>
@@ -40,7 +39,7 @@
 
 <script setup>
 import lenis from '@/js/lenis';
-import { onMounted, ref } from 'vue';
+import { computed, onMounted, ref } from 'vue';
 import IconAward from './icons/IconAward.vue';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -50,24 +49,25 @@ gsap.registerPlugin(ScrollTrigger);
 import aboutImg1 from '@/assets/images/about-1.webp';
 import aboutImg2 from '@/assets/images/about-2.webp';
 import aboutImg3 from '@/assets/images/about-3.webp';
+import { i18n } from '@/locales';
 
-const contents = [
+const contents = computed(() => [
 	{
-		title: 'Гибкий график',
-		text: 'Best online platform for professional courses.',
+		title: i18n.global.t('about-title-1'),
+		text: i18n.global.t('about-text-1'),
 		img: aboutImg1
 	},
 	{
-		title: 'Доступная стоимость',
-		text: 'Best online platform for professional courses.',
+		title: i18n.global.t('about-title-2'),
+		text: i18n.global.t('about-text-2'),
 		img: aboutImg2
 	},
 	{
-		title: 'Экспертные преподаватели',
-		text: 'Best online platform for professional courses.',
+		title: i18n.global.t('about-title-3'),
+		text: i18n.global.t('about-text-3'),
 		img: aboutImg3
 	}
-];
+]);
 
 const aboutRef = ref();
 

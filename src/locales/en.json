@@ -1,0 +1,258 @@
+{
+	"send": "Send",
+	"dev": "Developed by",
+	"scroll": "scroll",
+	"go-to": "Go to",
+
+	"hero-title": "We create educational content in any format",
+	"hero-text": "Developing educational content for universities, schools, training centers, and businesses",
+	"hero-stat-amount-1": "1300",
+	"hero-stat-name-1": "Interactive lessons",
+	"hero-stat-amount-2": "1500",
+	"hero-stat-name-2": "Hours of educational video",
+	"hero-stat-amount-3": "24000",
+	"hero-stat-name-3": "Active users",
+	"hero-stat-amount-4": "65",
+	"hero-stat-name-4": "Number of disciplines",
+	"hero-stat-amount-5": "295000",
+	"hero-stat-name-5": "Materials",
+
+	"about-label": "Guaranteed and certified",
+	"about-title": "Learn online at your convenience",
+	"about-subtitle": "Online courses from the world's leading experts.",
+	"about-text": "Lorem ipsum is simply dummy text of the printing and typesetting industry lorem ipsum has been the industry standard dummy text.",
+	"about-title-1": "Flexible schedule",
+	"about-text-1": "Best online platform for professional courses.",
+	"about-title-2": "Affordable cost",
+	"about-text-2": "Best online platform for professional courses.",
+	"about-title-3": "Expert instructors",
+	"about-text-3": "Best online platform for professional courses.",
+
+	"history-label": "Our history",
+	"history-title": "Providing reliable service for 6 years",
+	"history-title-1": "Lessons",
+	"history-text-1": "1300+",
+	"history-date-1": "2018",
+	"history-title-2": "Subjects",
+	"history-text-2": "65+",
+	"history-date-2": "2019",
+	"history-title-3": "Pages",
+	"history-text-3": "295,000+",
+	"history-date-3": "2020",
+	"history-title-4": "Reading",
+	"history-text-4": "10,400+ hours",
+	"history-date-4": "2021",
+	"history-title-5": "Directions",
+	"history-text-5": "14+",
+	"history-date-5": "2022",
+	"history-title-6": "Creation",
+	"history-text-6": "5200+ hours",
+	"history-date-6": "2023",
+	"history-title-7": "Users",
+	"history-text-7": "24,000+",
+	"history-date-7": "2024",
+	"history-title-8": "Video lessons",
+	"history-text-8": "700+ hours",
+	"history-date-8": "2024",
+
+	"directions-title": "We offer ready-made comprehensive courses in the following directions:",
+
+	"directions-title-1": "ACCA",
+	"directions-data-1-text-1": "Corporate governance",
+	"directions-data-1-text-2": "Risk management",
+	"directions-data-1-text-3": "Ethics and corporate culture",
+	"directions-data-1-text-4": "Performance management",
+	"directions-data-1-text-5": "Financial management",
+	"directions-data-1-text-6": "Financial reporting",
+	"directions-data-1-text-7": "Management accounting",
+
+	"directions-title-2": "CIMA",
+	"directions-data-2-text-1": "E1 - Organizational management",
+	"directions-data-2-text-2": "E2 - Project management and relationship management",
+	"directions-data-2-text-3": "E3 - Strategic management",
+	"directions-data-2-text-4": "F3 - Financial strategy",
+	"directions-data-2-text-5": "P1 - Operational performance management",
+	"directions-data-2-text-6": "P2 - Business performance management",
+	"directions-data-2-text-7": "P3 - Risk management",
+
+	"directions-title-3": "Business management",
+	"directions-data-3-text-1": "Business management",
+	"directions-data-3-text-2": "Business processes",
+	"directions-data-3-text-3": "Business ethics",
+	"directions-data-3-text-4": "Business communication",
+	"directions-data-3-text-5": "Finance",
+	"directions-data-3-text-6": "Analytics",
+	"directions-data-3-text-7": "Human resources management",
+
+	"directions-title-4": "Engineering",
+	"directions-data-4-text-1": "Hydromechanics",
+	"directions-data-4-text-2": "Pneumatics",
+	"directions-data-4-text-3": "Electronics",
+	"directions-data-4-text-4": "Robotics",
+	"directions-data-4-text-5": "Civil engineering",
+	"directions-data-4-text-6": "Strength of materials",
+
+	"directions-title-5": "Technology",
+	"directions-data-5-text-1": "Programming languages",
+	"directions-data-5-text-2": "WEB development",
+	"directions-data-5-text-3": "Design",
+	"directions-data-5-text-4": "Testing",
+	"directions-data-5-text-5": "Data Science",
+	"directions-data-5-text-6": "Machine learning",
+
+	"directions-title-6": "Science",
+	"directions-data-6-text-1": "Higher mathematics",
+	"directions-data-6-text-2": "Statistics",
+	"directions-data-6-text-3": "Econometrics",
+	"directions-data-6-text-4": "Physics-2",
+	"directions-data-6-text-5": "Chemistry",
+
+	"directions-title-7": "Project management",
+	"directions-data-7-text-1": "Project management (PMBOK, PRINCE2, AGILE)",
+	"directions-data-7-text-2": "SCRUM",
+	"directions-data-7-text-3": "KANBAN",
+	"directions-data-7-text-4": "LEAN",
+	"directions-data-7-text-5": "Change management",
+
+	"directions-title-8": "Software and tools",
+	"directions-data-8-text-1": "AutoDesk package",
+	"directions-data-8-text-2": "Adobe package",
+	"directions-data-8-text-3": "MS OFFICE package",
+	"directions-data-8-text-4": "DINAMO BIM",
+	"directions-data-8-text-5": "SolidWorks",
+	"directions-data-8-text-6": "MatLab",
+
+	"directions-title-9": "Psychology",
+	"directions-data-9-text-1": "Social psychology",
+	"directions-data-9-text-2": "Business psychology",
+	"directions-data-9-text-3": "Game theory",
+	"directions-data-9-text-4": "Cognitive psychology",
+
+	"directions-title-10": "Languages",
+	"directions-data-10-text-1": "English",
+	"directions-data-10-text-2": "Chinese",
+	"directions-data-10-text-3": "Russian",
+	"directions-data-10-text-4": "German",
+	"directions-data-10-text-5": "French",
+	"directions-data-10-text-6": "Italian",
+	"directions-data-10-text-7": "Spanish",
+	"directions-data-10-text-8": "Japanese",
+	"directions-data-10-text-9": "Korean",
+
+	"courses-label": "Guaranteed and certified",
+	"courses-title": "Learn online at your convenience",
+	"courses-subtitle": "Online courses from the world's leading experts.",
+	"courses-text": "Lorem ipsum is simply dummy text of the printing and typesetting industry lorem ipsum has been the industry standard dummy text.",
+
+	"courses-title-1": "Critical thinking",
+	"courses-text-1": "Persuasion one-on-one",
+
+	"courses-title-2": "ENGLISH",
+	"courses-text-2": "Environment. Essay: Rainforests of the sea",
+
+	"courses-title-3": "Philosophy",
+	"courses-text-3": "Philosophy and its role in social life.",
+
+	"courses-title-4": "ECONOMIC THEORY",
+	"courses-text-4": "Wages and labor relations.",
+
+	"courses-title-5": "Psychophysiology",
+	"courses-text-5": "Biofeedback. Psychophysiology of sensory processes.",
+
+	"courses-title-6": "HRM",
+	"courses-text-6": "Performance management and job evaluation",
+
+	"courses-title-7": "Consumer behavior",
+	"courses-text-7": "Persuasion: attitude and judgment",
+
+	"courses-title-8": "Statistics",
+	"courses-text-8": "Linear regression",
+
+	"courses-title-9": "Managing Finance in Digital World",
+	"courses-text-9": "Internet of things. Mobile. 3D printing.",
+
+	"courses-title-10": "Performance Management",
+	"courses-text-10": "Cost volume profit analysis",
+
+	"services-title": "Solutions for effective online learning and automation",
+	"services-label": "Services",
+
+	"services-title-1": "Interactive learning materials",
+	"services-text-1": "We transform learning materials into an interactive online format, making learning more engaging and understandable.",
+
+	"services-title-2": "Adaptation of learning materials",
+	"services-text-2": "We develop learning materials specifically adapted for online and hybrid forms of education to ensure effective learning in any environment.",
+
+	"services-title-3": "Interactive lectures",
+	"services-text-3": "We create interactive lectures that inspire and teach, making the learning process more interesting and memorable.",
+
+	"services-title-4": "Author's online courses",
+	"services-text-4": "We develop author courses that can be easily used on websites or educational platforms to share knowledge with the audience.",
+
+	"services-title-5": "Automation of learning processes",
+	"services-text-5": "We automate the processes of learning and professional development, facilitating access to continuous learning.",
+
+	"services-title-6": "Learning management systems (LMS)",
+	"services-text-6": "We implement learning management systems (LMS) that automate routine monitoring and management processes.",
+
+	"services-title-7": "Video content for learning",
+	"services-text-7": "We create video materials for lessons, lectures, seminars, and training sessions to produce high-quality and accessible content for learning.",
+
+	"product-label": "Product",
+	"product-title": "Our product: EDULAB",
+	"product-name": "Edulab",
+	"product-desc": "The EduLab platform is an online course marketplace where you can find lessons, lectures, and seminars in 3 languages: Uzbek, English, and Russian. Here anyone can publish their author course for any audience with the possibility of monetization.",
+
+	"skills-label": "Premium education",
+	"skills-title": "What we offer",
+	"skills-quote-text": "Education is now perceived not as preparation for adult life, but as a continuous process of growth and development – from birth to death. – Stephen Mitchell",
+	"skills-quote-desc": "We offer you to enter the era of educational transformation together with us! A unique offer for your business to quickly and effectively develop your employees and clients!",
+
+	"words-big": "Mastery in online learning and course development",
+	"words-small": "Online learning anytime, anywhere.",
+
+	"offer-label": "We cater to everyone",
+	"offer-title": "Our offers for_",
+	"offer-text": "Create and monetize online courses with the ability to control learning and professional development",
+	"offer-client": "Clients successfully complete courses",
+
+	"offer-text-1": "Online training for personnel development and professional development, as well as LMS for monitoring and controlling employee learning",
+	"offer-for-1": "Corporate clients",
+
+	"offer-text-2": "Development of online courses based on author programs with the possibility of publishing and monetizing own courses on the platform for a wide audience",
+	"offer-for-2": "Independent course authors",
+
+	"offer-text-3": "Online lessons on the school curriculum and author courses, courses on professional skills and exam preparation, as well as a learning management system (LMS) for effective management of the learning process",
+	"offer-for-3": "Schools",
+
+	"offer-text-4": "Online lessons for distance and hybrid learning based on author programs, tests and exams for knowledge assessment, additional courses on professional skills, as well as LMS for managing the educational process",
+	"offer-for-4": "Universities",
+
+	"offer-text-5": "Online lessons based on author programs for distance and hybrid learning, assignments for independent work and knowledge assessment, as well as LMS for effective management of the learning process",
+	"offer-for-5": "Training centers",
+
+	"contacts-title": "How can we help?",
+	"contacts-classified": "We are committed to protecting privacy. We never collect information about you without your explicit consent.",
+
+	"contacts-desc-1": "Enter your name",
+	"contacts-title-1": "Name*",
+
+	"contacts-desc-2": "Enter your email address",
+	"contacts-title-2": "Email*",
+
+	"contacts-desc-3": "Enter your phone number",
+	"contacts-title-3": "Phone*",
+
+	"contacts-desc-4": "How can we help you?",
+	"contacts-title-4": "Subject",
+
+	"contacts-desc-5": "Describe your message",
+	"contacts-title-5": "Message",
+
+	"footer-strong": "Knowledge",
+	"footer-power": "– new power",
+	"footer-subtitle": "Providing quality content for 6 years",
+	"footer-help": "Need help?",
+	"footer-call": "Call us?",
+	"footer-support": "Need support?"
+}
