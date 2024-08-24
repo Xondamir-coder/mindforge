@@ -65,6 +65,7 @@ const contents = [
 	flex-direction: column;
 	gap: 6rem;
 	color: var(--dark-gray);
+	overflow: hidden;
 	&.active &__head {
 		opacity: 1;
 		transform: rotateY(0) translate(0, 0);

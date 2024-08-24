@@ -9,10 +9,7 @@
 					<Rectangle class="footer__rectangle" />
 					<Triangle class="footer__triangle" />
 				</div>
-				<IconLike />
-				<h1 class="footer__banner-title">
-					Оставайтесь на связи. Подпишитесь на нас в <a href="#">Facebook</a>
-				</h1>
+				<h1 class="footer__banner-title"><strong>Сила</strong> в знании</h1>
 			</div>
 			<div class="footer__content">
 				<div class="footer__box">
@@ -179,16 +176,11 @@ import Triangle from './Triangle.vue';
 			text-align: center;
 		}
 		&-title {
-			font-size: 28px;
-			font-weight: 600;
+			font-size: 2.8rem;
 			font-family: var(--font-alt);
-		}
-		a {
-			color: inherit;
-			font-weight: 800;
-			transition: color 300ms;
-			&:hover {
-				color: var(--base-color);
+			font-weight: 400;
+			strong {
+				color: #c00000;
 			}
 		}
 		&-button {

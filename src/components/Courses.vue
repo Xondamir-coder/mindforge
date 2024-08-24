@@ -230,6 +230,7 @@ const contents = [
 			font-size: 17px;
 		}
 		&-img {
+			margin-top: 2rem;
 			margin-bottom: 30px;
 			height: 10rem;
 			width: 10rem;

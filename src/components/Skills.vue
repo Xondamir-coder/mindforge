@@ -21,7 +21,7 @@
 					v-for="(skill, i) in skills"
 					:key="i"
 					:class="{ active: activeItem === i }"
-					@click="activeItem = i">
+					@click="toggleItem(i)">
 					<h2 class="skills__box-title">{{ skill.title }}</h2>
 					<div class="skills__box-box">
 						<p class="skills__box-text">{{ skill.desc }}</p>
@@ -40,22 +40,23 @@ import IconBriefcase from './icons/IconBriefcase.vue';
 import gsap from 'gsap';
 import Circle from './Circle.vue';
 
-const activeItem = ref(0);
+const activeItem = ref(-1);
 const imgContainerRef = ref();
 
 const skills = [
 	{
-		title: 'Lorem',
-		desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, quibusdam?',
-		icon: IconBook
-	},
-	{
-		title: 'Forem',
-		desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, quibusdam',
+		title: 'Образование воспринимается теперь не как подготовка ко взрослой жизни, а как непрерывный процесс роста и развития – от рождения до смерти. – Стивен Митчел',
+		desc: 'Мы предлагаем вам вступить в эпоху трансформации образования вместе с нами! Уникальное предложение для вашего бизнеса прокачать своих сотрудников и клиентов быстро и эффективно!',
 		icon: IconBook
 	}
+	// {
+	// 	title: 'Forem',
+	// 	desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, quibusdam',
+	// 	icon: IconBook
+	// }
 ];
 
+const toggleItem = i => (activeItem.value = activeItem.value === i ? -1 : i);
 const handleMouseMove = e => {
 	const rect = imgContainerRef.value.getBoundingClientRect();
 	const x = e.clientX - rect.left - rect.width / 2;

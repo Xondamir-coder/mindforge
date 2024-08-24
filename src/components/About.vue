@@ -93,7 +93,6 @@ onMounted(() => {
 <style lang="scss" scoped>
 .about {
 	color: var(--dark-gray);
-	overflow: hidden;
 	display: flex;
 	flex-direction: column;
 	gap: 10rem;
@@ -340,5 +339,6 @@ onMounted(() => {
 }
 .container {
 	position: relative;
+	overflow: visible !important;
 }
 </style>

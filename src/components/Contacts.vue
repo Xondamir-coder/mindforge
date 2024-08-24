@@ -27,8 +27,8 @@
 		</form>
 		<div class="contacts__footer">
 			<p>
-				Мы принципиально привязываемся к защите Вашей конфиденциальности. Мы никогда не
-				собираем информацию о вас без вашего явного согласия.
+				Мы принципиально привязываемся к защите конфиденциальности. Мы никогда не собираем
+				информацию о вас без о явного согласия.
 			</p>
 			<Button
 				@click="submitForm"
@@ -43,7 +43,7 @@
 import IconCall from './icons/IconCall.vue';
 import IconMail from './icons/IconMail.vue';
 import IconSmile from './icons/IconSmile.vue';
-import IconCopy from './icons/IconCopy.vue';
+import IconTopic from './icons/IconTopic.vue';
 import IconMessage from './icons/IconMessage.vue';
 import { ref } from 'vue';
 import IconError from './icons/IconError.vue';
@@ -54,37 +54,37 @@ import Button from './Button.vue';
 const contents = [
 	{
 		name: 'name',
-		desc: 'Какое ваше хорошее имя?',
+		desc: 'Введите имя',
 		icon: IconSmile,
-		title: 'Ваше хорошее имя*',
+		title: 'Имя*',
 		isRequired: true
 	},
 	{
 		name: 'email',
 		desc: 'Введите ваш адрес электронной почты',
 		icon: IconMail,
-		title: 'Ваш адрес электронной почты*',
+		title: 'Почта*',
 		isRequired: true
 	},
 	{
 		name: 'tel',
 		desc: 'Введите ваш номер телефона',
 		icon: IconCall,
-		title: 'Ваш номер телефона*',
+		title: 'Номер*',
 		isRequired: true
 	},
 	{
 		name: 'subject',
 		desc: 'Как мы можем вам помочь?',
-		icon: IconCopy,
-		title: 'Ваша тема',
+		icon: IconTopic,
+		title: 'Тема',
 		isRequired: false
 	},
 	{
 		name: 'message',
-		desc: 'Опишите ваше сообщение',
+		desc: 'Опишите сообщение',
 		icon: IconMessage,
-		title: 'Ваше сообщение',
+		title: 'Сообщение',
 		isRequired: false
 	}
 ];
@@ -197,7 +197,6 @@ const submitForm = () => {
 	&__label {
 		font-size: 14px;
 		font-weight: 600;
-		text-transform: uppercase;
 	}
 }
 .contacts {

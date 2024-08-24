@@ -54,8 +54,8 @@ onMounted(() => {
 });
 </script>
 
-<style lang="scss" scoped>
-.container {
+<style scoped>
+.container > * {
 	overflow: hidden;
 }
 </style>

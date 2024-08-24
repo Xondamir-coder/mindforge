@@ -10,7 +10,7 @@
 		</div>
 		<div class="hero__lines"></div>
 		<div class="hero__content">
-			<h1 class="hero__title">Создаем контент для обучения</h1>
+			<h1 class="hero__title">Создаем образовательный контент любого формата</h1>
 			<p class="hero__text">
 				Разработка обучающего контента для ВУЗов, школ, учебных центров, и для бизнесов
 			</p>
@@ -50,12 +50,20 @@ const stats = [
 		name: 'Интерактивные уроки'
 	},
 	{
-		amount: 2000,
-		name: 'Обучающие видео'
+		amount: 1500,
+		name: 'Часов обучающего видео'
 	},
 	{
 		amount: 24000,
-		name: 'Потребители'
+		name: 'Активные пользователи'
+	},
+	{
+		amount: 65,
+		name: 'Количество дисциплин'
+	},
+	{
+		amount: 295000,
+		name: 'Материал'
 	}
 ];
 
@@ -98,11 +106,11 @@ const handleMouseLeave = () => {
 	background-size: cover;
 	background-position: center;
 	position: relative;
-	overflow: hidden;
 
+	overflow: visible !important;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	gap: max(15vw, 5rem);
+	gap: max(6vw, 5rem);
 
 	&__svg {
 		width: 3rem;
@@ -156,7 +164,8 @@ const handleMouseLeave = () => {
 	}
 	&__stats {
 		display: flex;
-		justify-content: space-between;
+		gap: 3rem;
+		justify-content: center;
 		flex-wrap: wrap;
 		opacity: 0;
 		animation: fade-rotate 800ms forwards 600ms;
@@ -195,7 +204,7 @@ const handleMouseLeave = () => {
 		line-height: 0.89;
 		animation: fade-rotate 800ms forwards;
 		@media only screen and (max-width: 767px) {
-			font-size: min(45px, 6rem);
+			font-size: 5rem;
 		}
 	}
 	&__content {
