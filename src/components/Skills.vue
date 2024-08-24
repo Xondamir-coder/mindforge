@@ -34,7 +34,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { computed, ref } from 'vue';
 import IconBook from './icons/IconBook.vue';
 import IconBriefcase from './icons/IconBriefcase.vue';
 import gsap from 'gsap';
@@ -43,18 +43,13 @@ import { i18n } from '@/locales';
 const activeItem = ref(-1);
 const imgContainerRef = ref();
 
-const skills = [
+const skills = computed(() => [
 	{
 		title: i18n.global.t('skills-quote-text'),
 		desc: i18n.global.t('skills-quote-desc'),
 		icon: IconBook
 	}
-	// {
-	// 	title: 'Forem',
-	// 	desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, quibusdam',
-	// 	icon: IconBook
-	// }
-];
+]);
 
 const toggleItem = i => (activeItem.value = activeItem.value === i ? -1 : i);
 const handleMouseMove = e => {
