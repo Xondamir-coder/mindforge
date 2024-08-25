@@ -40,13 +40,18 @@ import IconBriefcase from './icons/IconBriefcase.vue';
 import gsap from 'gsap';
 import { i18n } from '@/locales';
 
-const activeItem = ref(-1);
+const activeItem = ref(0);
 const imgContainerRef = ref();
 
 const skills = computed(() => [
 	{
-		title: i18n.global.t('skills-quote-text'),
-		desc: i18n.global.t('skills-quote-desc'),
+		title: i18n.global.t('skills-quote'),
+		desc: i18n.global.t('skills-quote-text'),
+		icon: IconBook
+	},
+	{
+		title: i18n.global.t('skills-slogan'),
+		desc: i18n.global.t('skills-slogan-text'),
 		icon: IconBook
 	}
 ]);

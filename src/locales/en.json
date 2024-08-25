@@ -12,10 +12,6 @@
 	"hero-stat-name-2": "Hours of educational video",
 	"hero-stat-amount-3": "24000",
 	"hero-stat-name-3": "Active users",
-	"hero-stat-amount-4": "65",
-	"hero-stat-name-4": "Number of disciplines",
-	"hero-stat-amount-5": "295000",
-	"hero-stat-name-5": "Materials",
 
 	"about-label": "Guaranteed and certified",
 	"about-title": "Learn online at your convenience",
@@ -28,8 +24,8 @@
 	"about-title-3": "Expert instructors",
 	"about-text-3": "Best online platform for professional courses.",
 
-	"history-label": "Our history",
-	"history-title": "Providing reliable service for 6 years",
+	"history-label": "Our numbers",
+	"history-title": "From 2018 to the present day",
 	"history-title-1": "Lessons",
 	"history-text-1": "1300+",
 	"history-date-1": "2018",
@@ -205,8 +201,10 @@
 
 	"skills-label": "Premium education",
 	"skills-title": "What we offer",
+	"skills-quote": "Quote:",
+	"skills-slogan": "Slogan:",
 	"skills-quote-text": "Education is now perceived not as preparation for adult life, but as a continuous process of growth and development – from birth to death. – Stephen Mitchell",
-	"skills-quote-desc": "We offer you to enter the era of educational transformation together with us! A unique offer for your business to quickly and effectively develop your employees and clients!",
+	"skills-slogan-text": "We offer you to enter the era of educational transformation together with us! A unique offer for your business to quickly and effectively develop your employees and clients!",
 
 	"words-big": "Mastery in online learning and course development",
 	"words-small": "Online learning anytime, anywhere.",

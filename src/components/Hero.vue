@@ -4,9 +4,6 @@
 			<Circle class="hero__svg hero__svg-1" />
 			<Rectangle class="hero__svg hero__svg-2" />
 			<Triangle class="hero__svg hero__svg-3" />
-			<Circle class="hero__svg hero__svg-4" />
-			<Rectangle class="hero__svg hero__svg-5" />
-			<Triangle class="hero__svg hero__svg-6" />
 		</div>
 		<div class="hero__lines"></div>
 		<div class="hero__content">
@@ -57,14 +54,6 @@ const stats = computed(() => [
 	{
 		amount: i18n.global.t('hero-stat-amount-3'),
 		name: i18n.global.t('hero-stat-name-3')
-	},
-	{
-		amount: i18n.global.t('hero-stat-amount-4'),
-		name: i18n.global.t('hero-stat-name-4')
-	},
-	{
-		amount: i18n.global.t('hero-stat-amount-5'),
-		name: i18n.global.t('hero-stat-name-5')
 	}
 ]);
 
@@ -262,37 +251,56 @@ const handleMouseLeave = () => {
 	}
 }
 
-@function generate-translate($index) {
+@function generate-translate() {
 	$x: random(100); // Generates a random number between 0 and 100 for vw
 	$y: random(100) * -1; // Generates a random number between 0 and 100 for vh
 	@return translate(#{$x}vw, #{$y}vh);
 }
-@function generate-rotation($index) {
-	@return rotate(#{random(160) * 10}deg);
+
+@function generate-rotation() {
+	@return rotate(#{random(360)}deg);
 }
 
-@for $i from 1 through 6 {
+@for $i from 1 through 3 {
 	@keyframes wander#{$i} {
 		0% {
-			transform: translate(0, 0);
+			transform: translate(0, 0) rotate(0deg);
 		}
-		25% {
-			transform: generate-translate($i) generate-rotation($i);
+		10% {
+			transform: generate-translate() generate-rotation();
+		}
+		20% {
+			transform: generate-translate() generate-rotation();
+		}
+		30% {
+			transform: generate-translate() generate-rotation();
+		}
+		40% {
+			transform: generate-translate() generate-rotation();
 		}
 		50% {
-			transform: generate-translate($i) generate-rotation($i);
+			transform: generate-translate() generate-rotation();
 		}
-		75% {
-			transform: generate-translate($i) generate-rotation($i);
+		60% {
+			transform: generate-translate() generate-rotation();
+		}
+		70% {
+			transform: generate-translate() generate-rotation();
+		}
+		80% {
+			transform: generate-translate() generate-rotation();
+		}
+		90% {
+			transform: generate-translate() generate-rotation();
 		}
 		100% {
-			transform: translate(0, 0);
+			transform: generate-translate() generate-rotation(); // End at a completely random position
 		}
 	}
 
 	.hero__svg-#{$i} {
 		position: absolute;
-		animation: wander#{$i} #{20 + ($i * 2)}s ease-in-out infinite;
+		animation: wander#{$i} #{40 + ($i * 2)}s ease-in-out infinite alternate;
 	}
 }
 </style>

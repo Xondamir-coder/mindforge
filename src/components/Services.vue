@@ -174,11 +174,12 @@ const services = computed(() => [
 		&-container {
 			width: 8.6rem;
 			height: 8.6rem;
-			background-color: var(--blue-light);
+			border: 2px solid #0d3858;
 			border-radius: 50%;
 			display: grid;
 			place-items: center;
 			margin-bottom: 1rem;
+			box-shadow: 0px 0px 5px 0px #0d3858 inset;
 		}
 	}
 }

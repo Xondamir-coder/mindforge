@@ -6,7 +6,6 @@
 		</div>
 		<ul class="history__list">
 			<li class="history__item" v-for="content in contents" :key="content.title">
-				<p class="history__item-date">{{ content.date }}</p>
 				<h2 class="history__item-title">{{ content.title }}</h2>
 				<p class="history__item-text">{{ content.text }}</p>
 			</li>
@@ -97,13 +96,6 @@ const contents = computed(() => [
 		&:hover {
 			background-color: var(--dark-gray);
 			color: #fff;
-		}
-		&-date {
-			position: absolute;
-			top: 3rem;
-			right: 3rem;
-			font-size: 17px;
-			font-weight: bold;
 		}
 		&-title {
 			font-size: 18px;

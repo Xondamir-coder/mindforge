@@ -27,7 +27,7 @@
 				<h3 class="courses__item-title">{{ content.title }}</h3>
 				<p class="courses__item-text">{{ content.text }}</p>
 				<div class="courses__container">
-					<p>Hover me</p>
+					<p>&ThinSpace;</p>
 					<a :href="content.link" target="_blank" class="courses__button">
 						{{ $t('go-to') }}
 						<svg

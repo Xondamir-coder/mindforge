@@ -12,10 +12,6 @@
 	"hero-stat-name-2": "O'quv videolarining soatlari",
 	"hero-stat-amount-3": "24000",
 	"hero-stat-name-3": "Faol foydalanuvchilar",
-	"hero-stat-amount-4": "65",
-	"hero-stat-name-4": "Fanlar soni",
-	"hero-stat-amount-5": "295000",
-	"hero-stat-name-5": "Materiallar",
 
 	"about-label": "Kafolatlangan va sertifikatlangan",
 	"about-title": "Qulay vaqtda onlayn o'rganing",
@@ -28,8 +24,8 @@
 	"about-title-3": "Ekspert o'qituvchilar",
 	"about-text-3": "Professional kurslar uchun eng yaxshi onlayn platforma.",
 
-	"history-label": "Bizning tariximiz",
-	"history-title": "6 yillik ishonchli xizmat ko'rsatamiz",
+	"history-label": "Bizning raqaramlarimiz",
+	"history-title": "2018-yildan boshlab",
 	"history-title-1": "Darslar",
 	"history-text-1": "1300+",
 	"history-date-1": "2018",
@@ -205,8 +201,10 @@
 
 	"skills-label": "Premium ta'lim",
 	"skills-title": "Biz nima taklif qilamiz",
+	"skills-quote": "Iqtibos:",
+	"skills-slogan": "Shior:",
 	"skills-quote-text": "Ta'lim endi kattalar hayotiga tayyorgarlik emas, balki tug'ilishdan to o'limga qadar uzluksiz o'sish va rivojlanish jarayoni sifatida qabul qilinadi. – Stiven Mitchell",
-	"skills-quote-desc": "Biz sizni biz bilan birgalikda ta'lim transformatsiyasi davriga kirishga taklif etamiz! Bizning taklifimiz – biznesingiz uchun xodimlaringizni va mijozlaringizni tez va samarali rivojlantirish.",
+	"skills-slogan-text": "Biz sizni biz bilan birgalikda ta'lim transformatsiyasi davriga kirishga taklif etamiz! Bizning taklifimiz – biznesingiz uchun xodimlaringizni va mijozlaringizni tez va samarali rivojlantirish.",
 
 	"words-big": "Onlayn ta'lim va kurslarni ishlab chiqishda mahorat",
 	"words-small": "Onlayn ta'lim istalgan joyda va istalgan vaqtda.",
