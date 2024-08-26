@@ -6,12 +6,12 @@
 		<About />
 		<History />
 		<Directions />
-		<Courses />
 		<Services />
 		<Product />
 		<Skills />
 		<Words />
 		<Offer />
+		<Courses />
 		<Contacts />
 		<Footer />
 	</main>

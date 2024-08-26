@@ -208,12 +208,8 @@ onUnmounted(() => {
 		transition: transform 500ms, opacity 500ms;
 	}
 	&__label {
-		font-size: 14px;
+		font-size: 16px;
 		font-weight: 600;
-		background-color: var(--blue-light);
-		color: var(--blue-dark);
-		padding: 0.7rem 2rem;
-		border-radius: 200px;
 	}
 	&__title {
 		font-size: 3.9rem;

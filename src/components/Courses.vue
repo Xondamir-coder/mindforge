@@ -20,7 +20,11 @@
 			</div>
 		</div>
 		<ul class="courses__list">
-			<li class="courses__item" v-for="content in contents" :key="content">
+			<li
+				class="courses__item"
+				v-for="(content, index) in contents"
+				:key="content"
+				:class="{ 'no-border': rightmostIndexes.includes(index) }">
 				<div class="courses__item-img">
 					<img src="@/assets/images/about-1.webp" alt="img" />
 				</div>
@@ -51,9 +55,8 @@
 import IconAward from './icons/IconAward.vue';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Rectangle from './Rectangle.vue';
 import { i18n } from '@/locales';
-import { computed } from 'vue';
+import { computed, onMounted, onUnmounted, ref } from 'vue';
 gsap.registerPlugin(ScrollTrigger);
 
 const contents = computed(() => [
@@ -108,6 +111,37 @@ const contents = computed(() => [
 		link: 'https://rise.articulate.com/share/2Ey08C-iD6zoqiJzlbDW-GYzzGgc5OcE#/'
 	}
 ]);
+
+const rightmostIndexes = ref([]);
+
+const updateRightmostItems = () => {
+	const items = document.querySelectorAll('.courses__item');
+	let previousTopOffset = items[0].offsetTop;
+
+	items.forEach((item, index) => {
+		const currentTopOffset = item.offsetTop;
+
+		// Detect if this item starts a new row
+		if (currentTopOffset !== previousTopOffset) {
+			rightmostIndexes.value.push(index - 1); // Mark the previous item as the rightmost
+			previousTopOffset = currentTopOffset;
+		}
+	});
+
+	// Ensure the last item in the list is marked if it's the rightmost
+	rightmostIndexes.value.push(items.length - 1);
+	console.log(rightmostIndexes.value);
+};
+
+onMounted(() => {
+	updateRightmostItems();
+
+	// Optional: add resize event listener to handle screen size changes
+	window.addEventListener('resize', updateRightmostItems);
+});
+onUnmounted(() => {
+	window.removeEventListener('resize', updateRightmostItems);
+});
 </script>
 
 <style lang="scss" scoped>
@@ -149,9 +183,8 @@ const contents = computed(() => [
 		display: flex;
 		flex-direction: column;
 		margin-top: auto;
-		border: 1px solid var(--extra-medium-gray);
-		border-left: none;
-		border-right: none;
+		border-top: 1px solid var(--extra-medium-gray);
+		border-bottom: 1px solid var(--extra-medium-gray);
 		position: relative;
 		overflow: hidden;
 		p {
@@ -185,12 +218,14 @@ const contents = computed(() => [
 	}
 	&__list {
 		list-style-type: none;
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(150px, 300px));
-		grid-auto-rows: 1fr;
+		display: flex;
+		flex-wrap: wrap;
 		justify-content: center;
 	}
 	&__item {
+		flex: 1;
+		max-width: 300px;
+		min-width: 300px;
 		display: flex;
 		align-items: center;
 		text-align: center;
@@ -199,14 +234,20 @@ const contents = computed(() => [
 		opacity: 0;
 		transform: perspective(800px) rotateY(-90deg);
 		transition: transform 1s, opacity 1s;
+		&.no-border {
+			border-right: none !important;
+		}
+
+		&:not(:last-child) {
+			border-right: 1px solid var(--extra-medium-gray);
+		}
 		& > *:not(.courses__container):not(.courses__item-img) {
 			padding: 0 5rem;
 		}
-		&:not(:first-child) {
-			border-left: 1px solid var(--extra-medium-gray);
-		}
 		@media only screen and (max-width: 660px) {
-			padding: 4rem 1rem;
+			padding: 1rem;
+			padding-bottom: 2rem;
+			border-right: none !important;
 		}
 		@for $index from 1 through 10 {
 			&:nth-child(#{$index}) {

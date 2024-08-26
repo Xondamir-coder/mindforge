@@ -155,7 +155,6 @@ const handleMouseLeave = () => {
 	&__stats {
 		display: flex;
 		gap: 3rem;
-		justify-content: center;
 		flex-wrap: wrap;
 		opacity: 0;
 		animation: fade-rotate 800ms forwards 600ms;
