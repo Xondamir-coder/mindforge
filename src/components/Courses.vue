@@ -130,7 +130,6 @@ const updateRightmostItems = () => {
 
 	// Ensure the last item in the list is marked if it's the rightmost
 	rightmostIndexes.value.push(items.length - 1);
-	console.log(rightmostIndexes.value);
 };
 
 onMounted(() => {

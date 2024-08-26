@@ -7,3 +7,8 @@
 		padding: 5rem 5vw;
 	}
 }
+@media only screen and (max-width: 600px) {
+	.section-padding {
+		padding: 5rem 2vw;
+	}
+}
