@@ -273,6 +273,8 @@ button {
 	}
 	&__cards {
 		display: grid;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
 	}
 	&__card {
 		grid-column: 1 / span 1;

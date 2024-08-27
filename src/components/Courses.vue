@@ -28,7 +28,7 @@
 				<div class="courses__item-img">
 					<img src="@/assets/images/about-1.webp" alt="img" />
 				</div>
-				<h3 class="courses__item-title">{{ content.title }}</h3>
+				<h3 class="courses__item-title">{{ content.title.toLowerCase() }}</h3>
 				<p class="courses__item-text">{{ content.text }}</p>
 				<div class="courses__container">
 					<p>&ThinSpace;</p>
@@ -250,6 +250,11 @@ onUnmounted(() => {
 		& > *:not(.courses__container):not(.courses__item-img) {
 			padding: 0 5rem;
 		}
+		&:nth-child(6) {
+			.courses__item-title {
+				text-transform: uppercase;
+			}
+		}
 		@media only screen and (max-width: 660px) {
 			padding: 1rem;
 			padding-bottom: 2rem;
@@ -271,6 +276,9 @@ onUnmounted(() => {
 		&-title {
 			font-weight: 600;
 			font-size: 18px;
+			&::first-letter {
+				text-transform: uppercase;
+			}
 		}
 		&-text {
 			color: var(--medium-gray);
