@@ -63,53 +63,60 @@ const contents = computed(() => [
 	{
 		title: i18n.global.t('courses-title-1'),
 		text: i18n.global.t('courses-text-1'),
-		link: 'https://rise.articulate.com/share/fiI3-K6KlURvjgrj4nvDOXT9d82ttZPA#/'
+		link: '/critical-thinking'
 	},
 	{
 		title: i18n.global.t('courses-title-2'),
 		text: i18n.global.t('courses-text-2'),
-		link: 'https://rise.articulate.com/share/agirrURI99r2s6DHEW9s1Pe5z7D8guen#/lessons/CivdVBNOdHXjD6ohQfqNv1K8j544zZ7_'
+		link: '/english'
 	},
 	{
 		title: i18n.global.t('courses-title-3'),
 		text: i18n.global.t('courses-text-3'),
-		link: 'https://rise.articulate.com/share/9ANAJwt4wi91eLHGWxxYRGaOhfQrVW--#/'
+		link: '/maths'
 	},
 	{
 		title: i18n.global.t('courses-title-4'),
 		text: i18n.global.t('courses-text-4'),
-		link: 'https://rise.articulate.com/share/N-uzWUbqJaxuCxiCcQGTpl5BiJP0XT-Z#/'
+		link: '/business-com'
 	},
 	{
 		title: i18n.global.t('courses-title-5'),
 		text: i18n.global.t('courses-text-5'),
-		link: 'https://rise.articulate.com/share/5kzW5bf4HlSaf_BVeFOlJavKzIv8GDt-#/'
+		link: '/business-ethics'
 	},
 	{
 		title: i18n.global.t('courses-title-6'),
 		text: i18n.global.t('courses-text-6'),
-		link: 'https://rise.articulate.com/share/eKfxoqO7H4T4BIgRf7vsUmJrkRPgMeyc#/'
+		link: '/hrm'
 	},
 	{
 		title: i18n.global.t('courses-title-7'),
 		text: i18n.global.t('courses-text-7'),
-		link: 'https://rise.articulate.com/share/3gOFJXXa-zUK41HWCaju8KKphQnLDsdl#/'
+		link:
+			i18n.global.locale == 'uz'
+				? 'consumer-behavior-ru'
+				: `consumer-behavior-${i18n.global.locale}`
 	},
 	{
 		title: i18n.global.t('courses-title-8'),
 		text: i18n.global.t('courses-text-8'),
-		link: 'https://rise.articulate.com/share/XaSYw9fJX8GQCFmhzzst7LyJ-UgNgIKf#/'
+		link:
+			i18n.global.locale == 'uz'
+				? 'consumer-behavior-ru'
+				: `consumer-behavior-${i18n.global.locale}`
 	},
 	{
 		title: i18n.global.t('courses-title-9'),
 		text: i18n.global.t('courses-text-9'),
-		link: 'https://rise.articulate.com/share/cbm6ZAzQhuz9OmvdrtG4zePycEs-mEiv#/'
+		link: '/organizational-behaviour'
 	},
 	{
 		title: i18n.global.t('courses-title-10'),
 		text: i18n.global.t('courses-text-10'),
-		link: 'https://rise.articulate.com/share/2Ey08C-iD6zoqiJzlbDW-GYzzGgc5OcE#/'
+		link: '/performance-management'
 	}
+	//PRESENTATION SKILLS NOT ADDED
 ]);
 
 const rightmostIndexes = ref([]);

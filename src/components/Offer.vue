@@ -50,7 +50,9 @@
 						</div>
 					</div>
 					<button class="offer__circle" @click="toggleCountdown">
-						<NextCircle class="offer__circle-img" :class="{ paused: !isCounting }" />
+						<NextCircle
+							class="offer__circle-img"
+							:class="[{ paused: !isCounting }, i18n.global.locale]" />
 						<span>{{ countdown }}</span>
 						<IconPause :class="{ hidden: isCounting }" class="offer__pause" />
 					</button>

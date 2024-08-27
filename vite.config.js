@@ -10,6 +10,9 @@ export default defineConfig({
 	css: {
 		postcss: './postcss.config.js'
 	},
+	build: {
+		emptyOutDir: true
+	},
 	resolve: {
 		alias: {
 			'@': fileURLToPath(new URL('./src', import.meta.url))

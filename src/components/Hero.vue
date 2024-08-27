@@ -158,6 +158,10 @@ const handleMouseLeave = () => {
 		flex-wrap: wrap;
 		opacity: 0;
 		animation: fade-rotate 800ms forwards 600ms;
+
+		@media only screen and (max-width: 1100px) {
+			justify-content: center;
+		}
 	}
 	&__stat {
 		display: flex;
