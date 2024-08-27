@@ -101,10 +101,7 @@ const contents = computed(() => [
 	{
 		title: i18n.global.t('courses-title-8'),
 		text: i18n.global.t('courses-text-8'),
-		link:
-			i18n.global.locale == 'uz'
-				? 'consumer-behavior-ru'
-				: `consumer-behavior-${i18n.global.locale}`
+		link: i18n.global.locale == 'uz' ? 'statistics-ru' : `statistics-${i18n.global.locale}`
 	},
 	{
 		title: i18n.global.t('courses-title-9'),
