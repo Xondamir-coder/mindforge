@@ -26,7 +26,7 @@
 				:key="content"
 				:class="{ 'no-border': rightmostIndexes.includes(index) }">
 				<div class="courses__item-img">
-					<img src="@/assets/images/about-1.webp" alt="img" />
+					<component :is="content.icon" />
 				</div>
 				<h3 class="courses__item-title">{{ content.title.toLowerCase() }}</h3>
 				<p class="courses__item-text">{{ content.text }}</p>
@@ -57,40 +57,57 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { i18n } from '@/locales';
 import { computed, onMounted, onUnmounted, ref } from 'vue';
+import IconThinking from './icons/IconThinking.vue';
+import IconEnglish from './icons/IconEnglish.vue';
+import IconMath from './icons/IconMath.vue';
+import IconCom from './icons/IconCom.vue';
+import IconEthics from './icons/IconEthics.vue';
+import IconHRM from './icons/IconHRM.vue';
+import IconConsumer from './icons/IconConsumer.vue';
+import IconStats from './icons/IconStats.vue';
+import IconOrg from './icons/IconOrg.vue';
+import IconPerformance from './icons/IconPerformance.vue';
 gsap.registerPlugin(ScrollTrigger);
 
 const contents = computed(() => [
 	{
+		icon: IconThinking,
 		title: i18n.global.t('courses-title-1'),
 		text: i18n.global.t('courses-text-1'),
 		link: '/critical-thinking'
 	},
 	{
+		icon: IconEnglish,
 		title: i18n.global.t('courses-title-2'),
 		text: i18n.global.t('courses-text-2'),
 		link: '/english'
 	},
 	{
+		icon: IconMath,
 		title: i18n.global.t('courses-title-3'),
 		text: i18n.global.t('courses-text-3'),
 		link: '/maths'
 	},
 	{
+		icon: IconCom,
 		title: i18n.global.t('courses-title-4'),
 		text: i18n.global.t('courses-text-4'),
 		link: '/business-com'
 	},
 	{
+		icon: IconEthics,
 		title: i18n.global.t('courses-title-5'),
 		text: i18n.global.t('courses-text-5'),
 		link: '/business-ethics'
 	},
 	{
+		icon: IconHRM,
 		title: i18n.global.t('courses-title-6'),
 		text: i18n.global.t('courses-text-6'),
 		link: '/hrm'
 	},
 	{
+		icon: IconConsumer,
 		title: i18n.global.t('courses-title-7'),
 		text: i18n.global.t('courses-text-7'),
 		link:
@@ -99,16 +116,19 @@ const contents = computed(() => [
 				: `consumer-behavior-${i18n.global.locale}`
 	},
 	{
+		icon: IconStats,
 		title: i18n.global.t('courses-title-8'),
 		text: i18n.global.t('courses-text-8'),
 		link: i18n.global.locale == 'uz' ? 'statistics-ru' : `statistics-${i18n.global.locale}`
 	},
 	{
+		icon: IconOrg,
 		title: i18n.global.t('courses-title-9'),
 		text: i18n.global.t('courses-text-9'),
 		link: '/organizational-behaviour'
 	},
 	{
+		icon: IconPerformance,
 		title: i18n.global.t('courses-title-10'),
 		text: i18n.global.t('courses-text-10'),
 		link: '/performance-management'
@@ -291,7 +311,7 @@ onUnmounted(() => {
 			border-radius: 50%;
 			display: grid;
 			place-items: center;
-			img {
+			svg {
 				width: 7.5rem;
 				height: 7.5rem;
 				object-fit: cover;

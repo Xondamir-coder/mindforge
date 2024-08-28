@@ -291,19 +291,19 @@ button {
 
 		// 1-animation
 
-		transition: transform 1s, border-radius 1s, opacity 0.5s;
-		transform: scale(0.8);
-		border-radius: 50%;
-		opacity: 0;
-		@media only screen and (max-width: 900px) {
-			border-radius: 30%;
-		}
-		&.active {
-			transform: scale(1);
-			border-radius: 16px;
-			opacity: 1;
-			z-index: 10;
-		}
+		// transition: transform 1s, border-radius 1s, opacity 0.5s;
+		// transform: scale(0.8);
+		// border-radius: 50%;
+		// opacity: 0;
+		// @media only screen and (max-width: 900px) {
+		// 	border-radius: 30%;
+		// }
+		// &.active {
+		// 	transform: scale(1);
+		// 	border-radius: 16px;
+		// 	opacity: 1;
+		// 	z-index: 10;
+		// }
 
 		// 2-animation
 
@@ -315,6 +315,16 @@ button {
 		// 	opacity: 1;
 		// 	z-index: 10;
 		// }
+
+		// 2.5-animation
+		transform-origin: right bottom; /* Origin point for peeling effect */
+		transform: perspective(1000px) rotateX(20deg) rotateY(-30deg) rotateZ(-10deg) scale(1);
+		transition: transform 1.2s cubic-bezier(0.77, 0, 0.175, 1), opacity 1.2s;
+		opacity: 0;
+		&.active {
+			transform: perspective(1000px) rotateX(0) rotateY(0) rotateZ(0) scale(1);
+			opacity: 1;
+		}
 
 		// 3-animation
 

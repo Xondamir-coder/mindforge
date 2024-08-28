@@ -21,8 +21,8 @@
 </template>
 
 <script setup>
-import directionsImg1 from '@/assets/images/directions-1.png';
-import directionsImg2 from '@/assets/images/directions-2.png';
+import directionsImg1 from '@/assets/images/directions-1.jpg';
+import directionsImg2 from '@/assets/images/directions-2.jpg';
 import directionsImg3 from '@/assets/images/directions-3.jpg';
 import directionsImg4 from '@/assets/images/directions-4.jpg';
 import directionsImg5 from '@/assets/images/directions-5.jpg';
@@ -198,6 +198,7 @@ const contents = computed(() => [
 		}
 	}
 	&__text {
+		font-size: 1.8rem;
 		opacity: 0;
 		transform: translateY(4rem);
 		transition: opacity 400ms, transform 400ms;
@@ -205,7 +206,7 @@ const contents = computed(() => [
 	&__item {
 		display: grid;
 		grid-template-rows: 300px max-content;
-		gap: 30px;
+		gap: 1.5rem;
 		transform: perspective(800px) rotateX(40deg) translateZ(100px);
 		transition: transform 1s, opacity 1s;
 		opacity: 0;
@@ -236,8 +237,7 @@ const contents = computed(() => [
 			position: relative;
 		}
 		&-title {
-			text-align: center;
-			font-size: 18px;
+			font-size: 2.6rem;
 		}
 	}
 }
