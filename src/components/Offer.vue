@@ -19,7 +19,7 @@
 				</li>
 			</ul>
 		</div>
-		<ul class="offer__cards section-padding">
+		<ul class="offer__cards">
 			<li
 				class="offer__card"
 				v-for="(content, i) in contents"
@@ -273,8 +273,10 @@ button {
 	}
 	&__cards {
 		display: grid;
-		padding-top: 1rem;
-		padding-bottom: 1rem;
+		padding: 1rem 5vw;
+		@media only screen and (max-width: 900px) {
+			padding: 1rem 0;
+		}
 	}
 	&__card {
 		grid-column: 1 / span 1;
@@ -384,6 +386,7 @@ button {
 			}
 		}
 		&-box {
+			flex-grow: 1;
 			display: flex;
 			justify-content: stretch;
 			flex-wrap: wrap;

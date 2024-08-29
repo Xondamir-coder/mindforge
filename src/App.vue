@@ -18,7 +18,7 @@
 </template>
 
 <script setup>
-import { onMounted, ref } from 'vue';
+import { onMounted, onUnmounted, ref } from 'vue';
 import Header from '@/components/Header.vue';
 import About from '@/components/About.vue';
 import Hero from '@/components/Hero.vue';
@@ -36,6 +36,8 @@ import Courses from './components/Courses.vue';
 
 const containerRef = ref(null);
 
+const func = () => window.scrollTo(0, 0);
+
 onMounted(() => {
 	const observer = new IntersectionObserver(
 		entries => {
@@ -51,6 +53,12 @@ onMounted(() => {
 	);
 
 	containerRef.value.querySelectorAll('section').forEach(section => observer.observe(section));
+
+	window.addEventListener('unload', func);
+});
+
+onUnmounted(() => {
+	window.removeEventListener('unload', func);
 });
 </script>
 

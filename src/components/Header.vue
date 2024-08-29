@@ -1,6 +1,6 @@
 <template>
 	<header class="header" ref="headerRef">
-		<a href="#"><Logo class="header__logo" /></a>
+		<button @click="reloadPage"><Logo class="header__logo" /></button>
 		<div class="header__right">
 			<ul class="header__languages">
 				<li
@@ -30,6 +30,10 @@ const headerRef = ref();
 
 const selectLang = lang => changeLang(lang);
 
+const reloadPage = () => {
+	window.location.reload();
+};
+
 onMounted(() => {
 	gsap.timeline({
 		scrollTrigger: {
@@ -53,6 +57,11 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
+button {
+	background-color: transparent;
+	border: none;
+	color: inherit;
+}
 .header {
 	width: 100%;
 	display: flex;
@@ -79,9 +88,6 @@ onMounted(() => {
 			color: var(--base-color);
 		}
 		button {
-			background-color: transparent;
-			border: none;
-			color: inherit;
 			transition: color 300ms;
 		}
 	}

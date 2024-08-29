@@ -99,8 +99,11 @@ const handleMouseLeave = () => {
 
 	overflow: visible !important;
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
 	gap: max(6vw, 5rem);
+	@media only screen and (max-width: 768px) {
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	}
 
 	&__svg {
 		width: 3rem;
@@ -116,10 +119,6 @@ const handleMouseLeave = () => {
 		}
 	}
 
-	@media only screen and (max-width: 900px) {
-		grid-template-columns: none;
-		grid-auto-rows: 1fr;
-	}
 	&__rectangle {
 		position: absolute;
 		z-index: 1;
@@ -223,6 +222,7 @@ const handleMouseLeave = () => {
 			display: flex;
 			justify-content: center;
 			transform-style: preserve-3d;
+			align-items: center;
 		}
 
 		img {

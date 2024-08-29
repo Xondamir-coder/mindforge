@@ -5,15 +5,13 @@
 			<Rectangle class="about__rectangle" />
 			<div class="about__top">
 				<div class="about__left">
-					<div class="about__head">
-						<div class="about__top">
-							<div class="about__icon-container">
-								<IconAward class="about__icon" />
-							</div>
-							<span>{{ $t('about-label') }}</span>
+					<div class="about__left-head">
+						<div class="about__icon-container">
+							<IconAward class="about__icon" />
 						</div>
-						<h1 class="about__title">{{ $t('about-title') }}</h1>
+						<span>{{ $t('about-label') }}</span>
 					</div>
+					<h1 class="about__title">{{ $t('about-title') }}</h1>
 				</div>
 				<div class="about__right">
 					<h2 class="about__subtitle">
@@ -198,7 +196,6 @@ onMounted(() => {
 	}
 
 	&__right {
-		align-self: end;
 		display: flex;
 		flex-direction: column;
 		gap: 7px;
@@ -214,18 +211,19 @@ onMounted(() => {
 		}
 	}
 	&__top {
-		display: flex;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		row-gap: 4rem;
 		align-items: center;
-		gap: 30px;
 		font-size: 1.9rem;
 		font-weight: 500;
-		@media only screen and (max-width: 900px) {
-			flex-direction: column;
-		}
 	}
 	&__title {
 		font-size: 5.5rem;
 		line-height: 0.85;
+		@media only screen and (max-width: 700px) {
+			text-align: center;
+		}
 	}
 	&__head {
 		display: flex;
@@ -283,10 +281,14 @@ onMounted(() => {
 	&__left {
 		display: flex;
 		flex-direction: column;
-		grid-area: left;
-		gap: 8rem;
-
-		@media only screen and (max-width: 768px) {
+		gap: 2rem;
+		&-head {
+			display: flex;
+			align-items: center;
+			gap: 1.5rem;
+		}
+		@media only screen and (max-width: 700px) {
+			align-items: center;
 			gap: 3rem;
 		}
 	}

@@ -91,8 +91,8 @@ const handleMouseLeave = () => {
 	display: grid;
 	grid-auto-flow: column;
 	grid-template-columns: minmax(250px, 1fr) 1fr;
-	gap: 5rem;
-	justify-content: center;
+	column-gap: 10rem;
+	row-gap: 5rem;
 	@media only screen and (max-width: 900px) {
 		gap: 5rem;
 		grid-auto-flow: row;
@@ -123,12 +123,10 @@ const handleMouseLeave = () => {
 		}
 	}
 	&__main {
-		padding: 0 4vw;
-		padding-right: 7vw;
 		max-width: 700px;
 		display: flex;
 		flex-direction: column;
-		gap: 20px;
+		gap: 2rem;
 		& > * {
 			opacity: 0;
 			transform: rotateY(-100deg) translate(9rem, 9rem);

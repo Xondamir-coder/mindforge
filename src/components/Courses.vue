@@ -2,18 +2,18 @@
 	<section class="courses section-padding">
 		<div class="courses__top">
 			<div class="courses__left">
-				<div class="courses__head">
-					<div class="courses__top">
-						<div class="courses__icon-container">
-							<IconAward class="courses__icon" />
-						</div>
-						<span>{{ $t('courses-label') }}</span>
+				<div class="courses__left-head">
+					<div class="courses__icon-container">
+						<IconAward class="courses__icon" />
 					</div>
-					<h1 class="courses__title">{{ $t('courses-title') }}</h1>
+					<span>{{ $t('courses-label') }}</span>
 				</div>
+				<h1 class="courses__title">{{ $t('courses-title') }}</h1>
 			</div>
 			<div class="courses__right">
-				<h2 class="courses__subtitle">{{ $t('courses-subtitle') }}</h2>
+				<h2 class="courses__subtitle">
+					{{ $t('courses-subtitle') }}
+				</h2>
 				<p class="courses__text">
 					{{ $t('courses-text') }}
 				</p>
@@ -334,7 +334,6 @@ onUnmounted(() => {
 		transition-delay: 300ms;
 	}
 	&__right {
-		align-self: end;
 		display: flex;
 		flex-direction: column;
 		gap: 7px;
@@ -350,18 +349,19 @@ onUnmounted(() => {
 		}
 	}
 	&__top {
-		display: flex;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		row-gap: 4rem;
 		align-items: center;
-		gap: 30px;
 		font-size: 1.9rem;
 		font-weight: 500;
-		@media only screen and (max-width: 900px) {
-			flex-direction: column;
-		}
 	}
 	&__title {
 		font-size: 5.5rem;
 		line-height: 0.85;
+		@media only screen and (max-width: 700px) {
+			text-align: center;
+		}
 	}
 	&__head {
 		display: flex;
@@ -393,13 +393,18 @@ onUnmounted(() => {
 	&__left {
 		display: flex;
 		flex-direction: column;
-		grid-area: left;
-		gap: 8rem;
-
-		@media only screen and (max-width: 768px) {
+		gap: 2rem;
+		&-head {
+			display: flex;
+			align-items: center;
+			gap: 1.5rem;
+		}
+		@media only screen and (max-width: 700px) {
+			align-items: center;
 			gap: 3rem;
 		}
 	}
+
 	&__icon {
 		width: 2.2rem;
 		height: 2.2rem;
