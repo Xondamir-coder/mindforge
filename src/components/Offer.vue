@@ -326,6 +326,7 @@ button {
 		&.active {
 			transform: perspective(1000px) rotateX(0) rotateY(0) rotateZ(0) scale(1);
 			opacity: 1;
+			z-index: 100;
 		}
 
 		// 3-animation
@@ -396,11 +397,15 @@ button {
 			}
 		}
 		img {
-			max-width: 35rem;
+			width: clamp(200px, 100%, 40rem);
+			height: 100%;
 			align-self: center;
 			height: 100%;
 			border-radius: 16px;
 			object-fit: cover;
+			@media only screen and (max-width: 500px) {
+				max-height: 25rem;
+			}
 		}
 	}
 	&__list {
