@@ -121,7 +121,7 @@ onMounted(() => {
 	&__list {
 		list-style-type: none;
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(150px, 300px));
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 		justify-content: center;
 		row-gap: 4rem;
 	}
@@ -151,12 +151,12 @@ onMounted(() => {
 		}
 		&-title {
 			font-weight: 600;
-			font-size: 18px;
+			font-size: 1.8rem;
 		}
 		&-text {
 			color: var(--medium-gray);
 			line-height: 30px;
-			font-size: 17px;
+			font-size: 1.7rem;
 		}
 		&-img {
 			margin-bottom: 30px;
@@ -182,7 +182,7 @@ onMounted(() => {
 		opacity: 1;
 	}
 	&__subtitle {
-		font-size: 18px;
+		font-size: 1.8rem;
 		font-weight: 600;
 		opacity: 0;
 		transform: translateY(-20px);
@@ -204,7 +204,7 @@ onMounted(() => {
 			text-align: center;
 		}
 		p {
-			font-size: 17px;
+			font-size: 1.7rem;
 			color: #828c8a;
 			font-weight: 400;
 			line-height: 1.6;
@@ -310,7 +310,7 @@ onMounted(() => {
 		font-family: var(--font-base);
 		display: flex;
 		align-items: center;
-		font-size: 17px;
+		font-size: 1.7rem;
 		font-weight: 500;
 		opacity: 0;
 		transform: rotateY(-90deg) translate(9rem, 9rem);

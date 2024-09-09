@@ -48,7 +48,7 @@ onMounted(() => {
 		})
 		.to(headerRef.value, {
 			backgroundColor: '#fff',
-			color: 'var(--dark-gray)',
+			color: 'rgba(31, 36, 65, 1)',
 			boxShadow: '0 0px 20px 4px rgba(0, 0, 0, 0.25)',
 			y: 0,
 			duration: 0.5
@@ -102,10 +102,6 @@ button {
 	&__logo {
 		width: 15.7rem;
 		height: 3.9rem;
-		transition: color 300ms;
-		&:hover {
-			color: var(--base-color);
-		}
 	}
 }
 </style>

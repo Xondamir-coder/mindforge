@@ -40,7 +40,7 @@ import IconBriefcase from './icons/IconBriefcase.vue';
 import gsap from 'gsap';
 import { i18n } from '@/locales';
 
-const activeItem = ref(0);
+const activeItem = ref(-1);
 const imgContainerRef = ref();
 
 const skills = computed(() => [

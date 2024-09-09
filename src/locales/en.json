@@ -1,8 +1,14 @@
 {
+	"for": "for",
 	"send": "Send",
 	"dev": "Developed by",
 	"scroll": "scroll",
 	"go-to": "Go to",
+
+	"for-uni": "Universities",
+	"for-school": "Schools",
+	"for-business": "Businesses",
+	"for-centres": "Training Centers",
 
 	"hero-title": "We create educational content in any format",
 	"hero-text": "Developing educational content for universities, schools, training centers, and businesses",
@@ -210,6 +216,7 @@
 	"words-small": "Online learning anytime, anywhere.",
 
 	"offer-label": "Our Offer",
+
 	"offer-uni": "For Universities",
 	"offer-school": "For Schools",
 	"offer-corporate": "For Corporate Clients",

@@ -19,16 +19,13 @@
 					<p class="footer__text">{{ $t('footer-subtitle') }}</p>
 					<ul class="footer__links">
 						<li class="footer__links-item">
-							<a href="#">Fb.</a>
+							<a href="https://www.facebook.com/profile.php?id=61565196746663">Fb.</a>
 						</li>
 						<li class="footer__links-item">
-							<a href="#">Ig.</a>
+							<a href="https://www.instagram.com/mindforge.uz/">Ig.</a>
 						</li>
 						<li class="footer__links-item">
-							<a href="#">Tw.</a>
-						</li>
-						<li class="footer__links-item">
-							<a href="#">Be.</a>
+							<a href="https://t.me/mindforge_edu">Tg.</a>
 						</li>
 					</ul>
 				</div>
@@ -145,7 +142,7 @@ import Triangle from './Triangle.vue';
 		display: flex;
 		align-items: center;
 		gap: 1.5rem;
-		padding: 3.6rem min(6vw, 6rem);
+		padding: 2rem min(6vw, 6rem);
 		border-radius: 8px;
 		flex-wrap: wrap;
 		text-align: center;
@@ -177,7 +174,7 @@ import Triangle from './Triangle.vue';
 			text-align: center;
 		}
 		&-title {
-			font-size: 2.8rem;
+			font-size: 4.5rem;
 			font-family: var(--font-alt);
 			font-weight: 400;
 			strong {

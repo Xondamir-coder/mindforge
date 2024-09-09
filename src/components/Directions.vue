@@ -177,11 +177,21 @@ const contents = computed(() => [
 		font-weight: 700;
 	}
 	&__list {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
 		list-style: none;
 		column-gap: 3rem;
 		row-gap: 6rem;
+		& > * {
+			max-width: 38rem;
+			min-width: 38rem;
+			flex: 1;
+			@media only screen and (max-width: 700px) {
+				flex-basis: 100%;
+				max-width: 100%;
+			}
+		}
 	}
 	&__container {
 		position: relative;

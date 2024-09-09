@@ -364,7 +364,7 @@ button {
 		}
 		&-percentages {
 			display: grid;
-			grid-template-columns: 80px 1fr;
+			grid-template-columns: 8rem 1fr;
 			align-items: center;
 			span {
 				padding-right: 1.6rem;
@@ -396,11 +396,9 @@ button {
 			}
 		}
 		img {
+			max-width: 35rem;
 			align-self: center;
-			flex: 1;
-			width: 100%;
 			height: 100%;
-			min-width: 250px;
 			border-radius: 16px;
 			object-fit: cover;
 		}

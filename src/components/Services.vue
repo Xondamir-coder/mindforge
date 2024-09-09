@@ -114,14 +114,21 @@ const services = computed(() => [
 		font-size: 3.9rem;
 		font-weight: 600;
 		line-height: 1.2;
-		max-width: 30ch;
 	}
 	&__list {
 		list-style: none;
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-		gap: 2.5rem;
+		display: flex;
+		flex-wrap: wrap;
 		justify-content: center;
+		gap: 2.5rem;
+		& > * {
+			flex-basis: 38rem; /* The basis for each flex item */
+			max-width: 38rem; /* Ensure the max width stays at the intended size */
+			@media only screen and (max-width: 700px) {
+				max-width: 100%;
+				flex-basis: 100%;
+			}
+		}
 	}
 	&__item {
 		background-color: #fff;
@@ -164,14 +171,15 @@ const services = computed(() => [
 		}
 	}
 	&__icon {
-		width: 50%;
-		height: 50%;
+		width: 60%;
+		height: 60%;
 		color: var(--blue-dark);
 		&-container {
 			width: 8.6rem;
 			height: 8.6rem;
-			border: 2px solid #0d3858;
-			border-radius: 50%;
+			border: 1px solid #0d3858;
+			// border-radius: 50%;
+			border-radius: 15px;
 			display: grid;
 			place-items: center;
 			margin-bottom: 1rem;

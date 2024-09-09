@@ -94,8 +94,8 @@ const contents = computed(() => [
 		transform: perspective(800px) rotateX(0) translateZ(0);
 	}
 	&__icon {
-		width: 10rem;
-		height: 10rem;
+		width: max(10rem, 100px);
+		height: max(10rem, 100px);
 		background-color: rgba(247, 247, 247, 0.97);
 		border-radius: 50%;
 		margin-bottom: 3rem;
@@ -114,19 +114,27 @@ const contents = computed(() => [
 	}
 	&__list {
 		list-style: none;
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-		row-gap: 4rem;
 		transform-style: preserve-3d;
 		transform: perspective(800px) rotateX(33deg) translateZ(75px);
 		transition: transform 1.5s;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		& > * {
+			min-width: 30rem;
+			max-width: 30rem;
+			flex: 1;
+			@media only screen and (max-width: 700px) {
+				max-width: 100%;
+			}
+		}
 	}
 	&__item {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		gap: 10px;
-		padding: 25%;
+		padding: 3rem;
 		border: 1px solid var(--extra-medium-gray);
 		position: relative;
 		transition: background-color 400ms, color 400ms;

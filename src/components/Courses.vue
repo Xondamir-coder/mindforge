@@ -1,26 +1,12 @@
 <template>
 	<section class="courses section-padding">
 		<div class="courses__top">
-			<div class="courses__left">
-				<div class="courses__left-head">
-					<div class="courses__icon-container">
-						<IconAward class="courses__icon" />
-					</div>
-					<span>{{ $t('courses-label') }}</span>
-				</div>
-				<h1 class="courses__title">{{ $t('courses-title') }}</h1>
-			</div>
-			<div class="courses__right">
-				<h2 class="courses__subtitle">
-					{{ $t('courses-subtitle') }}
-				</h2>
-				<p class="courses__text">
-					{{ $t('courses-text') }}
-				</p>
-			</div>
+			<h1 class="courses__title">{{ $t('courses-title') }}</h1>
 		</div>
 		<ul class="courses__list">
-			<li
+			<a
+				:href="content.link"
+				target="_blank"
 				class="courses__item"
 				v-for="(content, index) in contents"
 				:key="content"
@@ -32,7 +18,7 @@
 				<p class="courses__item-text">{{ content.text }}</p>
 				<div class="courses__container">
 					<p>&ThinSpace;</p>
-					<a :href="content.link" target="_blank" class="courses__button">
+					<div class="courses__button">
 						{{ $t('go-to') }}
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -44,9 +30,9 @@
 								fill-rule="evenodd"
 								d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
 						</svg>
-					</a>
+					</div>
 				</div>
-			</li>
+			</a>
 		</ul>
 	</section>
 </template>
@@ -173,7 +159,7 @@ onUnmounted(() => {
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
-	gap: 10rem;
+	gap: 8rem;
 	transform-style: preserve-3d;
 
 	&.active {
@@ -214,7 +200,7 @@ onUnmounted(() => {
 			padding: 1.5rem;
 			transition: transform 0.5s;
 		}
-		a {
+		.courses__button {
 			transition: top 0.5s;
 			position: absolute;
 			width: 100%;
@@ -246,9 +232,11 @@ onUnmounted(() => {
 		justify-content: center;
 	}
 	&__item {
+		color: inherit;
+		text-decoration: none;
 		flex: 1;
-		max-width: 300px;
-		min-width: 300px;
+		max-width: 30rem;
+		min-width: 30rem;
 		display: flex;
 		align-items: center;
 		text-align: center;
@@ -256,7 +244,10 @@ onUnmounted(() => {
 		gap: 1rem;
 		opacity: 0;
 		transform: perspective(800px) rotateY(-90deg);
-		transition: transform 1s, opacity 1s;
+		transition: transform 1s, opacity 1s, box-shadow 0.3s;
+		@media only screen and (max-width: 700px) {
+			max-width: 100%;
+		}
 		&.no-border {
 			border-right: none !important;
 		}
@@ -279,16 +270,19 @@ onUnmounted(() => {
 		}
 		@for $index from 1 through 10 {
 			&:nth-child(#{$index}) {
-				transition-delay: $index * 0.2s;
+				transition: transform 1s $index * 0.2s, opacity 1s $index * 0.2s, box-shadow 0.5s;
 			}
 		}
 		&:hover .courses__container {
-			a {
+			.courses__button {
 				top: 0;
 			}
 			p {
 				transform: translateY(15px);
 			}
+		}
+		&:hover {
+			box-shadow: 0 0 30px rgba(#313e3b, 0.1);
 		}
 		&-title {
 			font-weight: 600;

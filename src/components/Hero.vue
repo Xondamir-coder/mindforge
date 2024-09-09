@@ -11,6 +11,22 @@
 			<p class="hero__text">
 				{{ $t('hero-text') }}
 			</p>
+			<div class="hero__carousel">
+				<p>{{ $t('for') }}</p>
+				<div class="hero__carousel-container">
+					<p
+						v-for="(text, i) in [
+							$t('for-uni'),
+							$t('for-school'),
+							$t('for-centres'),
+							$t('for-business')
+						]"
+						:key="i"
+						:class="{ active: i == carouselIndex }">
+						{{ text }}
+					</p>
+				</div>
+			</div>
 			<div class="hero__stats">
 				<div class="hero__stat" v-for="stat in stats" :key="stat.amount">
 					<h2 class="hero__stat-name">{{ stat.amount }}+</h2>
@@ -35,7 +51,7 @@
 <script setup>
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { computed, ref } from 'vue';
+import { computed, onMounted, ref } from 'vue';
 gsap.registerPlugin(ScrollTrigger);
 import Circle from '@/components/Circle.vue';
 import Rectangle from './Rectangle.vue';
@@ -58,6 +74,14 @@ const stats = computed(() => [
 ]);
 
 const imgContainerRef = ref();
+const carouselIndex = ref(0);
+
+onMounted(() => {
+	const seconds = 1.5;
+	setInterval(() => {
+		carouselIndex.value = (carouselIndex.value + 1) % 4;
+	}, seconds * 1000);
+});
 
 const handleMouseMove = e => {
 	const rect = imgContainerRef.value.getBoundingClientRect();
@@ -103,6 +127,33 @@ const handleMouseLeave = () => {
 	gap: max(6vw, 5rem);
 	@media only screen and (max-width: 768px) {
 		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	}
+
+	&__carousel {
+		font-size: 5rem;
+		text-transform: uppercase;
+		display: flex;
+		gap: 1.5rem;
+		align-self: flex-start;
+		@media only screen and (max-width: 1920px) {
+			display: none;
+		}
+		&-container {
+			display: grid;
+			text-align: left;
+			p {
+				opacity: 0;
+				transform: translateX(10rem);
+				transition: opacity 0.5s, transform 0.5s, display 0.5s;
+				transition-behavior: allow-discrete;
+				grid-row: 1 / span 1;
+				grid-column: 1 / span 1;
+				&.active {
+					opacity: 1;
+					transform: translateX(0);
+				}
+			}
+		}
 	}
 
 	&__svg {
@@ -158,6 +209,9 @@ const handleMouseLeave = () => {
 		opacity: 0;
 		animation: fade-rotate 800ms forwards 600ms;
 
+		@media only screen and (min-width: 1920px) {
+			justify-content: center;
+		}
 		@media only screen and (max-width: 1100px) {
 			justify-content: center;
 		}
@@ -171,10 +225,16 @@ const handleMouseLeave = () => {
 		text-align: center;
 		&-name {
 			font-size: 3.2rem;
+			@media only screen and (min-width: 1920px) {
+				font-size: 4rem;
+			}
 		}
 		&-text {
 			opacity: 0.5;
 			font-size: 1.7rem;
+			@media only screen and (min-width: 1920px) {
+				font-size: 2.5rem;
+			}
 		}
 		&-divider {
 			align-self: stretch;
@@ -183,18 +243,28 @@ const handleMouseLeave = () => {
 	}
 
 	&__text {
-		font-size: 18px;
+		font-size: 1.8rem;
 		font-weight: 300;
 		font-family: var(--font-base);
 		opacity: 0;
 		line-height: 1.5;
 		animation: fade-rotate-2 800ms forwards 200ms;
+
+		@media only screen and (min-width: 1920px) {
+			font-size: 2.2rem;
+			display: none;
+		}
 	}
 	&__title {
 		font-size: 7.5rem;
 		font-weight: 500;
 		line-height: 0.89;
 		animation: fade-rotate 800ms forwards;
+		@media only screen and (min-width: 1920px) {
+			text-transform: uppercase;
+			line-height: 1.1;
+			font-size: 7rem;
+		}
 		@media only screen and (max-width: 767px) {
 			font-size: 5rem;
 		}
@@ -205,8 +275,15 @@ const handleMouseLeave = () => {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		gap: 40px;
+		gap: 4rem;
 		font-family: var(--font-alt);
+
+		@media only screen and (min-width: 1920px) {
+			align-items: center;
+			text-align: center;
+			max-width: 80%;
+			margin: auto;
+		}
 
 		@media only screen and (max-width: 1100px) {
 			padding-top: 10rem;
@@ -223,6 +300,9 @@ const handleMouseLeave = () => {
 			justify-content: center;
 			transform-style: preserve-3d;
 			align-items: center;
+			@media only screen and (min-width: 1920px) {
+				display: none;
+			}
 		}
 
 		img {
