@@ -255,7 +255,7 @@ import Triangle from './Triangle.vue';
 		background-color: rgba(255, 255, 255, 0.1);
 	}
 	&__logo {
-		width: 15.7rem;
+		width: 13.7rem;
 		height: 4rem;
 		color: #fff;
 	}
