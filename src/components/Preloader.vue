@@ -30,11 +30,14 @@ const removeEl = () => {
 	document.querySelector('.preloader').remove();
 };
 const startAnimation = () => {
+	gsap.to('.preloader__text', {
+		opacity: 0
+	});
 	gsap.timeline()
 		.to('.preloader__container', {
 			width: 'auto',
 			marginLeft: '3rem',
-			duration: 0.7
+			duration: 1
 		})
 		.to('.preloader', {
 			opacity: 0,
