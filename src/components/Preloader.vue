@@ -2,7 +2,10 @@
 	<div class="preloader">
 		<div class="preloader__content">
 			<div class="preloader__icons">
-				<Icon class="preloader__icons-icon" />
+				<div class="preloader__icon">
+					<Icon class="preloader__icons-icon" />
+					<div class="preloader__icon-bg"></div>
+				</div>
 				<div class="preloader__container">
 					<IconText class="preloader__icons-text" />
 				</div>
@@ -43,6 +46,11 @@ const startAnimation = () => {
 onMounted(() => {
 	document.body.classList.add('preloader-active');
 	lenis.stop();
+	gsap.to('.preloader__icon-bg', {
+		height: 0,
+		duration: 2,
+		ease: 'power1.in'
+	});
 	const interval = setInterval(() => {
 		if (loadingNum.value < 100) {
 			loadingNum.value++;
@@ -64,6 +72,16 @@ onMounted(() => {
 	display: grid;
 	place-items: center;
 	background-color: #fff;
+	&__icon {
+		display: grid;
+		& > * {
+			grid-row: 1 / span 1;
+			grid-column: 1 / span 1;
+		}
+		&-bg {
+			background-color: #fff;
+		}
+	}
 	&__content {
 		display: flex;
 		flex-direction: column;
