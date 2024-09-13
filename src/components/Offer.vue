@@ -103,7 +103,8 @@ const contents = computed(() => [
 		items: [
 			i18n.global.t('offer-card-1-item-1'),
 			i18n.global.t('offer-card-1-item-2'),
-			i18n.global.t('offer-card-1-item-3')
+			i18n.global.t('offer-card-1-item-3'),
+			i18n.global.t('offer-card-1-item-4')
 		]
 	},
 	{
@@ -390,21 +391,20 @@ button {
 			flex-grow: 1;
 			display: flex;
 			justify-content: stretch;
-			flex-wrap: wrap;
 			gap: 4rem;
-			@media only screen and (max-width: 600px) {
+			@media only screen and (max-width: 900px) {
 				flex-direction: column;
 			}
 		}
 		img {
-			width: clamp(200px, 100%, 40rem);
+			width: 45%;
 			height: 100%;
 			align-self: center;
 			height: 100%;
 			border-radius: 16px;
 			object-fit: cover;
-			@media only screen and (max-width: 500px) {
-				max-height: 25rem;
+			@media only screen and (max-width: 900px) {
+				width: 100%;
 			}
 		}
 	}

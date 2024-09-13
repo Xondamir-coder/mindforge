@@ -213,6 +213,7 @@ onMounted(() => {
 	&__top {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		column-gap: 2rem;
 		row-gap: 4rem;
 		align-items: center;
 		font-size: 1.9rem;

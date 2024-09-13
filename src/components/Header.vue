@@ -31,6 +31,7 @@ const headerRef = ref();
 const selectLang = lang => changeLang(lang);
 
 const reloadPage = () => {
+	window.scrollTo(0, 0);
 	window.location.reload();
 };
 
@@ -40,7 +41,8 @@ onMounted(() => {
 			trigger: headerRef.value,
 			start: '+=200 top',
 			endTrigger: document.body,
-			toggleActions: 'play none none reverse'
+			toggleActions: 'play none none reverse',
+			toggleClass: { targets: '.header__logo', className: 'active' }
 		}
 	})
 		.to(headerRef.value, {

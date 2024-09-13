@@ -1,4 +1,5 @@
 <template>
+	<Preloader />
 	<main class="container" ref="containerRef">
 		<ScrollThingy />
 		<Header />
@@ -33,6 +34,7 @@ import Contacts from './components/Contacts.vue';
 import Footer from './components/Footer.vue';
 import Directions from './components/Directions.vue';
 import Courses from './components/Courses.vue';
+import Preloader from './components/Preloader.vue';
 
 const containerRef = ref(null);
 

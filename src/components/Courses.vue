@@ -208,7 +208,7 @@ onUnmounted(() => {
 			left: 0;
 			top: 100%;
 			color: #fff;
-			background-color: var(--dark-gray);
+			background-color: var(--blue);
 			padding: 1.5rem;
 			text-decoration: none;
 			display: flex;
@@ -230,6 +230,8 @@ onUnmounted(() => {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
+		// &:has(.courses__item:hover) .courses__item:not(:hover) {
+		// }
 	}
 	&__item {
 		color: inherit;
@@ -244,14 +246,18 @@ onUnmounted(() => {
 		gap: 1rem;
 		opacity: 0;
 		transform: perspective(800px) rotateY(-90deg);
-		transition: transform 1s, opacity 1s, box-shadow 0.3s;
+		@for $index from 1 through 10 {
+			&:nth-child(#{$index}) {
+				transition: transform 1s $index * 0.2s, opacity 1s $index * 0.2s, box-shadow 0.5s,
+					filter 0.5s;
+			}
+		}
 		@media only screen and (max-width: 700px) {
 			max-width: 100%;
 		}
 		&.no-border {
 			border-right: none !important;
 		}
-
 		&:not(:last-child) {
 			border-right: 1px solid var(--extra-medium-gray);
 		}
@@ -268,11 +274,7 @@ onUnmounted(() => {
 			padding-bottom: 2rem;
 			border-right: none !important;
 		}
-		@for $index from 1 through 10 {
-			&:nth-child(#{$index}) {
-				transition: transform 1s $index * 0.2s, opacity 1s $index * 0.2s, box-shadow 0.5s;
-			}
-		}
+
 		&:hover .courses__container {
 			.courses__button {
 				top: 0;
@@ -282,7 +284,7 @@ onUnmounted(() => {
 			}
 		}
 		&:hover {
-			box-shadow: 0 0 30px rgba(#313e3b, 0.1);
+			box-shadow: 0 0 30px rgba(#154c79, 0.2);
 		}
 		&-title {
 			font-weight: 600;
@@ -351,11 +353,9 @@ onUnmounted(() => {
 		font-weight: 500;
 	}
 	&__title {
+		text-align: center;
 		font-size: 5.5rem;
 		line-height: 0.85;
-		@media only screen and (max-width: 700px) {
-			text-align: center;
-		}
 	}
 	&__head {
 		display: flex;

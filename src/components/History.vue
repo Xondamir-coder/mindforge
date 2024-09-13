@@ -139,13 +139,13 @@ const contents = computed(() => [
 		position: relative;
 		transition: background-color 400ms, color 400ms;
 		&:hover {
-			background-color: var(--dark-gray);
+			background-color: var(--blue);
 			color: #fff;
 			svg {
 				fill: #fff;
 			}
 			.history__icon {
-				background-color: var(--dark-gray);
+				background-color: var(--blue);
 			}
 		}
 		&-title {

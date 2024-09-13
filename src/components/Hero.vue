@@ -113,6 +113,13 @@ const handleMouseLeave = () => {
 </script>
 
 <style lang="scss" scoped>
+body.preloader-active {
+	.hero__title,
+	.hero__text,
+	.hero__stats {
+		animation-play-state: paused;
+	}
+}
 .hero {
 	min-height: 100vh;
 	background-image: linear-gradient(to right bottom, var(--blue), #061f35);
@@ -260,6 +267,7 @@ const handleMouseLeave = () => {
 		font-weight: 500;
 		line-height: 0.89;
 		animation: fade-rotate 800ms forwards;
+
 		@media only screen and (min-width: 1920px) {
 			text-transform: uppercase;
 			line-height: 1.1;

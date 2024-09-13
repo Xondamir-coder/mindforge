@@ -4,28 +4,33 @@
 			<div class="footer__lines"></div>
 			<img class="footer__obj" src="@/assets/images/offer-obj.png" />
 			<div class="footer__banner">
-				<div class="footer__banner-svgs">
-					<Circle class="footer__circle" />
-					<Rectangle class="footer__rectangle" />
-					<Triangle class="footer__triangle" />
-				</div>
+				<FooterPattern class="footer__banner-img" />
+				<FooterPattern class="footer__banner-img" />
 				<h1 class="footer__banner-title">
-					<strong>{{ $t('footer-strong') }}</strong> {{ $t('footer-power') }}
+					“{{ $t('footer-strong') }} {{ $t('footer-power') }}”
 				</h1>
 			</div>
 			<div class="footer__content">
 				<div class="footer__box">
-					<Logo class="footer__logo" />
+					<LogoWhite class="footer__logo" />
 					<p class="footer__text">{{ $t('footer-subtitle') }}</p>
 					<ul class="footer__links">
 						<li class="footer__links-item">
-							<a href="https://www.facebook.com/profile.php?id=61565196746663">Fb.</a>
+							<a
+								target="_blank"
+								href="https://www.facebook.com/profile.php?id=61565196746663">
+								<IconFacebook />
+							</a>
 						</li>
 						<li class="footer__links-item">
-							<a href="https://www.instagram.com/mindforge.uz/">Ig.</a>
+							<a target="_blank" href="https://www.instagram.com/mindforge.uz/">
+								<IconInsta />
+							</a>
 						</li>
 						<li class="footer__links-item">
-							<a href="https://t.me/mindforge_edu">Tg.</a>
+							<a target="_blank" href="https://t.me/mindforge_edu">
+								<IconTelegram />
+							</a>
 						</li>
 					</ul>
 				</div>
@@ -33,13 +38,13 @@
 					<h2 class="footer__title">{{ $t('footer-help') }}</h2>
 					<div>
 						<p class="footer__text">{{ $t('footer-call') }}</p>
-						<a href="tel:+1 800 222 000" class="footer__a footer__a--tel"
-							>+1 800 222 000</a
+						<a href="tel:+998 90 950 74 02" class="footer__a footer__a--tel"
+							>+998 90 950 74 02</a
 						>
 					</div>
 					<div>
 						<p class="footer__text">{{ $t('footer-support') }}</p>
-						<a class="footer__a" href="mailto:help@domain.com">help@domain.com</a>
+						<a class="footer__a" href="mailto:info@mindforge.uz">info@mindforge.uz</a>
 					</div>
 				</div>
 			</div>
@@ -58,7 +63,12 @@
 
 <script setup>
 import Circle from './Circle.vue';
+import FooterPattern from './FooterPattern.vue';
+import IconFacebook from './icons/IconFacebook.vue';
+import IconInsta from './icons/IconInsta.vue';
+import IconTelegram from './icons/IconTelegram.vue';
 import Logo from './icons/Logo.vue';
+import LogoWhite from './LogoWhite.vue';
 import Rectangle from './Rectangle.vue';
 import Triangle from './Triangle.vue';
 </script>
@@ -118,11 +128,14 @@ import Triangle from './Triangle.vue';
 		margin-top: 15px;
 		&-item {
 			a {
-				color: #fff;
 				text-decoration: none;
 				transition: color 300ms;
-				&:hover {
-					color: var(--base-color);
+				svg {
+					fill: #fff;
+					transition: fill 300ms;
+				}
+				&:hover svg {
+					fill: var(--base-color);
 				}
 			}
 		}
@@ -138,7 +151,7 @@ import Triangle from './Triangle.vue';
 		transform: translate(-50%, -50%);
 		z-index: 10;
 		width: 80%;
-		background-color: #000;
+		background-color: #fff;
 		display: flex;
 		align-items: center;
 		gap: 1.5rem;
@@ -150,6 +163,19 @@ import Triangle from './Triangle.vue';
 		color: #fff;
 		position: relative;
 		overflow: hidden;
+		&-img {
+			position: absolute;
+			height: 100%;
+			@media only screen and (max-width: 750px) {
+				display: none;
+			}
+			&:first-of-type {
+				left: -30px;
+			}
+			&:last-of-type {
+				right: -30px;
+			}
+		}
 
 		&-svgs {
 			position: absolute;
@@ -174,12 +200,11 @@ import Triangle from './Triangle.vue';
 			text-align: center;
 		}
 		&-title {
-			font-size: 4.5rem;
+			font-size: 3.6rem;
 			font-family: var(--font-alt);
-			font-weight: 400;
-			strong {
-				color: #c00000;
-			}
+			font-weight: 700;
+			text-transform: uppercase;
+			color: #001bcc;
 		}
 		&-button {
 			background-color: var(--dark-gray);

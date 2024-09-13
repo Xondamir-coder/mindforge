@@ -240,7 +240,7 @@ const submitForm = () => {
 		transition: transform 400ms, opacity 400ms;
 	}
 	&__button {
-		background-color: var(--dark-gray);
+		background-color: var(--blue);
 		color: #fff;
 	}
 }
