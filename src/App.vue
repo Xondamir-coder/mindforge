@@ -8,8 +8,8 @@
 		<History />
 		<Directions />
 		<Services />
-		<Product />
-		<Skills />
+		<!-- <Product />
+		<Skills /> -->
 		<Words />
 		<Offer />
 		<Courses />

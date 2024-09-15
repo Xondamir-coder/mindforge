@@ -4,8 +4,7 @@
 			<div class="footer__lines"></div>
 			<img class="footer__obj" src="@/assets/images/offer-obj.png" />
 			<div class="footer__banner">
-				<FooterPattern class="footer__banner-img" />
-				<FooterPattern class="footer__banner-img" />
+				<FooterPattern class="footer__banner-back" />
 				<h1 class="footer__banner-title">
 					“{{ $t('footer-strong') }} {{ $t('footer-power') }}”
 				</h1>
@@ -151,32 +150,26 @@ import Triangle from './Triangle.vue';
 		transform: translate(-50%, -50%);
 		z-index: 10;
 		width: 80%;
-		background-color: #fff;
+		background-color: #072036;
 		display: flex;
 		align-items: center;
 		gap: 1.5rem;
 		padding: 2rem min(6vw, 6rem);
 		border-radius: 8px;
-		flex-wrap: wrap;
 		text-align: center;
 		justify-content: center;
 		color: #fff;
 		position: relative;
 		overflow: hidden;
-		&-img {
+
+		&-back {
 			position: absolute;
-			height: 100%;
-			@media only screen and (max-width: 750px) {
-				display: none;
-			}
-			&:first-of-type {
-				left: -30px;
-			}
-			&:last-of-type {
-				right: -30px;
+			width: 100%;
+			@media only screen and (max-width: 1200px) {
+				height: 100%;
+				width: 200%;
 			}
 		}
-
 		&-svgs {
 			position: absolute;
 			inset: 0;
@@ -204,7 +197,8 @@ import Triangle from './Triangle.vue';
 			font-family: var(--font-alt);
 			font-weight: 700;
 			text-transform: uppercase;
-			color: #001bcc;
+			color: #fff;
+			z-index: 2;
 		}
 		&-button {
 			background-color: var(--dark-gray);
