@@ -31,8 +31,9 @@
 				<div class="offer__card-box">
 					<img loading="lazy" :src="content.img" alt="" />
 					<div class="offer__card-content">
-						<p class="offer__card-text" v-for="text in content.texts" :key="text">
-							{{ text }}
+						<p class="offer__card-text" v-for="(text, i) in content.texts" :key="text">
+							{{ i == content.texts.length - 1 ? text.slice(0, -1) : text
+							}}<span v-if="i == content.texts.length - 1">:</span>
 						</p>
 						<ul class="offer__card-list">
 							<li class="offer__card-item" v-for="item in content.items" :key="item">

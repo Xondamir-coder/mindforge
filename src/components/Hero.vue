@@ -12,8 +12,8 @@
 				{{ $t('hero-text') }}
 			</p>
 			<div class="hero__carousel">
-				<p>{{ $t('for') }}</p>
-				<div class="hero__carousel-container">
+				<p v-if="$i18n.locale != 'uz'">{{ $t('for') }}</p>
+				<div class="hero__carousel-container" :class="{ alignright: $i18n.locale == 'uz' }">
 					<p
 						v-for="(text, i) in [
 							$t('for-uni'),
@@ -26,6 +26,7 @@
 						{{ text }}
 					</p>
 				</div>
+				<p v-if="$i18n.locale == 'uz'">{{ $t('for') }}</p>
 			</div>
 			<div class="hero__stats">
 				<div class="hero__stat" v-for="stat in stats" :key="stat.amount">
@@ -141,20 +142,21 @@ body.preloader-active {
 		text-transform: uppercase;
 		display: flex;
 		gap: 1.5rem;
-		align-self: flex-start;
 		@media only screen and (max-width: 1920px) {
 			display: none;
 		}
 		&-container {
 			display: grid;
 			text-align: left;
+			&.alignright {
+				text-align: right;
+			}
 			p {
 				opacity: 0;
 				transform: translateX(10rem);
 				transition: opacity 0.5s, transform 0.5s, display 0.5s;
 				transition-behavior: allow-discrete;
-				grid-row: 1 / span 1;
-				grid-column: 1 / span 1;
+				grid-area: 1/1/2/2;
 				&.active {
 					opacity: 1;
 					transform: translateX(0);
@@ -272,6 +274,7 @@ body.preloader-active {
 			text-transform: uppercase;
 			line-height: 1.1;
 			font-size: 7rem;
+			font-weight: 600;
 		}
 		@media only screen and (max-width: 767px) {
 			font-size: 5rem;

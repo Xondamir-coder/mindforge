@@ -25,7 +25,7 @@
 			<ul class="about__list">
 				<li class="about__item" v-for="content in contents" :key="content">
 					<div class="about__item-img">
-						<img :src="content.img" alt="img" />
+						<component class="about__item-icon" :is="content.icon" />
 					</div>
 					<h3 class="about__item-title">{{ content.title }}</h3>
 					<p class="about__item-text">{{ content.text }}</p>
@@ -44,26 +44,26 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import ScrollHere from './ScrollHere.vue';
 import Rectangle from './Rectangle.vue';
 gsap.registerPlugin(ScrollTrigger);
-import aboutImg1 from '@/assets/images/about-1.webp';
-import aboutImg2 from '@/assets/images/about-2.webp';
-import aboutImg3 from '@/assets/images/about-3.webp';
 import { i18n } from '@/locales';
+import IconAutomationLearning from './icons/IconAutomationLearning.vue';
+import IconInteractiveLearning from './icons/IconInteractiveLearning.vue';
+import IconVideoContent from './icons/IconVideoContent.vue';
 
 const contents = computed(() => [
 	{
 		title: i18n.global.t('about-title-1'),
 		text: i18n.global.t('about-text-1'),
-		img: aboutImg1
+		icon: IconInteractiveLearning
 	},
 	{
 		title: i18n.global.t('about-title-2'),
 		text: i18n.global.t('about-text-2'),
-		img: aboutImg2
+		icon: IconVideoContent
 	},
 	{
 		title: i18n.global.t('about-title-3'),
 		text: i18n.global.t('about-text-3'),
-		img: aboutImg3
+		icon: IconAutomationLearning
 	}
 ]);
 
@@ -166,12 +166,13 @@ onMounted(() => {
 			border-radius: 50%;
 			display: grid;
 			place-items: center;
-			img {
-				width: 7.5rem;
-				height: 7.5rem;
-				object-fit: cover;
-				transform: translateY(2.5rem);
-			}
+		}
+		&-icon {
+			width: 7.5rem;
+			height: 7.5rem;
+			object-fit: cover;
+			transform: translateY(50%);
+			fill: var(--dark-gray);
 		}
 	}
 	&__rectangle {
@@ -208,6 +209,9 @@ onMounted(() => {
 			color: #828c8a;
 			font-weight: 400;
 			line-height: 1.6;
+			&::first-letter {
+				text-transform: uppercase;
+			}
 		}
 	}
 	&__top {
