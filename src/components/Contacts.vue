@@ -2,39 +2,38 @@
 	<section class="contacts section-padding">
 		<h1 class="contacts__title">{{ $t('contacts-title') }}</h1>
 		<form class="form" @submit.prevent="submitForm">
-			<div class="form__container" v-for="content in contents" :key="content.name">
-				<h2 class="form__label">{{ content.title }}</h2>
-				<div class="form__box">
-					<input
-						:type="
-							content.name == 'message' ||
-							content.name == 'subject' ||
-							content.name == 'name'
-								? 'text'
-								: content.name
-						"
-						class="form__input"
-						:name="content.name"
-						:placeholder="content.desc"
-						:required="content.isRequired"
-						v-model="data[content.name]" />
-					<component class="form__icon" :is="content.icon" />
-					<IconError class="form__icon-validity form__icon-invalid" />
-					<IconValid class="form__icon-validity form__icon-valid" />
+			<div class="form__wrapper">
+				<div class="form__container" v-for="content in contents" :key="content.name">
+					<h2 class="form__label">{{ content.title }}</h2>
+					<div class="form__box">
+						<input
+							v-if="content.inputType != 'textarea'"
+							:type="content.inputType"
+							class="form__input"
+							:name="content.name"
+							:placeholder="content.desc"
+							:required="content.isRequired"
+							v-model="data[content.name]"
+							@input="validateInput" />
+						<textarea class="form__input" v-else :placeholder="content.desc">
+						</textarea>
+						<component class="form__icon" :is="content.icon" />
+						<IconError class="form__icon-validity form__icon-invalid" />
+						<IconValid class="form__icon-validity form__icon-valid" />
+					</div>
 				</div>
 			</div>
-			<button type="submit"></button>
+			<div class="contacts__footer">
+				<p>
+					{{ $t('contacts-classified') }}
+				</p>
+				<Button
+					type="submit"
+					:label="$t('send')"
+					:icon="IconSend"
+					class="contacts__button" />
+			</div>
 		</form>
-		<div class="contacts__footer">
-			<p>
-				{{ $t('contacts-classified') }}
-			</p>
-			<Button
-				@click="submitForm"
-				:label="$t('send')"
-				:icon="IconSend"
-				class="contacts__button" />
-		</div>
 	</section>
 </template>
 
@@ -53,6 +52,7 @@ import { i18n } from '@/locales';
 
 const contents = computed(() => [
 	{
+		inputType: 'text',
 		name: 'name',
 		icon: IconSmile,
 		isRequired: true,
@@ -60,6 +60,7 @@ const contents = computed(() => [
 		title: i18n.global.t('contacts-title-1')
 	},
 	{
+		inputType: 'email',
 		name: 'email',
 		icon: IconMail,
 		isRequired: true,
@@ -67,6 +68,7 @@ const contents = computed(() => [
 		title: i18n.global.t('contacts-title-2')
 	},
 	{
+		inputType: 'tel',
 		name: 'tel',
 		icon: IconCall,
 		isRequired: true,
@@ -74,16 +76,16 @@ const contents = computed(() => [
 		title: i18n.global.t('contacts-title-3')
 	},
 	{
+		inputType: 'text',
 		name: 'subject',
 		icon: IconTopic,
-		isRequired: false,
 		desc: i18n.global.t('contacts-desc-4'),
 		title: i18n.global.t('contacts-title-4')
 	},
 	{
+		inputType: 'textarea',
 		name: 'message',
 		icon: IconMessage,
-		isRequired: false,
 		desc: i18n.global.t('contacts-desc-5'),
 		title: i18n.global.t('contacts-title-5')
 	}
@@ -97,6 +99,14 @@ const data = ref({
 	message: ''
 });
 
+const validateInput = e => {
+	const isTelInput = e.target.type === 'tel';
+	if (isTelInput) {
+		const telValue = e.data;
+		const isValid = /^[0-9 +]+$/.test(telValue);
+		if (!isValid) data.value.tel = data.value.tel.slice(0, -1);
+	}
+};
 const submitForm = () => {
 	Object.keys(data.value).forEach(key => {
 		data.value[key] = data.value[key].trim();
@@ -109,13 +119,12 @@ const submitForm = () => {
 
 <style lang="scss" scoped>
 .form {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 	width: 100%;
 	max-width: 900px;
-	gap: 4rem;
-	button {
-		display: none;
+	&__wrapper {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+		gap: 4rem;
 	}
 	@media only screen and (max-width: 500px) {
 		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -187,6 +196,7 @@ const submitForm = () => {
 		font-size: 16px;
 		padding: 2.2rem 0;
 		outline: none;
+		resize: none;
 		&:user-valid ~ .form__icon-valid {
 			opacity: 1;
 		}
@@ -224,6 +234,9 @@ const submitForm = () => {
 		margin-top: 5rem;
 		border-top: 1px solid var(--extra-medium-gray);
 		justify-content: space-between;
+		@media only screen and (max-width: 768px) {
+			margin-top: 0;
+		}
 		p {
 			max-width: 50ch;
 			font-size: 15px;

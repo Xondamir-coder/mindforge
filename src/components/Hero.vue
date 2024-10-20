@@ -38,14 +38,6 @@
 				</div>
 			</div>
 		</div>
-		<div
-			class="hero__images-container"
-			@mousemove="handleMouseMove"
-			@mouseleave="handleMouseLeave">
-			<div class="hero__images" ref="imgContainerRef">
-				<img src="@/assets/images/guy.webp" alt="hero guy" />
-			</div>
-		</div>
 	</section>
 </template>
 
@@ -74,7 +66,6 @@ const stats = computed(() => [
 	}
 ]);
 
-const imgContainerRef = ref();
 const carouselIndex = ref(0);
 
 onMounted(() => {
@@ -83,41 +74,14 @@ onMounted(() => {
 		carouselIndex.value = (carouselIndex.value + 1) % 4;
 	}, seconds * 1000);
 });
-
-const handleMouseMove = e => {
-	const rect = imgContainerRef.value.getBoundingClientRect();
-	const x = e.clientX - rect.left - rect.width / 2;
-	const y = e.clientY - rect.top - rect.height / 2;
-
-	const rotateX = (-y / rect.height) * 45; // Stronger rotation
-	const rotateY = (x / rect.width) * 45;
-
-	gsap.to(imgContainerRef.value, {
-		duration: 0.5, // Slightly longer duration for more dramatic effect
-		rotateX: rotateX,
-		rotateY: rotateY,
-		scale: 1.06,
-		ease: 'power1.out',
-		transformOrigin: 'center'
-	});
-};
-const handleMouseLeave = () => {
-	gsap.to(imgContainerRef.value, {
-		duration: 0.7, // Slightly longer duration to smoothly reset
-		rotateX: 0,
-		rotateY: 0,
-		translateZ: 0,
-		scale: 1,
-		ease: 'power1.out'
-	});
-};
 </script>
 
 <style lang="scss" scoped>
 body.preloader-active {
 	.hero__title,
 	.hero__text,
-	.hero__stats {
+	.hero__stats,
+	.hero__carousel {
 		animation-play-state: paused;
 	}
 }
@@ -142,8 +106,12 @@ body.preloader-active {
 		text-transform: uppercase;
 		display: flex;
 		gap: 1.5rem;
-		@media only screen and (max-width: 1920px) {
-			display: none;
+		animation: fade-rotate 800ms both 600ms;
+		@media only screen and (max-width: 768px) {
+			font-size: 3rem;
+		}
+		@media only screen and (max-width: 500px) {
+			font-size: 2rem;
 		}
 		&-container {
 			display: grid;
@@ -216,14 +184,8 @@ body.preloader-active {
 		gap: 3rem;
 		flex-wrap: wrap;
 		opacity: 0;
-		animation: fade-rotate 800ms forwards 600ms;
-
-		@media only screen and (min-width: 1920px) {
-			justify-content: center;
-		}
-		@media only screen and (max-width: 1100px) {
-			justify-content: center;
-		}
+		animation: fade-rotate 800ms forwards 1s;
+		justify-content: center;
 	}
 	&__stat {
 		display: flex;
@@ -266,15 +228,13 @@ body.preloader-active {
 	}
 	&__title {
 		font-size: 7.5rem;
-		font-weight: 500;
-		line-height: 0.89;
+		line-height: 1.1;
+		font-weight: 600;
+		text-transform: uppercase;
 		animation: fade-rotate 800ms forwards;
 
 		@media only screen and (min-width: 1920px) {
-			text-transform: uppercase;
-			line-height: 1.1;
 			font-size: 7rem;
-			font-weight: 600;
 		}
 		@media only screen and (max-width: 767px) {
 			font-size: 5rem;
@@ -288,10 +248,10 @@ body.preloader-active {
 		justify-content: center;
 		gap: 4rem;
 		font-family: var(--font-alt);
+		align-items: center;
+		text-align: center;
 
 		@media only screen and (min-width: 1920px) {
-			align-items: center;
-			text-align: center;
 			max-width: 80%;
 			margin: auto;
 		}
@@ -299,29 +259,6 @@ body.preloader-active {
 		@media only screen and (max-width: 1100px) {
 			padding-top: 10rem;
 			text-align: center;
-		}
-	}
-	&__images {
-		position: relative;
-		width: 100%;
-		height: 100%;
-
-		&-container {
-			display: flex;
-			justify-content: center;
-			transform-style: preserve-3d;
-			align-items: center;
-			@media only screen and (min-width: 1920px) {
-				display: none;
-			}
-		}
-
-		img {
-			width: 100%;
-			height: 100%;
-			object-fit: contain;
-			position: relative;
-			z-index: 2;
 		}
 	}
 }

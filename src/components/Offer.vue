@@ -79,9 +79,10 @@ import IconPause from '@/components/icons/IconPause.vue';
 
 gsap.registerPlugin(ScrollTrigger);
 
+const timer = 15; // 15 seconds
 const objRef = ref();
 const currentIndex = ref(0);
-const countdown = ref(5);
+const countdown = ref(timer);
 const isCounting = ref(true);
 let interval;
 
@@ -172,14 +173,14 @@ const contents = computed(() => [
 
 const changeCurIndex = i => {
 	currentIndex.value = i;
-	countdown.value = 5;
+	countdown.value = timer;
 };
 const setCountdown = () => {
 	interval = setInterval(() => {
 		countdown.value--;
 		if (countdown.value < 0) {
-			currentIndex.value = (currentIndex.value + 1) % 4;
-			countdown.value = 5;
+			currentIndex.value = (currentIndex.value + 1) % buttons.value.length;
+			countdown.value = timer;
 		}
 	}, 1000);
 };

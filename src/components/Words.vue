@@ -27,6 +27,8 @@
 		font-size: max(13vw, 120px);
 		letter-spacing: -2px;
 		text-wrap: nowrap;
+		white-space: nowrap;
+		-webkit-white-space: nowrap; /* Safari specific */
 		z-index: -1;
 		animation: move 50s linear infinite alternate;
 		mask-image: linear-gradient(
