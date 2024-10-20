@@ -15,7 +15,11 @@
 							:required="content.isRequired"
 							v-model="data[content.name]"
 							@input="validateInput" />
-						<textarea class="form__input" v-else :placeholder="content.desc">
+						<textarea
+							class="form__input"
+							v-else
+							:placeholder="content.desc"
+							v-model="data.message">
 						</textarea>
 						<component class="form__icon" :is="content.icon" />
 						<IconError class="form__icon-validity form__icon-invalid" />
@@ -101,6 +105,7 @@ const data = ref({
 
 const validateInput = e => {
 	const isTelInput = e.target.type === 'tel';
+	if (e.inputType === 'deleteContentBackward') return;
 	if (isTelInput) {
 		const telValue = e.data;
 		const isValid = /^[0-9 +]+$/.test(telValue);
@@ -111,9 +116,7 @@ const submitForm = () => {
 	Object.keys(data.value).forEach(key => {
 		data.value[key] = data.value[key].trim();
 	});
-	console.log(data.value);
 	if (!data.value.name || !data.value.email || !data.value.tel) return;
-	console.log(data.value);
 };
 </script>
 
